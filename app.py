@@ -8,13 +8,14 @@ from src.ingestion.pdf_extractor import PDFPaperIngestor, SI_PATTERNS
 from src.evaluation.benchmark_runner import PerturbMatBenchmarkRunner
 
 st.set_page_config(
-    page_title="PerturbMat-Agent | OSI Hackathon",
+    page_title="The Skeptical Chymist | OSI Hackathon",
+    page_icon="⚖️",
     layout="wide",
 )
 
-st.title("🔬 PerturbMat-Agent: Mechanistic Literature Gap Analyzer & Experiment Predictor")
+st.title("⚖️ The Skeptical Chymist: Mechanistic Literature Gap Analyzer & Experiment Predictor")
 st.caption(
-    "Open Scientific Intelligence (OSI) Hackathon — Comparing Single-Agent vs. Adversarial Physical-Chemistry Cross-Questioning"
+    "Open Scientific Intelligence (OSI) Hackathon — Climbing the DIKW Pyramid with Adversarial Physical-Chemistry Cross-Questioning"
 )
 
 root = Path(__file__).resolve().parent
