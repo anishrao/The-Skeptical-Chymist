@@ -1,0 +1,66 @@
+{
+  "paper_id": "OA_W4320497587",
+  "title": "Seed-Mediated Synthesis of Thin Gold Nanoplates with Tunable Edge Lengths and Optical Properties",
+  "authors_short": "Not specified et al.",
+  "publication_year": 2023,
+  "doi": "https://doi.org/10.3390/nano13040711",
+  "core_system_studied": "Seed-mediated synthesis of thin Au nanoplates using Au–Ag alloy nanoframes and sulfite (SO32−) ligands",
+  "parameters_varied": [
+    "sulfite (SO32−) ligand concentration",
+    "edge length tuning"
+  ],
+  "parameters_held_constant": [],
+  "synthesis_runs": [
+    {
+      "run_id": "run_thin_nanoplates_range",
+      "parameters": [
+        {
+          "name": "Seed type",
+          "raw_value": "Au–Ag alloy nanoframes obtained by galvanic replacement of Ag nanoplates with HAuCl4",
+          "role": "seed_parameter"
+        },
+        {
+          "name": "Ligand / capping agent",
+          "raw_value": "sulfite (SO32−)",
+          "role": "surfactant"
+        },
+        {
+          "name": "Gold precursor",
+          "raw_value": "Au salt (HAuCl4)",
+          "role": "gold_precursor"
+        }
+      ],
+      "outcome": {
+        "morphology": "thin gold nanoplates",
+        "length_nm": "48–167 nm",
+        "width_nm": "7.5 nm (thickness at lowest edge length, increases with edge length)",
+        "aspect_ratio": null,
+        "volume_nm3": null,
+        "lspr_peak_nm": null,
+        "shape_yield_percent": null
+      },
+      "source_section": "Abstract"
+    }
+  ],
+  "cmo_edges": [
+    {
+      "perturbed_parameter": "sulfite (SO32−) ligand concentration",
+      "perturbation_direction": "increase",
+      "parameter_range_tested": "Sulfite ligand in Au-Ag alloy nanoframes seed-mediated synthesis",
+      "fixed_boundary_conditions": [
+        "Au-Ag alloy nanoframes seeds",
+        "HAuCl4 gold precursor"
+      ],
+      "proposed_mechanism": "Sulfite ligands complex effectively with Au(III) precursor ions to regulate reduction kinetics and govern the anisotropic growth of thin nanoplates.",
+      "affected_observable": "Bipyramid longitudinal length",
+      "outcome_direction": "increase",
+      "quantitative_effect": "Edge lengths tunable from 48 nm to 167 nm.",
+      "evidence_quote": "run_thin_nanoplates_range: morphology=thin gold nanoplates, L=48–167 nm, W=7.5 nm",
+      "from_supplementary_info": false
+    }
+  ],
+  "untested_assumptions_or_limitations": [
+    "Nanoplate thickness increases as edge length is tuned to larger sizes"
+  ],
+  "key_cited_references": []
+}

@@ -1,0 +1,34 @@
+{
+  "paper_id": "EPMC_PMC6107855",
+  "title": "The Many \"Facets\" of Halide Ions in the Chemistry of Colloidal Inorganic Nanocrystals.",
+  "authors_short": "Singhal et al.",
+  "publication_year": 2018,
+  "doi": "10.1021/acs.chemrev.8b00158",
+  "core_system_studied": "Halide-mediated colloidal inorganic nanocrystal synthesis",
+  "parameters_varied": [
+    "halide ion type (Cl-, Br-, I-)",
+    "halide concentration"
+  ],
+  "parameters_held_constant": [],
+  "synthesis_runs": [],
+  "cmo_edges": [
+    {
+      "perturbed_parameter": "halide ion type",
+      "perturbation_direction": "addition_or_substitution",
+      "parameter_range_tested": "Chloride, bromide, and iodide ions across nanocrystal syntheses",
+      "fixed_boundary_conditions": [
+        "Colloidal inorganic nanocrystal synthesis"
+      ],
+      "proposed_mechanism": "Halide ions selectively adsorb onto specific crystal facets and form complexes with metal precursors, regulating surface energy and anisotropic growth kinetics.",
+      "affected_observable": "Shape yield",
+      "outcome_direction": "increase",
+      "quantitative_effect": "Provides high level of shape and compositional control in colloidal nanomaterials.",
+      "evidence_quote": "Halide ions affect the NC growth kinetics through several means, including selective binding on crystal facets, complexation with the precursors, and oxidative etching.",
+      "from_supplementary_info": false
+    }
+  ],
+  "untested_assumptions_or_limitations": [
+    "Review article covering general mechanisms across multiple distinct material classes (metals, semiconductors, perovskites) rather than a single standardized protocol"
+  ],
+  "key_cited_references": []
+}

@@ -1,0 +1,82 @@
+# ==========================================
+# Security & Secret Credentials (NEVER COMMIT)
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+client_secrets.json
+
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# Caches & Temporary Artifacts
+# ==========================================
+.pytest_cache/
+.coverage
+htmlcov/
+outputs/extraction_cache/
+outputs/extraction_cache/**
+outputs/downloaded_si/
+outputs/downloaded_si/**
+outputs/uploaded_seeds/
+outputs/uploaded_seeds/**
+outputs/uploaded_sis/
+outputs/uploaded_sis/**
+outputs/si_tables/
+outputs/si_tables/**
+scratch/
+scratch/**
+.cache/
+*.mp4
+outputs/*.mp4
+outputs/*.zip
+data/**/*.pdf
+data/**/*.docx
+!data/**/.gitkeep
+!data/**/README.md
+
+# ==========================================
+# OS & IDE Workspace Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+outputs/*.code-workspace
+.gemini/
+

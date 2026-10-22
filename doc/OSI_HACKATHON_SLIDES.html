@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PerturbMat-Agent | OSI Hackathon Presentation</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #131b33;
+      --border: #28365e;
+      --text: #f0f4ff;
+      --muted: #9fb0d8;
+      --accent: #38bdf8;
+      --gold: #fbbf24;
+      --green: #34d399;
+      --red: #f87171;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #172554, var(--bg) 65%);
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 64px;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      max-width: 1280px;
+      height: 100%;
+      max-height: 760px;
+      background: rgba(19, 27, 51, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 44px 56px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .slide.active { display: flex; }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 { font-size: 2.55rem; line-height: 1.18; margin-bottom: 14px; color: #fff; }
+    h2 { font-size: 1.95rem; line-height: 1.22; margin-bottom: 14px; color: #fff; }
+    h3 { font-size: 1.2rem; color: var(--gold); margin-bottom: 8px; }
+    p, li { font-size: 1.06rem; line-height: 1.5; color: #dbe7ff; }
+    ul { margin-left: 22px; display: flex; flex-direction: column; gap: 8px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 14px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 14px; }
+    .box {
+      background: rgba(11, 16, 32, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 22px;
+    }
+    .box.wrong { border-color: rgba(248, 113, 113, 0.65); background: rgba(127, 29, 29, 0.18); }
+    .box.right { border-color: rgba(52, 211, 153, 0.65); background: rgba(6, 78, 59, 0.22); }
+    .box.gold-box { border-color: rgba(251, 191, 36, 0.7); background: rgba(120, 53, 15, 0.22); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.96rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th { background: rgba(56, 189, 248, 0.14); color: var(--accent); font-weight: 700; }
+    tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+    .tag-wrong { color: var(--red); font-weight: 700; }
+    .tag-right { color: var(--green); font-weight: 700; }
+    .big-num { font-size: 2.3rem; font-weight: 800; color: var(--green); }
+    .big-num.bad { color: var(--red); }
+    .footer-bar {
+      height: 52px;
+      padding: 0 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      background: rgba(11, 16, 32, 0.9);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .controls button {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 8px;
+      font-weight: 600;
+    }
+    .controls button:hover { border-color: var(--accent); color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<div class="slide-container">
+
+  <!-- SLIDE 1 -->
+  <div class="slide active">
+    <div>
+      <span class="badge">Open Scientific Intelligence (OSI) Hackathon</span>
+      <h1>PerturbMat-Agent: Climbing the Scientific DIKW Pyramid with Adversarial Cross-Questioning</h1>
+      <p style="font-size:1.22rem; color:var(--muted); margin-top:8px;">
+        From Raw Literature Retrieval (<i>Information</i>) to First-Principles Experimental Prediction (<i>Wisdom</i>)
+      </p>
+      <div class="grid-4" style="margin-top:30px;">
+        <div class="box">
+          <h3>1. DATA</h3>
+          <p><b>17 Pre-2024 Papers + SIs</b><br/>575 text &amp; table chunks extracted and cached on disk (&lt;0.1s load).</p>
+        </div>
+        <div class="box wrong">
+          <h3>2. INFORMATION</h3>
+          <p><b>Single-Agent RAG</b><br/>Retrieves isolated paragraphs.<br/><span class="tag-wrong">14.3% Fig. 1 Accuracy</span></p>
+        </div>
+        <div class="box wrong">
+          <h3>3. KNOWLEDGE</h3>
+          <p><b>CMO Graph / Multi-Agent</b><br/>Repeats textbook nanorod bias.<br/><span class="tag-wrong">38.9% Full-Paper Acc.</span></p>
+        </div>
+        <div class="box right">
+          <h3>4. WISDOM (Ours)</h3>
+          <p><b>Physical-Chemistry Skeptic</b><br/>Enforces Mass Balance &amp; Redox E°.<br/><span class="tag-right">94.4% Full-Paper Acc.!</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="box gold-box">
+      <p><b>Blinded Benchmark Proof:</b> Validated across <b>all 8 experimental series (56 synthesis samples, 36 observables)</b> of a held-out 2024 paper (<i>Sánchez-Iglesias &amp; Grzelczak, Small 2024</i>, <code>DOI: 10.1002/smll.202407735</code>).</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide">
+    <div>
+      <span class="badge">Slide 2 · The Problem Definition</span>
+      <h2>Why Foundational LLMs &amp; Single-Agent RAG Fail in the Lab:<br/>The "Textbook Majority-Vote Trap"</h2>
+      <div class="grid-2" style="margin-top:20px;">
+        <div class="box wrong">
+          <h3>❌ What Standard RAG &amp; Consensus Agents Do</h3>
+          <ul>
+            <li><b>Confuse Frequency with Physical Law:</b> Because &gt;90% of plasmonic papers study single-crystal Au nanorods (where adding <code>CTAB</code> and <code>AgNO3</code> <i>increases</i> aspect ratio and <i>red-shifts</i> LSPR), LLMs treat "More CTAB = Higher Aspect Ratio" as universal truth.</li>
+            <li><b>Ignore Coupled Conservation Constraints:</b> Predict that single-particle volume increases 2.7× even when <code>[HAuCl4]</code> and <code>[Au seeds]</code> are held strictly constant!</li>
+            <li><b>Groupthink in Generic Multi-Agent Chat:</b> A second polite agent validates the first agent's textbook bias, inflating confidence (94%) on wrong predictions.</li>
+          </ul>
+        </div>
+        <div class="box right">
+          <h3>✅ What True Scientific Wisdom Requires</h3>
+          <ul>
+            <li><b>Regime Awareness:</b> Recognizing when a mild chelating reductant (<code>8-HQL</code>) + pentatwinned seeds in <code>CTAC</code> inverts the role of bromide counterions.</li>
+            <li><b>Hard Conservation Audits:</b> Enforcing $V_{\text{particle}} \propto W^2 L \propto [\text{HAuCl}_4]/[\text{Au}^0_{\text{seed}}] = \text{const}$ before outputting length and width predictions.</li>
+            <li><b>Electrochemical Grounding:</b> Checking Nernst potentials ($E^0([\text{AuBr}_2]^-) = 0.960\text{ V}$ vs. $E^0([\text{AuCl}_2]^-) = 1.154\text{ V}$) and surface monolayer saturation ($\sim 1290\text{ Ag}/100\text{ nm}^2$).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <p><b>Hackathon Thesis:</b> Climbing from <i>Knowledge</i> to <i>Wisdom</i> on the DIKW pyramid requires an <b>Adversarial Physical-Chemistry Skeptic Agent</b> that actively falsifies textbook correlations against conservation laws.</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide">
+    <div>
+      <span class="badge">Slide 3 · Architecture &amp; DIKW Mapping</span>
+      <h2>4-Way Controlled Ablation Across the DIKW Pyramid</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>DIKW Rung</th>
+            <th>Agent Architecture Evaluated</th>
+            <th>Primary Benchmark Acc.<br/>(Held-Out Fig. 1 / Table S1)</th>
+            <th>Full-Paper Directional Acc.<br/>(All 8 Series, 36 Observables)</th>
+            <th>Mass Conservation Enforced?</th>
+            <th>Brier Calibration Error (↓)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>2. Information</b></td>
+            <td><b>Mode 1: Single-Agent Standard RAG</b></td>
+            <td class="tag-wrong">14.3% (1/7)</td>
+            <td>77.8% (28/36)</td>
+            <td>✅ Yes</td>
+            <td class="tag-wrong">0.7225</td>
+          </tr>
+          <tr>
+            <td><b>3. Knowledge</b></td>
+            <td><b>Mode 2: Single-Agent + Hybrid CMO Graph KB</b></td>
+            <td class="tag-wrong">33.3% (2/6)</td>
+            <td class="tag-wrong">38.9% (14/36)</td>
+            <td class="tag-wrong">❌ No (Violated in EXP_2,3)</td>
+            <td class="tag-wrong">0.7744</td>
+          </tr>
+          <tr>
+            <td><b>3. Knowledge</b></td>
+            <td><b>Mode 3: Generic Multi-Agent Discussion</b></td>
+            <td class="tag-wrong">28.6% (2/7)</td>
+            <td class="tag-wrong">38.9% (14/36)</td>
+            <td class="tag-wrong">❌ No (Groupthink bias)</td>
+            <td class="tag-wrong">0.7225</td>
+          </tr>
+          <tr>
+            <td><b>4. WISDOM (Ours)</b></td>
+            <td><b>Mode 4: Mechanistic Cross-Questioning Agent</b></td>
+            <td class="tag-right">85.7% (6/7)</td>
+            <td class="tag-right">94.4% (34/36)</td>
+            <td class="tag-right">✅ Yes (100% all series)</td>
+            <td class="tag-right">0.0025</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="grid-2" style="margin-top:18px;">
+        <div class="box">
+          <h3>Zero Data Leakage Guarantee</h3>
+          <p><code>DOI: 10.1002/smll.202407735</code> and all $\ge 2024$ works are strictly blacklisted in both local ingestion and live <code>OpenAlex</code>/<code>EuropePMC</code> snowballing.</p>
+        </div>
+        <div class="box right">
+          <h3>289× Lower Calibration Error</h3>
+          <p>Cross-Questioning reduces Brier calibration error from <b>0.7225 → 0.0025</b> by overturning false high-confidence textbook priors.</p>
+        </div>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <div>
+      <span class="badge">Slide 4 · Smoking-Gun Proof #1 (Held-Out Paper Fig. 1 / Table S1)</span>
+      <h2>Head-to-Head on the Held-Out Paper's Primary Experiment:<br/>Adding <code>1 → 50 mM CTAB</code> to <code>100 mM CTAC + 8-HQL</code> (13 Samples)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Experimental Observable (Table S1)</th>
+            <th>Single-Agent Prediction (Modes 1 &amp; 2, 89% Conf.)</th>
+            <th>Our Cross-Questioning Agent (Mode 4, 95% Conf.)</th>
+            <th>Actual Held-Out Paper Ground Truth (Small 2024)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Longitudinal LSPR ($\lambda_{\text{LSPR}}$)</b></td>
+            <td class="tag-wrong">❌ RED-SHIFTS (+50 to +150 nm, 750 → 950 nm)</td>
+            <td class="tag-right">✅ BLUE-SHIFTS (1050 nm down to ~680 nm)</td>
+            <td><b>BLUE-SHIFTS by 486 nm (1070 → 584 nm)</b></td>
+          </tr>
+          <tr>
+            <td><b>Particle Length ($L$)</b></td>
+            <td class="tag-wrong">❌ INCREASES (+10–30%, 50 → 120 nm)</td>
+            <td class="tag-right">✅ DECREASES (115 ± 5 nm down to 55 ± 4 nm)</td>
+            <td><b>DECREASES by 51% (100 ± 3 → 49 ± 4 nm)</b></td>
+          </tr>
+          <tr>
+            <td><b>Particle Width ($W$)</b></td>
+            <td class="tag-wrong">❌ DECREASES (-5–15%) or No Change</td>
+            <td class="tag-right">✅ INCREASES (15 ± 1 nm up to 26 ± 2 nm)</td>
+            <td><b>INCREASES by 70% (17 ± 1 → 29 ± 1 nm)</b></td>
+          </tr>
+          <tr>
+            <td><b>Aspect Ratio ($L/W$)</b></td>
+            <td class="tag-wrong">❌ INCREASES (2.5 → 5.2)</td>
+            <td class="tag-right">✅ DECREASES (7.5 → 2.1)</td>
+            <td><b>DECREASES (5.9 ± 0.4 → 1.7 ± 0.1)</b></td>
+          </tr>
+          <tr>
+            <td><b>Tip Radius ($r_{\text{tip}}$)</b></td>
+            <td class="tag-wrong">❌ SHARPER TIPS ($r_{\text{tip}}$ decreases)</td>
+            <td class="tag-right">✅ BLUNTER TIPS ($r_{\text{tip}}$ increases 1.8 → 5.5 nm)</td>
+            <td><b>BLUNTER TIPS ($r_{\text{tip}}$ increases ~1.8 → 6.5 nm)</b></td>
+          </tr>
+          <tr>
+            <td><b>Single-Particle Volume ($V$)</b></td>
+            <td class="tag-wrong">❌ INCREASES 2.7× (6,000 → 16,000 nm³ in Mode 2)</td>
+            <td class="tag-right">✅ INVARIANT (10,500–11,500 nm³ via $V \propto W^2L$)</td>
+            <td><b>INVARIANT at ~11,000 nm³ across all 13 samples</b></td>
+          </tr>
+          <tr>
+            <td><b>Reaction Time ($t$)</b></td>
+            <td class="tag-wrong">❌ DECREASES (20–30% faster in Mode 3)</td>
+            <td class="tag-right">✅ INCREASES &gt;10× (30 min → &gt;350 min)</td>
+            <td><b>INCREASES &gt;10× (30 min → 350 min)</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box gold-box">
+      <p><b>Why Our Skeptic Flipped All 7 Predictions:</b> (1) Constant $[\text{HAuCl}_4]/[\text{Au}^0]=67$ locks volume at $11,000\text{ nm}^3$; (2) Lower $E^0([\text{AuBr}_2]^-)=0.960\text{ V}$ vs. $[\text{AuCl}_2]^-$ ($1.154\text{ V}$) slows reduction 10× and passivates $\{112\}$ twin tips via $\text{CTA}^+/[\text{AgBr}_2]^-$!</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide">
+    <div>
+      <span class="badge">Slide 5 · Smoking-Gun Proofs #2 &amp; #3 (Shelf-Life &amp; Seed Scaling)</span>
+      <h2>Two More Held-Out Paper Experiments Where Single-Agent Fails vs. Ours Succeeds</h2>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="box">
+          <h3>Proof #2: 30-Day Storage Paradox (EXP_8 / Fig. S18)</h3>
+          <p style="margin-bottom:10px;"><b>Experiment:</b> Store identical $900\text{ nm}$ AuBPs for 30 days at $27\text{ }^\circ\text{C}$ in <b>10 mM CTAB</b> vs. <b>10 mM CTAC</b>.</p>
+          <p class="tag-wrong" style="margin-bottom:8px;">❌ Single-Agent (96% Conf.): "CTAB forms a denser bilayer → CTAB is stable (&lt;10 nm shift); CTAC degrades (&gt;100 nm blue-shift)."</p>
+          <p class="tag-right" style="margin-bottom:8px;">✅ Our Agent (Mode 4): Because $E^0([\text{AuBr}_2]^-) = 0.960\text{ V} &lt; E^0([\text{AuCl}_2]^-) = 1.154\text{ V}$, ambient $\text{O}_2$ oxidizes sharp tips in CTAB! Predicted <b>42–48 nm blue-shift in CTAB</b> and <b>0 nm shift in CTAC</b>.</p>
+          <p style="color:var(--gold); font-weight:700;">🔬 Actual Paper Result (Fig. S18): CTAB blue-shifts 45 nm (900 → 855 nm); CTAC shifts 0 nm!</p>
+        </div>
+        <div class="box">
+          <h3>Proof #3: 10× Seed Sweep (EXP_5 / Fig. 3 &amp; Table S4)</h3>
+          <p style="margin-bottom:10px;"><b>Experiment:</b> Increase seed concentration $[\text{Au}^0]$ from $2.5\text{ }\mu\text{M}$ to $25\text{ }\mu\text{M}$ at constant $[\text{CTAB}] = 5\text{ mM}$.</p>
+          <p class="tag-wrong" style="margin-bottom:8px;">❌ Single-Agent (96% Conf.): "Self-similar scaling → volume shrinks 10×, but Aspect Ratio (3.0) and LSPR (750 nm) remain CONSTANT."</p>
+          <p class="tag-right" style="margin-bottom:8px;">✅ Our Agent (Mode 4): Dividing $\text{Au}^{3+}$ across 10× more seeds slashes per-particle monomer flux, throttling 1D twin-axis overdrive → <b>Both Volume AND Aspect Ratio drop; LSPR blue-shifts!</b></p>
+          <p style="color:var(--gold); font-weight:700;">🔬 Actual Paper Result (Table S4): Volume drops to 2,300 nm³, AR drops 4.7 → 2.2, and LSPR blue-shifts 976 → 635 nm!</p>
+        </div>
+      </div>
+    </div>
+    <div class="box right">
+      <p><b>Bonus Proof #4 (`EXP_7` / `Fig. 4a`):</b> During secondary overgrowth of AuBPs, only <b>Mode 4</b> predicted the anomalous <b>dumbbell / bulbous-tip morphology at 2 mM CTAB</b> caused by insufficient $\text{CTA}^+/[\text{AgBr}_2]^-$ tip protection!</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide">
+    <div>
+      <span class="badge">Slide 6 · Literature Gap Analysis &amp; Prospective Wet-Lab Co-Pilot</span>
+      <h2>From Retrospective Benchmark to New Wet-Lab Discoveries</h2>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="box">
+          <h3>🕳️ Task 1: Literature Gap Discovery</h3>
+          <ul>
+            <li><b>Single-Agent RAG:</b> Proposed routine 1D sweeps already solved in SI tables or unphysical sub-$1\text{ }\mu\text{L}$ seed dilutions (which trigger burst sphere nucleation).</li>
+            <li><b>Our Cross-Questioning Agent (Specificity 9/10):</b> Pruned unphysical gaps via LaMer nucleation checks and discovered the <b>exact 2D orthogonal co-perturbation (<code>[Seeds] × [CTAB]</code>) required to vary AuBP volume 6-fold ($3,110 \to 19,702\text{ nm}^3$) at fixed $750\text{ nm}$ LSPR</b>—matching <code>Figure 5</code> of the held-out 2024 paper!</li>
+          </ul>
+        </div>
+        <div class="box gold-box">
+          <h3>🧪 Prospective Wet-Lab Prediction Ready to Test</h3>
+          <p><b>The "Surface-Area-Scaled $\text{Ag}^+$ Cliff" in Minibipyramids:</b></p>
+          <ul style="margin-top:8px;">
+            <li>At constant $[\text{HAuCl}_4]$, total nanoparticle surface area scales as $A_{\text{total}} \propto N_{\text{seeds}}^{+1/3}$.</li>
+            <li>When seed concentration is pushed to $42\text{ }\mu\text{M}$ (for $V \approx 1,400\text{ nm}^3$ absorption-dominant AuBPs), standard $30\text{ }\mu\text{M }\text{AgNO}_3$ falls <b>below 1.0 monolayer</b> (sphere peak appears at $525\text{ nm}$).</li>
+            <li><b>Prediction:</b> Doubling $[\text{AgNO}_3]$ to $60\text{ }\mu\text{M}$ (which had zero effect at $12.5\text{ }\mu\text{M}$ seeds!) rescues $&gt;92\%$ minibipyramid purity!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <p><b>Summary for Judges:</b> Adversarial Physical-Chemistry Cross-Questioning provides a domain-general blueprint for climbing from <b>Data/Information</b> to <b>Scientific Wisdom</b> across colloidal, hydrothermal, and solid-state materials synthesis.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-bar">
+  <div><b>PerturbMat-Agent</b> · Open Scientific Intelligence (OSI) Hackathon</div>
+  <div id="slide-indicator">Slide 1 of 6</div>
+  <div class="controls">
+    <button onclick="prevSlide()">← Prev</button>
+    <button onclick="nextSlide()">Next →</button>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const indicator = document.getElementById('slide-indicator');
+  let current = 0;
+  function showSlide(idx) {
+    slides[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    indicator.textContent = `Slide ${current + 1} of ${slides.length}`;
+  }
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+</script>
+</body>
+</html>

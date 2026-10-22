@@ -1,0 +1,138 @@
+{
+  "without_valency": {
+    "latency_seconds": 29.68,
+    "search_logs_count": 4,
+    "search_logs": [
+      "[LITERATURE | Triggered by KINETIC_VS_THERMODYNAMIC_DOMINANCE | Query: 'CTAC CTAB mixed surfactant gold bipyramids 8-hydroxyquinoline kinetics aspect ratio'] Advanced Photonic Hybrid Materials (2015) -> The public reporting burden for this collection of information is estimated to average 1 hour per response, including the time for reviewing instructions, searching existing data sources, gathering and maintaining the data needed, and completing and reviewing the collection of information.Send comments regarding this burden estimate or any other aspect of this collection of information, including suggestions for reducing the burden, to Department",
+      "[LITERATURE | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'mixed CTAC CTAB micelles critical micelle concentration counterion binding'] Hierarchically porous materials: synthesis strategies and structure design (2016) -> Owing to their immense potential in energy conversion and storage, catalysis, photocatalysis, adsorption, separation and life science applications, significant interest has been devoted to the design and synthesis of hierarchically porous materials. The hierarchy of materials on porosity, structural, morphological, and component levels is key for high performance in all kinds of applications. Synthesis and applications of hierarchically structure",
+      "[LITERATURE | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'mixed CTAC CTAB micelles critical micelle concentration counterion binding'] The Role of Ligands in the Chemical Synthesis and Applications of Inorganic Nanoparticles (2019) -> The design of nanoparticles is critical for their efficient use in many applications ranging from biomedicine to sensing and energy. While shape and size are responsible for the properties of the inorganic nanoparticle core, the choice of ligands is of utmost importance for the colloidal stability and function of the nanoparticles. Moreover, the selection of ligands employed in nanoparticle synthesis can determine their final size and shape. Liga",
+      "[LITERATURE | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'mixed CTAC CTAB micelles critical micelle concentration counterion binding'] Recent advances in nanoflowers: compositional and structural diversification for potential applications (2023) -> In recent years, nanoscience and nanotechnology have emerged as promising fields in materials science. Spectroscopic techniques like scanning tunneling microscopy and atomic force microscopy have revolutionized the characterization, manipulation, and size control of nanomaterials, enabling the creation of diverse materials such as fullerenes, graphene, nanotubes, nanofibers, nanorods, nanowires, nanoparticles, nanocones, and nanosheets. Among the"
+    ],
+    "primary_prediction_summary": "Contrary to naive single-agent RAG assumptions, increasing CTAB concentration in a CTAC/8-HQL pentatwinned growth system increases halide (Br-) coordination strength, lowers the reduction potential and slows down the reduction kinetics of Au(III)/Au(I) complexes, increases reaction completion time, suppresses longitudinal growth along the twin axis, decreases length, increases width, decreases aspect ratio, increases tip radius/bluntness, and blue-shifts the longitudinal LSPR while maintaining single-particle volume strictly constant due to invariant precursor-to-seed stoichiometry.",
+    "observables": [
+      {
+        "observable": "Bipyramid single-particle volume",
+        "predicted_direction": "no_significant_change",
+        "predicted_magnitude_or_range": "Volume remains strictly constant (within <2% variation)",
+        "mechanistic_justification": "Mass conservation strictly holds. Because total [HAu0] reduced per seed particle is defined by the fixed molar ratio of HAuCl4 to the constant seed count ($V \times N_{\text{seed}} = \text{constant}$), single-particle volume cannot change."
+      },
+      {
+        "observable": "Aspect ratio",
+        "predicted_direction": "decrease",
+        "predicted_magnitude_or_range": "Aspect ratio decreases from baseline (~3.0) down to ~2.1-2.4 at 50 mM CTAB",
+        "mechanistic_justification": "Stronger $\text{CTA}^+/\text{AgBr}_2^-$ passivation and slower reduction kinetics alter the relative growth rates, favoring lateral thickening over axial elongation when bromide concentration increases in this specific CTAC/8-HQL regime."
+      },
+      {
+        "observable": "Longitudinal LSPR peak wavelength",
+        "predicted_direction": "decrease",
+        "predicted_magnitude_or_range": "Blue-shifts by 60 to 150 nm",
+        "mechanistic_justification": "Because the aspect ratio decreases due to suppressed longitudinal growth and increased width, the dipolar plasmon resonance along the long axis shifts to shorter wavelengths (blue-shift)."
+      },
+      {
+        "observable": "Length",
+        "predicted_direction": "decrease",
+        "predicted_magnitude_or_range": "Length decreases by ~15-30%",
+        "mechanistic_justification": "Suppression of axial tip growth caused by altered bromide/chloride Stern-layer passivation kinetics restricts elongation along the pentatwinned axis."
+      },
+      {
+        "observable": "Width",
+        "predicted_direction": "increase",
+        "predicted_magnitude_or_range": "Width increases by ~10-25%",
+        "mechanistic_justification": "To satisfy mass conservation ($V \times \text{AR}^{-2} \times L \text{ const}$) while length and aspect ratio decrease, the equatorial width must increase."
+      },
+      {
+        "observable": "Tip sharpness / radius",
+        "predicted_direction": "increase",
+        "predicted_magnitude_or_range": "Tip radius of curvature increases (tips become blunter/more truncated)",
+        "mechanistic_justification": "Stronger bromide passivation and modified reduction kinetics passivate high-index tip facets less selectively, resulting in blunter, more rounded bipyramidal apexes."
+      },
+      {
+        "observable": "Reaction completion time",
+        "predicted_direction": "increase",
+        "predicted_magnitude_or_range": "Reaction completion time increases by ~30-60%",
+        "mechanistic_justification": "Au(I)-Br complexes exhibit lower redox potentials and slower reduction kinetics with mild 8-hydroxyquinoline than corresponding chloride complexes, slowing down complete precursor consumption."
+      }
+    ],
+    "causal_mechanism_chain": [
+      "[\u0394 CTAB concentration (1-50 mM added to 100 mM CTAC)]",
+      "-> [Alteration of mixed micelle Stern-layer Br-/Cl- counterion ratio and formation of stable CTA+-AuBr4-/AgBr2- complexes]",
+      "-> [Lowered effective redox potential and slower reduction kinetics of gold precursors by 8-HQL]",
+      "-> [Shifted relative facet growth rates favoring equatorial lateral thickening over axial tip elongation]",
+      "-> [Decreased length, increased width, decreased aspect ratio, blunter tips, blue-shifted longitudinal LSPR, and constant single-particle volume per mass conservation]"
+    ],
+    "conservation_check": "Mass balance is rigorously conserved. Total metallic volume $V$ per nanoparticle is locked by the initial precursor-to-seed stoichiometric ratio ($V \times W^2 L \text{ scaling}$). The geometric constraint dictates that when aspect ratio decreases, length must decrease and width must increase proportionally without secondary nucleation.",
+    "supporting_citations": [
+      "s11051-016-3486-y (2016, Main)",
+      "c4nr06323f (2015, Main)",
+      "d1nr01768c (2021, SI)"
+    ]
+  },
+  "with_valency": {
+    "latency_seconds": 27.2,
+    "search_logs_count": 8,
+    "search_logs": [
+      "[VALENCY_PUBMED | Triggered by KINETIC_VS_THERMODYNAMIC_DOMINANCE | Query: 'gold nanobipyramids CTAC CTAB mixed surfactant reduction kinetics 8-hydroxyquinoline'] Size-controlled synthesis of gold bipyramids using an aqueous mixture of CTAC and salicylate anions as the soft template. (2013) -> One-dimensional (1D) gold (Au) bipyramids are successfully synthesized through a facile seed-mediated method using cetyltrimethylammonium chloride (CTAC), Au seed nanoparticles, Ag(+) ions, and ascorbic acid. The length and optical properties of the synthesized Au bipyramids are controlled with precision by varying the amount of salicylate anions (Sal(-)) added during the synthesis. The micelles formed from CTA(+)-Sal(-) mixtures in aqueous solut",
+      "[VALENCY_PUBMED | Triggered by KINETIC_VS_THERMODYNAMIC_DOMINANCE | Query: 'gold nanobipyramids CTAC CTAB mixed surfactant reduction kinetics 8-hydroxyquinoline'] Tuning and tracking the growth of gold nanoparticles synthesized using binary surfactant mixtures. (2020) -> Synthesis of gold nanorods (Au NRs) using surfactant-mediated seeded growth involves the interplay of parameters such as pH, reducing agent, and surfactant among others. The use of binary surfactant mixtures of cetyltrimethylammonium bromide (CTAB) and oleic acid (OA) has been reported by our group previously to obtain other anisotropic shapes. However, there are no reports investigating the growth kinetics and mechanisms of such shapes. Here, we",
+      "[VALENCY_PUBMED | Triggered by KINETIC_VS_THERMODYNAMIC_DOMINANCE | Query: 'gold nanobipyramids CTAC CTAB mixed surfactant reduction kinetics 8-hydroxyquinoline'] Controlling the Optical Properties of Gold Nanorods in One-Pot Syntheses. (2022) -> We present the characterization of the CTAB-oleate controlled synthesis of gold nanorods (AuNRs). Concentrations of key compounds in the synthetic system were varied in the presence of oleate, including HCl, borohydride, silver nitrate, and ascorbic acid. The longitudinal surface plasmon resonance peak was sensitive to changes in all concentrations. Reducing the concentration of Ag ions below 66 \u03bcM led to slower reaction kinetics and incomplete A",
+      "[VALENCY_PUBMED | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'binary surfactant CTAC CTAB mixed micelles phase behavior gold nanorods bipyramids'] Using binary surfactant mixtures to simultaneously improve the dimensional tunability and monodispersity in the seeded growth of gold nanorods. (2013) -> We report a dramatically improved synthesis of colloidal gold nanorods (NRs) using a binary surfactant mixture composed of hexadecyltrimethylammonium bromide (CTAB) and sodium oleate (NaOL). Both thin (diameter <25 nm) and thicker (diameter >30 nm) gold NRs with exceptional monodispersity and broadly tunable longitudinal surface plasmon resonance can be synthesized using seeded growth at reduced CTAB concentrations (as low as 0.037 M). The CTAB-N",
+      "[VALENCY_PUBMED | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'binary surfactant CTAC CTAB mixed micelles phase behavior gold nanorods bipyramids'] Growth of gold nanorods and bipyramids using CTEAB surfactant. (2006) -> Gold nanorods and bipyramids have been synthesized using the seed-mediated approach in aqueous cetyltriethylammonium bromide (CTEAB) solutions in the presence of silver nitrate. Gold nanoparticle seeds that are stabilized with either CTEAB or sodium citrate have been used. The use of the CTEAB-stabilized seeds gives gold nanorods in high yield in one step with the longitudinal plasmon wavelength ranging from 750 to 1030 nm, depending on the amoun",
+      "[VALENCY_PUBMED | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'binary surfactant CTAC CTAB mixed micelles phase behavior gold nanorods bipyramids'] Tuning and tracking the growth of gold nanoparticles synthesized using binary surfactant mixtures. (2020) -> Synthesis of gold nanorods (Au NRs) using surfactant-mediated seeded growth involves the interplay of parameters such as pH, reducing agent, and surfactant among others. The use of binary surfactant mixtures of cetyltrimethylammonium bromide (CTAB) and oleic acid (OA) has been reported by our group previously to obtain other anisotropic shapes. However, there are no reports investigating the growth kinetics and mechanisms of such shapes. Here, we",
+      "[VALENCY CONTRADICTION AUDIT | Hypothesis: 'Increasing CTAB concentration alters mixed micelle structuring and bromide/counterion adso...'] Iodide ions control seed-mediated growth of anisotropic gold nanoparticles. -> There are now a variety of preparatory procedures for nanoscale gold rods, triangular prisms, and spheres. Many of these methods rely on seed-mediated approaches with cetyltrimethylammonium bromide (CTABr) as a surfactant. Interestingly, seemingly similar preparatory procedures yield very different morphologies, and although there have been a variety of proposals regarding the importance of different steps in shape control, there is no self-consi",
+      "[VALENCY CONTRADICTION AUDIT | Hypothesis: 'Increasing CTAB concentration alters mixed micelle structuring and bromide/counterion adso...'] Revisiting the Facet Control in the Growth of Au Nanobipyramids. -> Abnormalities of Au nanobipyramids (NBPs), such as rough surfaces, variable tip angles, corrugated edges, and curved tips, cannot be explained by traditional facet control. The underlying mechanism and significance of these abnormalities have not been fully recognized. This study revisits the growth process, focusing on the transition from normal to abnormal structures. We propose that both cetyltrimethylammonium bromide (CTAB) and Ag+ ions passi"
+    ],
+    "primary_prediction_summary": "Adding CTAB to a CTAC-dominated pentatwinned gold nanobipyramid synthesis retards the 8-HQL reduction kinetics due to stronger Au-Br complexation, decreases the longitudinal aspect ratio, increases width while shortening length at strictly conserved total single-particle volume ($V \times \text{seed count} = \text{total reduced } [Au^3+]$), blunts tip sharpness, prolongs reaction completion time, and blue-shifts the longitudinal LSPR peak.",
+    "observables": [
+      {
+        "observable": "Bipyramid single-particle volume",
+        "predicted_direction": "no_significant_change",
+        "predicted_magnitude_or_range": "Volume remains constant within <5% experimental variation",
+        "mechanistic_justification": "Mass conservation strictly dictates that the total volume of reduced gold deposited per seed is constrained entirely by the fixed initial molar ratio of $[Au^{3+}] / [Au^0_{\text{seed}}]$. Adding CTAB alters the deposition rate and morphology, but cannot create or destroy gold atoms."
+      },
+      {
+        "observable": "Length",
+        "predicted_direction": "decrease",
+        "predicted_magnitude_or_range": "Length decreases by ~15-30% across 1 to 50 mM CTAB",
+        "mechanistic_justification": "Stronger $\text{CTA}^+/[AgBr_2]^-$ passivation on high-index tip facets combined with slower reduction kinetics suppresses axial elongation along the pentatwinned axis."
+      },
+      {
+        "observable": "Width",
+        "predicted_direction": "increase",
+        "predicted_magnitude_or_range": "Equatorial width increases by ~10-25%",
+        "mechanistic_justification": "To satisfy mass conservation ($V \text{ \u221d } W^2 L = \text{const}$) when longitudinal length ($L$) decreases, the equatorial width ($W$) must increase to preserve the total single-particle volume."
+      },
+      {
+        "observable": "Aspect ratio",
+        "predicted_direction": "decrease",
+        "predicted_magnitude_or_range": "Aspect ratio drops from ~4.5 down to ~3.0 across the 1-50 mM range",
+        "mechanistic_justification": "The simultaneous reduction in longitudinal length and increase in equatorial width directly leads to a significant decrease in the aspect ratio ($L/W$)."
+      },
+      {
+        "observable": "Tip sharpness / radius",
+        "predicted_direction": "increase",
+        "predicted_magnitude_or_range": "Tip radius increases (tips become noticeably blunter/rounded)",
+        "mechanistic_justification": "Increased bromide counterion concentration and modified mixed micelle packing enhance passivation at high-index tip vertices, rounding the sharp extremities of the bipyramids."
+      },
+      {
+        "observable": "Reaction completion time",
+        "predicted_direction": "increase",
+        "predicted_magnitude_or_range": "Reaction time increases by 50% to 200%",
+        "mechanistic_justification": "Substitution of chloride by bromide forms more stable $\text{[AuBr}_4\text{]}^-/\text{[AuBr}_2\text{]}^-$ complexes that possess lower redox potentials and slower reduction kinetics with 8-hydroxyquinoline (8-HQL)."
+      },
+      {
+        "observable": "Longitudinal LSPR peak wavelength",
+        "predicted_direction": "decrease",
+        "predicted_magnitude_or_range": "Blue-shifts by ~50-120 nm",
+        "mechanistic_justification": "Because the aspect ratio decreases and the tips become blunter, the dipolar longitudinal surface plasmon resonance (LSPR) experiences a pronounced blue shift."
+      }
+    ],
+    "causal_mechanism_chain": [
+      "[\u0394CTAB concentration (1-50 mM)] -> [Formation of stronger Au-Br complexes and altered mixed CTAC/CTAB micellar packing] -> [Retarded 8-HQL reduction kinetics and enhanced high-index facet passivation] -> [Suppressed axial growth ($L \u2193$) and compensatory equatorial broadening ($W \u2193\u2191$) at strictly conserved $V$] -> [Lower aspect ratio, blunter tips, slower reaction completion, and blue-shifted LSPR]"
+    ],
+    "conservation_check": "Mass conservation $V \text{ \u221d } W^2 L = \text{const}$ is strictly maintained across all CTAB concentrations because the initial gold precursor concentration and seed count are identical. The reduction kinetics slow down noticeably due to the thermodynamic stability of Au-Br complexes, but the reaction still proceeds to completion within modified timescales.",
+    "supporting_citations": [
+      "c4nr06323f (2015)",
+      "d1nr01768c (2021)",
+      "ncomms8571 (2015)"
+    ]
+  }
+}

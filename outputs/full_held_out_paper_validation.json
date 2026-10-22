@@ -1,0 +1,1253 @@
+{
+  "paper_title": "Expanding Chemical Space in the Synthesis of Gold Bipyramids (S\u00e1nchez-Iglesias & Grzelczak, Small 2024, DOI: 10.1002/smll.202407735)",
+  "total_experimental_series": 8,
+  "total_samples_in_paper": 56,
+  "experimental_series_ground_truth": [
+    {
+      "series_id": "EXP_1",
+      "title": "Single-Surfactant Baseline Comparison: Pure CTAB (100 mM) vs. Pure CTAC (100 mM)",
+      "paper_reference": "Figure 1b & Figure S1",
+      "baseline_and_perturbation": "Using thermally treated pentatwinned Au seeds (6 nm, CTAC/citric acid aged at 80 \u00b0C for 90 min), compare growth at 35 \u00b0C with [HAuCl4]=0.25 mM, [AgNO3]=30 \u00b5M, [8-HQL]=3.7 mM, and [HAuCl4]/[Au0]=67 in (A) Pure CTAB (100 mM, no CTAC) vs. (B) Pure CTAC (100 mM, no CTAB).",
+      "ground_truth_summary": "Pure CTAB (100 mM) yields short, low-aspect-ratio rice-like bipyramids (LSPR ~575 nm) with high shape purity (minimal spheres), whereas Pure CTAC (100 mM) yields high-aspect-ratio elongated bipyramids (LSPR ~950 nm) alongside a large fraction of isotropic spherical byproducts (strong 525 nm peak).",
+      "ground_truth_metrics": {
+        "LSPR_wavelength": "Pure CTAB: ~575 nm (short rice-like) vs. Pure CTAC: bimodal 525 nm (spheres) + ~950 nm (elongated AuBPs)",
+        "Aspect_ratio": "Pure CTAB: low AR (~1.6-1.8, rice-like) vs. Pure CTAC: high AR (~4.5-5.5)",
+        "Shape_purity_yield": "Pure CTAB: high purity rice-like bipyramids; Pure CTAC: poor purity (heavy isotropic sphere contamination)"
+      }
+    },
+    {
+      "series_id": "EXP_2",
+      "title": "Binary Surfactant [CTAB] Sweep (1 to 50 mM) in 100 mM CTAC at [HAuCl4]/[Au0] = 67 (13 Samples)",
+      "paper_reference": "Figure 1a,c-i, Table S1, Figures S2, S3, S5",
+      "baseline_and_perturbation": "In 100 mM CTAC growth solution at 35 \u00b0C ([HAuCl4]=0.25 mM, [AgNO3]=30 \u00b5M, [8-HQL], [HAuCl4]/[Au0]=67, [Au0]=3.75 \u00b5M), systematically increase [CTAB] across 13 samples: 1, 2, 3, 4, 5, 8, 10, 14, 18, 25, 35, 40, 50 mM.",
+      "ground_truth_summary": "Increasing [CTAB] from 1 mM to 50 mM monotonically blueshifts LSPR from 1070 nm to 584 nm, decreases length L from 100\u00b13 nm to 49\u00b14 nm, increases width W from 17\u00b11 nm to 29\u00b11 nm, decreases aspect ratio AR from 5.9\u00b10.4 to 1.7\u00b10.1, increases tip radius from ~1.8 nm to ~6.5 nm, and slows reaction completion time from 30 min to 350 min, while single-particle volume remains invariant at ~11,000 nm\u00b3.",
+      "ground_truth_metrics": {
+        "LSPR_wavelength": "decrease (blueshifts 486 nm: 1070 nm at 1 mM -> 882 nm at 5 mM -> 806 nm at 10 mM -> 682 nm at 25 mM -> 584 nm at 50 mM)",
+        "Particle_length": "decrease (100\u00b13 nm at 1 mM -> 86\u00b12 nm at 5 mM -> 78\u00b11 nm at 10 mM -> 64\u00b12 nm at 25 mM -> 49\u00b14 nm at 50 mM)",
+        "Particle_width": "increase (17\u00b11 nm at 1 mM -> 21\u00b11 nm at 5 mM -> 23\u00b11 nm at 10 mM -> 26\u00b11 nm at 25 mM -> 29\u00b11 nm at 50 mM)",
+        "Aspect_ratio": "decrease (5.9\u00b10.4 -> 4.1\u00b10.2 -> 3.4\u00b10.1 -> 2.5\u00b10.1 -> 1.7\u00b10.1)",
+        "Single_particle_volume": "no_significant_change (invariant at ~11,000 nm\u00b3 across all 13 samples)",
+        "Reaction_completion_time": "increase (30 min at 1-3 mM -> 60 min at 10 mM -> 120 min at 25 mM -> 350 min at 50 mM)",
+        "Tip_radius": "increase (tips become progressively rounder/blunter from ~1.8 nm to ~6.5 nm, wedge angle drops linearly)"
+      }
+    },
+    {
+      "series_id": "EXP_3",
+      "title": "Counterion Decoupling: Inorganic [KBr] Sweep (1 to 50 mM) in 100 mM CTAC (Zero CTAB, 7 Samples)",
+      "paper_reference": "Table S2 & Figure S4 ( plus Figure S6 UV-Vis [AuCl4]- -> [AuBr4]- titration)",
+      "baseline_and_perturbation": "Replace CTAB completely with inorganic potassium bromide (KBr: 1, 2, 5, 10, 25, 35, 50 mM) in 100 mM CTAC at [HAuCl4]/[Au0] = 67 ([Au0]=3.75 \u00b5M, [AgNO3]=30 \u00b5M, 35 \u00b0C). Also evaluate the UV-Vis ligand exchange of 0.25 mM HAuCl4 in 100 mM CTAC upon adding 1-100 mM Br-.",
+      "ground_truth_summary": "Replacing CTAB with KBr (1 to 50 mM) reproduces virtually identical dimensions, optical shifts, and reaction times as CTAB: LSPR blueshifts from 1032 nm (1 mM KBr) to 583 nm (50 mM KBr), L drops from 103\u00b11 nm to 49\u00b13 nm, W increases from 19\u00b11 nm to 29\u00b12 nm, AR drops from 5.4\u00b10.3 to 1.7\u00b10.1, and completion time slows from 30 min to 350 min. UV-Vis titration shows CTA+/[AuCl4]- (315 nm) converts to CTA+/[AuBr4]- (390 nm) with a plateau at 18 mM Br-.",
+      "ground_truth_metrics": {
+        "LSPR_wavelength": "decrease (1032 nm at 1 mM KBr -> 907 nm at 5 mM -> 797 nm at 10 mM -> 688 nm at 25 mM -> 583 nm at 50 mM KBr)",
+        "Particle_length": "decrease (103\u00b11 nm -> 90\u00b12 nm -> 77\u00b12 nm -> 64\u00b11 nm -> 49\u00b13 nm)",
+        "Particle_width": "increase (19\u00b11 nm -> 23\u00b11 nm -> 24\u00b11 nm -> 27\u00b11 nm -> 29\u00b12 nm)",
+        "Aspect_ratio": "decrease (5.4\u00b10.3 -> 4.0\u00b10.2 -> 3.3\u00b10.1 -> 2.4\u00b10.1 -> 1.7\u00b10.1)",
+        "Single_particle_volume": "no_significant_change (invariant ~11,000 nm\u00b3, identical to CTAB series)",
+        "Reaction_completion_time": "increase (30 min at 1-2 mM -> 60 min at 10 mM -> 120 min at 25 mM -> 350 min at 50 mM)"
+      }
+    },
+    {
+      "series_id": "EXP_4",
+      "title": "Silver Nitrate [AgNO3] Concentration Sweep (0 to 100 \u00b5M) at Fixed [CTAC]=100 mM, [CTAB]=5 mM, [Au3+]/[Au0]=20 (8 Samples)",
+      "paper_reference": "Figure 2a-e, Table S3, Figure S7",
+      "baseline_and_perturbation": "In [CTAC]=100 mM and [CTAB]=5 mM with [Au0]=12.5 \u00b5M ([HAuCl4]/[Au0]=20) at 35 \u00b0C for 30 min, vary [AgNO3] across 8 samples: 0, 15, 17, 19, 23, 30, 40, and 100 \u00b5M.",
+      "ground_truth_summary": "Contrary to single-crystal Au nanorods where [Ag+] continuously increases aspect ratio, in pentatwinned AuBPs [AgNO3] acts as a threshold switch for yield with minimal effect on dimensions above 30 \u00b5M: At 0 \u00b5M AgNO3, 100% isotropic spheres form (LSPR 527 nm). From 15 to 30 \u00b5M AgNO3, bipyramid population rises from ~35% to 98% and LSPR redshifts from 625 nm to 737 nm. From 30 \u00b5M to 100 \u00b5M AgNO3 (once >=1 monolayer of Ag atoms, ~1290 Ag/100 nm\u00b2, covers the surface), purity stays ~98%, length stays constant within error (48\u00b12 to 49\u00b12 nm), width stays constant (16\u00b11 nm), AR stays constant (3.0\u00b10.1 to 3.1\u00b10.2), and LSPR shifts by only 16 nm (737 to 753 nm).",
+      "ground_truth_metrics": {
+        "Shape_purity_yield": "non_monotonic_threshold (0% AuBPs / 100% spheres at 0 \u00b5M -> rises steeply across 15-23 \u00b5M -> saturates at >=98% AuBP purity for 30-100 \u00b5M)",
+        "LSPR_wavelength": "non_monotonic_threshold (527 nm at 0 \u00b5M -> redshifts to 737 nm at 30 \u00b5M -> plateaus at 737-753 nm from 30 to 100 \u00b5M)",
+        "Aspect_ratio_and_dimensions_above_threshold": "no_significant_change (for 30-100 \u00b5M Ag+, L=48\u00b12 to 49\u00b12 nm, W=16\u00b11 nm, AR=3.0\u00b10.1 to 3.1\u00b10.2)"
+      }
+    },
+    {
+      "series_id": "EXP_5",
+      "title": "Seed Concentration [Au0] Sweep (2.5 to 25 \u00b5M; [HAuCl4]/[Au0] from 100 down to 10) at Constant [CTAB]=5 mM (8 Samples)",
+      "paper_reference": "Figure 3a-d, Table S4, Figure S8",
+      "baseline_and_perturbation": "At constant [CTAC]=100 mM, [CTAB]=5 mM, [HAuCl4]=0.25 mM, [AgNO3]=30 \u00b5M, and t=30 min at 35 \u00b0C, increase thermally aged seed concentration [Au0] across 8 samples: 2.5, 3.8, 5.0, 6.3, 8.3, 12.5, 18.8, and 25.0 \u00b5M (corresponding to [HAuCl4]/[Au0] molar ratios of 100, 67, 50, 40, 30, 20, 13, and 10).",
+      "ground_truth_summary": "Increasing seed concentration from 2.5 to 25.0 \u00b5M progressively reduces single-particle volume from ~14,000 nm\u00b3 down to ~2,300 nm\u00b3 (ultra-small minibipyramids at 25 \u00b5M with 90% yield), while simultaneously decreasing length L from 105\u00b13 nm to 32\u00b12 nm, decreasing width W from 22\u00b11 nm to 14\u00b11 nm, decreasing aspect ratio AR from 4.7\u00b10.2 to 2.2\u00b10.1, and blueshifting LSPR from 976 nm to 635 nm.",
+      "ground_truth_metrics": {
+        "Single_particle_volume": "decrease (drops ~6-fold from ~14,000 nm\u00b3 at 2.5 \u00b5M seeds down to ~2,300 nm\u00b3 at 25 \u00b5M seeds)",
+        "Particle_length": "decrease (105\u00b13 nm at 2.5 \u00b5M -> 73\u00b13 nm at 5.0 \u00b5M -> 46\u00b12 nm at 12.5 \u00b5M -> 32\u00b12 nm at 25.0 \u00b5M)",
+        "Particle_width": "decrease (22\u00b11 nm at 2.5 \u00b5M -> 20\u00b11 nm at 5.0 \u00b5M -> 16\u00b11 nm at 12.5 \u00b5M -> 14\u00b11 nm at 25.0 \u00b5M)",
+        "Aspect_ratio": "decrease (4.7\u00b10.2 -> 3.6\u00b10.2 -> 3.0\u00b10.2 -> 2.2\u00b10.1)",
+        "LSPR_wavelength": "decrease (blueshifts from 976 nm -> 842 nm -> 729 nm -> 635 nm)"
+      }
+    },
+    {
+      "series_id": "EXP_6",
+      "title": "2D Co-Perturbation of [CTAB] x [Seeds] for Iso-LSPR (750 nm & 800 nm) Volume Tuning (3,110 to 19,702 nm\u00b3) & Optical Sensitivity (RIS/FOM)",
+      "paper_reference": "Figure 3e, Figure 5a-d, Tables S5-S6, Figures S9-S10, S13-S17",
+      "baseline_and_perturbation": "Part A: Sweep [CTAB] from 1 to 25 mM at lower [HAuCl4]/[Au0] ratios of 50 ([Au0]=5.0 \u00b5M, Table S5) and 30 ([Au0]=8.25 \u00b5M, Table S6). Part B: Simultaneously co-vary seed concentration [Au0] and [CTAB] to hold longitudinal LSPR strictly constant at ~750 nm (or ~800 nm) while varying particle volume 6-fold from 3,110 nm\u00b3 to 19,702 nm\u00b3, and measure Refractive Index Sensitivity (RIS) and Figure of Merit (FOM) in water-glycerol mixtures.",
+      "ground_truth_summary": "At [HAuCl4]/[Au0]=50 (Table S5), increasing [CTAB] 1->25 mM blueshifts LSPR from 1030 to 679 nm (L: 100->58 nm, W: 19->23 nm, AR: 5.2->2.5). At [HAuCl4]/[Au0]=30 (Table S6), increasing [CTAB] 1->25 mM blueshifts LSPR from 905 to 631 nm (L: 76->48 nm, W: 17->20 nm, AR: 4.4->2.4). By pairing higher seed concentration (smaller V, lower AR) with lower [CTAB] (higher AR at fixed V), 6 samples with identical LSPR (~750 nm, AR ~3.6) are synthesized spanning a 6-fold volume range (3,110 to 19,702 nm\u00b3; L from 35 to 80 nm, W from 15 to 27 nm). At constant LSPR (~800 nm, AR=3.6), increasing volume from 3,181 to 11,160 nm\u00b3 increases RIS from 381 to 408 nm/RIU, narrows FWHM from 73.7 to 64.5 nm, and increases FOM from 5.2 to 6.3.",
+      "ground_truth_metrics": {
+        "LSPR_vs_CTAB_at_ratios_30_and_50": "decrease (1030->679 nm at ratio 50; 905->631 nm at ratio 30)",
+        "Iso_LSPR_volume_tuning": "increase (6-fold volume expansion from 3,110 to 19,702 nm\u00b3 achieved at constant LSPR=750 nm by decreasing [Au0] while increasing [CTAB])",
+        "Refractive_Index_Sensitivity_and_FOM_vs_Volume": "increase (as V increases from 3,181 to 11,160 nm\u00b3 at AR=3.6, RIS increases 381->408 nm/RIU, FWHM drops 73.7->64.5 nm, FOM increases 5.2->6.3)"
+      }
+    },
+    {
+      "series_id": "EXP_7",
+      "title": "Secondary Overgrowth of Pre-Synthesized AuBPs (66 x 19 nm) as a Function of [CTAB] (2 to 50 mM) at [HAuCl4]/[Au0] = 5 (8 Samples)",
+      "paper_reference": "Figure 4a-d, Table S7, Figures S11-S12",
+      "baseline_and_perturbation": "Use pre-synthesized AuBPs (L=66 nm, W=19 nm, AR=3.5, LSPR=795 nm) as seeds ([Au0]=5.0 \u00b5M, [HAuCl4]/[Au0]=5) in [CTAC]=100 mM, [AgNO3]=30 \u00b5M, and 8-HQL at 35 \u00b0C. Vary [CTAB] across 8 overgrowth samples: 2, 5, 8, 10, 18, 25, 38, and 50 mM.",
+      "ground_truth_summary": "Overgrowth conserves the bipyramidal morphology while scaling particles to larger dimensions. Increasing [CTAB] from 2 mM to 50 mM slows overgrowth time from 30 min to 350 min, decreases final overgrown length from 173\u00b14 nm to 76\u00b11 nm, increases final width from 27\u00b12 nm to 36\u00b11 nm, decreases aspect ratio from 6.4\u00b10.5 to 2.2\u00b10.1, and blueshifts LSPR from 1274 nm (at 2 mM) to 662 nm (at 50 mM). Crucially, at the lowest CTAB concentration (2 mM, CTAC:CTAB = 50:1), minimal CTA+/[AgBr2]- tip protection leads to rapid gold deposition on the tips, forming dumbbell-like / spherical-tipped bipyramids.",
+      "ground_truth_metrics": {
+        "LSPR_wavelength": "decrease (blueshifts from 1274 nm at 2 mM CTAB -> 940 nm at 10 mM -> 798 nm at 25 mM -> 662 nm at 50 mM CTAB)",
+        "Particle_length": "decrease (173\u00b14 nm at 2 mM -> 154\u00b12 nm at 5 mM -> 130\u00b11 nm at 10 mM -> 108\u00b11 nm at 25 mM -> 76\u00b11 nm at 50 mM)",
+        "Particle_width": "increase (27\u00b12 nm at 2 mM -> 30\u00b11 nm at 5 mM -> 32\u00b11 nm at 10 mM -> 34\u00b11 nm at 25 mM -> 36\u00b11 nm at 50 mM)",
+        "Aspect_ratio": "decrease (6.4\u00b10.5 -> 5.1\u00b10.2 -> 3.9\u00b10.1 -> 3.2\u00b10.1 -> 2.2\u00b10.1)",
+        "Low_CTAB_2mM_tip_morphology": "increase (at 2 mM CTAB, selective tip overgrowth produces spherical/dumbbell-like tips)"
+      }
+    },
+    {
+      "series_id": "EXP_8",
+      "title": "30-Day Long-Term Storage & Reshaping Stability of AuBPs (Initial LSPR = 900 nm) in 10 mM CTAB vs. 10 mM CTAC at 27 \u00b0C",
+      "paper_reference": "Main Text Section 2 (Page 6) & Figure S18a-e",
+      "baseline_and_perturbation": "Take identical as-prepared AuBPs (initial LSPR = 900 nm, L \u2248 76 nm, W \u2248 20 nm, AR = 3.8\u00b10.1, tip radius = 3.0\u00b10.4 nm), centrifuge and redisperse into either (A) pure 10 mM CTAB or (B) pure 10 mM CTAC, and store at 27 \u00b0C for 30 days.",
+      "ground_truth_summary": "After 30 days at 27 \u00b0C, AuBPs stored in 10 mM CTAB exhibit a pronounced 45 nm LSPR blueshift (from 900 nm down to 855 nm) due to tip rounding/blunting (tip radius increases from 3.0\u00b10.4 nm to 3.7\u00b10.4 nm while overall aspect ratio remains ~3.8\u00b10.1), driven by the lower redox potential of AuBr2- (0.960 V) vs AuCl2- (1.154 V) facilitating surface atom migration/oxidation at sharp tips. In contrast, AuBPs stored in 10 mM CTAC show zero LSPR shift (remains at 900 nm for 30 days) and preserve sharp tips (r_tip = 3.0\u00b10.4 nm).",
+      "ground_truth_metrics": {
+        "LSPR_shift_in_CTAB_30_days": "decrease (blueshifts by 45 nm from 900 nm to 855 nm over 30 days)",
+        "LSPR_shift_in_CTAC_30_days": "no_significant_change (remains constant at 900 nm over 30 days)",
+        "Tip_radius_in_CTAB_vs_CTAC": "increase (tip radius increases by 0.7 nm in CTAB from 3.0\u00b10.4 nm to 3.7\u00b10.4 nm; unchanged in CTAC)"
+      }
+    }
+  ],
+  "mode_1_single_agent_rag": {
+    "architecture_name": "Standard Single-Agent RAG",
+    "series_predictions": [
+      {
+        "series_id": "EXP_1",
+        "predicted_summary": "Pure CTAB yields elongated Au bipyramids with longitudinal LSPR in the near-infrared, whereas pure CTAC yields predominantly isotropic/quasi-spherical particles with LSPR in the visible region due to lack of facet-stabilizing bromide ions.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "CTAB: 750 - 820 nm; CTAC: 530 - 560 nm",
+            "mechanistic_justification": "Bromide ions from CTAB selectively bind to Au facets to direct anisotropic growth along the longitudinal axis. In pure CTAC, the weaker binding chloride fails to break symmetry, leading to isotropic growth."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "CTAB: 3.2 - 3.8; CTAC: 1.0 - 1.3",
+            "mechanistic_justification": "CTAB provides the halide-assisted underpotential deposition environment required to maintain pentatwinned anisotropic tip-directed growth, while pure CTAC drives uniform radial growth."
+          },
+          {
+            "observable": "Shape_purity_yield",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "CTAB: 70 - 85%; CTAC: < 15%",
+            "mechanistic_justification": "Without bromide counterions, twinned seed elongation is suppressed, resulting in irregular spherical byproduct dominance."
+          }
+        ],
+        "confidence": 0.85
+      },
+      {
+        "series_id": "EXP_2",
+        "predicted_summary": "Increasing [CTAB] from 1 to 50 mM in 100 mM CTAC slows reduction kinetics and shifts growth from tip-preferential to lateral, systematically decreasing aspect ratio, blue-shifting the longitudinal LSPR, and increasing tip radius.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "1050 nm down to 680 nm",
+            "mechanistic_justification": "Progressive displacement of Cl- by Br- modulates the facet capping ratio and slows Au reduction, promoting lateral deposition and lowering aspect ratio."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "100 nm down to 55 nm",
+            "mechanistic_justification": "High [Br-] retards tip growth kinetics via stronger surface passivation and slower reduction of AuBr4- compared to AuCl4-."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "18 nm up to 26 nm",
+            "mechanistic_justification": "Slower longitudinal growth redirects adatom flux toward lateral equatorial facets."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "5.0 down to 2.2",
+            "mechanistic_justification": "Simultaneous length contraction and width expansion monotonically reduce the aspect ratio."
+          },
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "6,500 - 8,500 nm\u00b3",
+            "mechanistic_justification": "Total precursor [HAuCl4] and seed concentration are constant; all available Au(III) is fully reduced into the fixed number of seeds."
+          },
+          {
+            "observable": "Reaction_completion_time",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "5 min up to > 120 min",
+            "mechanistic_justification": "Formation of AuBr4- complexes with lower reduction potentials and denser surfactant packing substantially slows the reduction rate by 8-HQL."
+          },
+          {
+            "observable": "Tip_radius",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "2.0 nm up to 6.5 nm",
+            "mechanistic_justification": "Higher bromide concentrations passivate sharp tips and promote rounded, blunter apexes."
+          }
+        ],
+        "confidence": 0.88
+      },
+      {
+        "series_id": "EXP_3",
+        "predicted_summary": "Adding inorganic KBr to 100 mM CTAC quantitatively replicates the CTAB sweep: UV-Vis shows rapid Cl- to Br- ligand exchange on Au(III), and resulting AuBPs show identical aspect ratio reduction and reaction deceleration.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "1020 nm down to 690 nm",
+            "mechanistic_justification": "The bromide counterion alone, rather than the CTA+ cation concentration, governs facet binding and the Au(III) coordination sphere."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "4.8 down to 2.3",
+            "mechanistic_justification": "Free Br- from KBr coordinates to Au(III) and the micellar Stern layer, driving lateral growth exactly like CTAB."
+          },
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "6,500 - 8,500 nm\u00b3",
+            "mechanistic_justification": "Constant seed and metal precursor concentrations maintain constant average mass per particle."
+          },
+          {
+            "observable": "Reaction_completion_time",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "6 min up to > 120 min",
+            "mechanistic_justification": "Coordination of Br- shifts the Au(III)/Au(0) redox potential negatively, decelerating reduction kinetics identically to CTAB."
+          }
+        ],
+        "confidence": 0.86
+      },
+      {
+        "series_id": "EXP_4",
+        "predicted_summary": "Silver nitrate exhibits a sharp threshold behavior: below ~17-19 \u00b5M AgNO3, bipyramid yield is negligible; above this threshold, shape purity jumps to >85% and dimensions stabilize.",
+        "observables": [
+          {
+            "observable": "Shape_purity_yield",
+            "predicted_direction": "non_monotonic_threshold",
+            "predicted_quantitative_range": "< 10% at 0-15 \u00b5M; jumps to 85 - 95% at >= 19 \u00b5M",
+            "mechanistic_justification": "A critical concentration of Ag+ is necessary to trigger underpotential deposition (UPD) on high-index side facets, stabilizing pentatwinned bipyramidal growth."
+          },
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "530 nm (at 0 \u00b5M) jumping to 740 - 780 nm (at >= 19 \u00b5M)",
+            "mechanistic_justification": "Transition from isotropic spheres/aggregates to high aspect ratio bipyramids shifts the dipolar plasmon band into the NIR."
+          },
+          {
+            "observable": "Aspect_ratio_and_dimensions_above_threshold",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "Aspect ratio 2.8 - 3.2 across 23 - 100 \u00b5M",
+            "mechanistic_justification": "Once UPD monolayer coverage is achieved to direct anisotropic growth, excess Ag+ provides minimal additional morphological alteration."
+          }
+        ],
+        "confidence": 0.85
+      },
+      {
+        "series_id": "EXP_5",
+        "predicted_summary": "Increasing seed concentration at fixed [HAuCl4] distributes the same gold precursor over a larger particle population, systematically reducing particle volume and dimensions while aspect ratio and LSPR exhibit mild blue-shifts.",
+        "observables": [
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "20,000 nm\u00b3 down to 2,500 nm\u00b3 (inversely proportional to [Au0])",
+            "mechanistic_justification": "The fixed quantity of Au3+ precursor is divided among an increasing number of seed nuclei."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "115 nm down to 45 nm",
+            "mechanistic_justification": "Reduced gold atom availability per seed restricts overall linear expansion."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "35 nm down to 15 nm",
+            "mechanistic_justification": "Equatorial facet growth scales down proportionally with the lower available Au mass."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "3.3 down to 2.8",
+            "mechanistic_justification": "Growth kinetics slightly favor radial completion as particle size decreases toward the seed regime."
+          },
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "820 nm down to 710 nm",
+            "mechanistic_justification": "Combined decrease in aspect ratio and increased electrodynamic depolarization in smaller particles shift the resonance blue."
+          }
+        ],
+        "confidence": 0.87
+      },
+      {
+        "series_id": "EXP_6",
+        "predicted_summary": "Co-varying seed concentration and [CTAB] enables independent volume scaling at fixed LSPR; larger volume AuBPs exhibit higher Refractive Index Sensitivity (RIS) and Figure of Merit (FOM).",
+        "observables": [
+          {
+            "observable": "LSPR_vs_CTAB_at_ratios_30_and_50",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "Blueshifts by ~150 - 250 nm across 1 to 25 mM CTAB",
+            "mechanistic_justification": "Higher CTAB concentrations suppress aspect ratio consistently across lower precursor-to-seed ratios."
+          },
+          {
+            "observable": "Iso_LSPR_volume_tuning",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "LSPR held at 750 \u00b1 15 nm or 800 \u00b1 15 nm while volume spans 3,110 to 19,702 nm\u00b3",
+            "mechanistic_justification": "Compensating [Au0] increases with reduced [CTAB] preserves aspect ratio while varying particle mass."
+          },
+          {
+            "observable": "Refractive_Index_Sensitivity_and_FOM_vs_Volume",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "RIS: 220 up to 550 nm/RIU; FOM increases from 1.5 to 3.8",
+            "mechanistic_justification": "Higher single-particle volume enhances polarizability and plasmonic scattering cross-section, increasing sensitivity to local dielectric changes."
+          }
+        ],
+        "confidence": 0.82
+      },
+      {
+        "series_id": "EXP_7",
+        "predicted_summary": "Secondary overgrowth of pre-formed AuBPs at [HAuCl4]/[Au0]=5 depends strongly on [CTAB]: low [CTAB] drives apex deposition with red-shifted LSPR, while high [CTAB] drives lateral overgrowth, causing a net blue-shift.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "860 nm (at 2 mM CTAB) down to 730 nm (at 50 mM CTAB)",
+            "mechanistic_justification": "Low [Br-] directs Au deposition exclusively to high-energy tips (aspect ratio increases), whereas high [Br-] promotes side-wall deposition (aspect ratio decreases)."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "82 nm (at 2 mM) down to 68 nm (at 50 mM)",
+            "mechanistic_justification": "Tip-directed elongation is favored at low [Br-] where tip passivation is minimal."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "20 nm (at 2 mM) up to 26 nm (at 50 mM)",
+            "mechanistic_justification": "Increased [Br-] redirects adatoms to lateral facets, thickening the waist."
+          },
+          {
+            "observable": "Low_CTAB_2mM_tip_morphology",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "Sharpened/elongated tips with aspect ratio increasing to ~4.1",
+            "mechanistic_justification": "Preferential growth at the five-fold twinned apices at low bromide concentration accentuates tip sharpness."
+          }
+        ],
+        "confidence": 0.8
+      },
+      {
+        "series_id": "EXP_8",
+        "predicted_summary": "AuBPs stored in 10 mM CTAB undergo significant oxidative tip blunting and LSPR blue-shift over 30 days, whereas AuBPs in 10 mM CTAC retain their sharp tips and optical spectral profile.",
+        "observables": [
+          {
+            "observable": "LSPR_shift_in_CTAB_30_days",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "Blue-shift of 40 - 80 nm (from 900 nm down to 820 - 860 nm)",
+            "mechanistic_justification": "Dissolved oxygen in the presence of strong Au(I)-complexing Br- ligands drives spontaneous oxidative etching of the high-energy tips."
+          },
+          {
+            "observable": "LSPR_shift_in_CTAC_30_days",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "Shift < 10 nm (stable at 890 - 905 nm)",
+            "mechanistic_justification": "Cl- has a much lower complexation affinity for Au(I) than Br-, preventing dissolved-oxygen-mediated oxidative dissolution of tips."
+          },
+          {
+            "observable": "Tip_radius_in_CTAB_vs_CTAC",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "CTAB: increases from 3.0 nm to 6.0 - 8.0 nm; CTAC: remains 3.0 - 3.5 nm",
+            "mechanistic_justification": "High surface curvature at the tips makes them primary targets for oxidative truncation in CTAB, rounding the apex."
+          }
+        ],
+        "confidence": 0.86
+      }
+    ]
+  },
+  "mode_2_single_agent_hybrid_kb": {
+    "architecture_name": "Single-Agent-CMO-Predictor",
+    "series_predictions": [
+      {
+        "series_id": "EXP_1",
+        "predicted_summary": "Pure CTAB supports high-yield anisotropic growth into sharp Au nanobipyramids, whereas pure CTAC completely suppresses high-yield bipyramidal elongation, yielding primarily isotropic/spherical nanoparticles and low-aspect-ratio byproducts.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "CTAC: ~530 - 550 nm (isotropic); CTAB: ~780 - 850 nm",
+            "mechanistic_justification": "Bromide counterions in CTAB strongly adsorb onto Au facets and stabilize Ag(I) underpotential deposition (UPD) layers, driving tip elongation. Pure CTAC lacks bromide, preventing tip-directed anisotropic growth and keeping plasmon resonance in the visible transverse range."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "CTAC: 1.0 - 1.3; CTAB: 3.2 - 4.2",
+            "mechanistic_justification": "In the absence of Br-, the chloride bilayer allows isotropic Au(0) deposition across all facets. CTAB enables strong side-facet passivation and preferential axial addition at penta-twinned apices."
+          },
+          {
+            "observable": "Shape_purity_yield",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "CTAC: < 15% bipyramids; CTAB: > 80% bipyramids",
+            "mechanistic_justification": "Pentatwinned seed templates undergo isotropic overgrowth or disintegration into irregular particles under pure CTAC/8-HQL conditions, whereas CTAB preserves and amplifies the pentatwinned symmetry."
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "series_id": "EXP_2",
+        "predicted_summary": "Systematically increasing [CTAB] from 1 to 50 mM in 100 mM CTAC linearly/monotonically increases aspect ratio, particle length, and longitudinal LSPR while dramatically increasing reaction completion time.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "670 nm (at 1 mM CTAB) to ~1060 nm (at 50 mM CTAB)",
+            "mechanistic_justification": "Increasing [CTAB] raises the Br-/Cl- surface exchange ratio, enhancing side-facet passivation and promoting extreme axial elongation."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "50 - 55 nm up to 110 - 125 nm",
+            "mechanistic_justification": "Higher Br- surface coverage suppresses lateral growth on {110}/{100} side facets, directing reduced Au atoms strictly toward the penta-twinned {111} apex tips."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "18 - 22 nm across all samples",
+            "mechanistic_justification": "Equatorial growth is pinned by Ag-Br adlayer underpotential deposition across all bromide-containing conditions above 1 mM."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "2.5 \u00b1 0.2 up to 5.2 \u00b1 0.3",
+            "mechanistic_justification": "Length increases more than 2-fold while width remains constrained near 20 nm, resulting in a continuous increase in aspect ratio."
+          },
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "~6,000 nm\u00b3 to ~16,000 nm\u00b3",
+            "mechanistic_justification": "Geometrical volume of a dual pentagonal pyramid scales linearly with particle length at constant waist width."
+          },
+          {
+            "observable": "Reaction_completion_time",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "15 min (at 1 mM) to > 180 min (at 50 mM)",
+            "mechanistic_justification": "Bromide binds more strongly to Au(I) than chloride, lowering the Au(I)/Au(0) reduction potential and significantly decelerating 8-HQL reduction kinetics."
+          },
+          {
+            "observable": "Tip_radius",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "4.5 nm down to 2.0 - 2.5 nm",
+            "mechanistic_justification": "Slower growth kinetics at elevated Br- levels allow thermodynamic minimization of tip surface energy, sharpening the apical tip geometry."
+          }
+        ],
+        "confidence": 0.94
+      },
+      {
+        "series_id": "EXP_3",
+        "predicted_summary": "Inorganic KBr sweep in 100 mM CTAC exactly mimics the CTAB sweep: Br- counterion addition alone drives AuCl4- to AuBr4- ligand exchange, red-shifts LSPR, increases aspect ratio, and slows reaction kinetics identically.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "670 nm (1 mM KBr) to ~1050 nm (50 mM KBr)",
+            "mechanistic_justification": "Anionic halide exchange on the micelle headgroup and the Au surface is purely governed by [Br-]/[Cl-] thermodynamics, decoupling the mechanism from the CTA+ surfactant chain concentration."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "52 nm to ~120 nm",
+            "mechanistic_justification": "Bromide from KBr coordinates with Ag+ and Au+ to stabilize equatorial facets identically to bromide introduced via CTAB."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "18 - 21 nm",
+            "mechanistic_justification": "Waist diameter is governed by the critical seed nucleus size and Ag-UPD passivation threshold, remaining fixed despite increasing KBr."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "2.6 to 5.1",
+            "mechanistic_justification": "Axial elongation dominates as Br- concentration increases at invariant particle waist width."
+          },
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "~6,500 nm\u00b3 to ~15,500 nm\u00b3",
+            "mechanistic_justification": "Length elongation at constant waist width directly drives the increase in unit volume per bipyramid."
+          },
+          {
+            "observable": "Reaction_completion_time",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "15 min to > 180 min",
+            "mechanistic_justification": "Ligand exchange of [AuCl4]- to [AuBr4]- (confirmed spectrophotometrically by the shift in the LMCT absorption band from 395 nm to 400 nm) lowers precursor reduction potential."
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "series_id": "EXP_4",
+        "predicted_summary": "AgNO3 concentration exhibits a sharp threshold transition: below ~17-19 \u00b5M Ag+, bipyramid formation fails (spheres/rods dominate); above 19 \u00b5M, bipyramid shape yield exceeds 85-90% with stable LSPR.",
+        "observables": [
+          {
+            "observable": "Shape_purity_yield",
+            "predicted_direction": "non_monotonic_threshold",
+            "predicted_quantitative_range": "0 - 15 \u00b5M: < 30% yield; 19 - 100 \u00b5M: 85 - 95% yield",
+            "mechanistic_justification": "A critical underpotential deposition (UPD) coverage of Ag(0)/Ag(I) on the lateral facets is required to arrest radial growth and direct pentatwinned seed growth exclusively along the 5-fold axis."
+          },
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "0 \u00b5M: 530 - 560 nm (broad); 19 - 100 \u00b5M: 740 - 770 nm",
+            "mechanistic_justification": "Without Ag+, lack of facet-specific growth arrest produces isotropic or poorly defined particles. Once the Ag threshold is reached, stable anisotropic bipyramid geometry is established."
+          },
+          {
+            "observable": "Aspect_ratio_and_dimensions_above_threshold",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "AR = 3.0 \u00b1 0.2; Length = 55 - 62 nm; Width = 18 - 20 nm for 23 - 100 \u00b5M",
+            "mechanistic_justification": "Once monolayer/sub-monolayer Ag-UPD coverage is fully saturated on the side facets, additional AgNO3 in solution produces no further aspect ratio expansion."
+          }
+        ],
+        "confidence": 0.93
+      },
+      {
+        "series_id": "EXP_5",
+        "predicted_summary": "Increasing seed concentration [Au0] (decreasing [HAuCl4]/[Au0] from 100 to 10) systematically downscales particle volume and linear dimensions by 10-fold while preserving an invariant aspect ratio and LSPR.",
+        "observables": [
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "~24,000 nm\u00b3 down to ~2,400 nm\u00b3",
+            "mechanistic_justification": "Total precursor gold is distributed over an increasingly large number of growing seeds, scaling particle mass/volume inversely with [Au0]."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "115 \u00b1 8 nm down to 45 \u00b1 3 nm",
+            "mechanistic_justification": "Cube-root volume scaling dictates a proportional reduction in length as total monomer per seed drops."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "38 \u00b1 3 nm down to 14 \u00b1 2 nm",
+            "mechanistic_justification": "Waist width contracts proportionally with particle length to maintain self-similar geometric scaling."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "3.0 \u00b1 0.2 across all 8 samples",
+            "mechanistic_justification": "Aspect ratio is governed strictly by the chemical growth environment (fixed [CTAB]=5 mM, [CTAC]=100 mM, [AgNO3]=30 \u00b5M), which enforces self-similar geometric expansion regardless of seed count."
+          },
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "750 \u00b1 15 nm across all 8 samples",
+            "mechanistic_justification": "In the quasi-static plasmonic regime, longitudinal LSPR is almost exclusively determined by aspect ratio and tip sharpness, both of which remain constant."
+          }
+        ],
+        "confidence": 0.96
+      },
+      {
+        "series_id": "EXP_6",
+        "predicted_summary": "Co-varying [CTAB] and seed concentration enables decoupled control over AuBP volume (3,110 to 19,702 nm\u00b3) at strictly fixed LSPR (~750 nm and ~800 nm), with refractive index sensitivity (RIS) and FOM increasing significantly with volume.",
+        "observables": [
+          {
+            "observable": "LSPR_vs_CTAB_at_ratios_30_and_50",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "670 nm (1 mM CTAB) to ~950 nm (25 mM CTAB)",
+            "mechanistic_justification": "Even at lower precursor-to-seed ratios, bromide counterions modulate the relative tip-to-waist growth rate, allowing fine-tuning of the aspect ratio."
+          },
+          {
+            "observable": "Iso_LSPR_volume_tuning",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "Pinned at 750 \u00b1 10 nm (or 800 \u00b1 10 nm) across 3,110 to 19,702 nm\u00b3",
+            "mechanistic_justification": "Adjusting [CTAB] slightly to maintain constant tip curvature and aspect ratio while modulating [Au0] allows the particle volume to be tuned by a factor of 6 at invariant resonance."
+          },
+          {
+            "observable": "Refractive_Index_Sensitivity_and_FOM_vs_Volume",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "RIS: ~160 nm/RIU (3,110 nm\u00b3) to ~390 nm/RIU (19,702 nm\u00b3); FOM increases from ~1.8 to ~3.8",
+            "mechanistic_justification": "Larger nanoparticles exhibit greater optical polarizability and spatial extension of the localized plasmonic near-field into the surrounding dielectric medium, significantly enhancing refractive index sensitivity."
+          }
+        ],
+        "confidence": 0.94
+      },
+      {
+        "series_id": "EXP_7",
+        "predicted_summary": "Secondary overgrowth of pre-formed AuBPs at low [CTAB] (2 mM) leads to waist thickening and tip blunting/dogbone formation, whereas high [CTAB] (\u226510 mM) preserves sharp tip morphology and extends the aspect ratio and LSPR.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "760 nm (at 2 mM CTAB) to > 900 nm (at 50 mM CTAB)",
+            "mechanistic_justification": "Insufficient Br- at 2 mM allows premature isotropic deposition causing a blue-shift relative to initial seeds (795 nm), whereas high Br- forces preferential tip overgrowth, red-shifting the longitudinal mode."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "70 nm (at 2 mM) to 95 - 105 nm (at 50 mM)",
+            "mechanistic_justification": "Higher bromide concentrations direct incoming Au(0) exclusively onto the high-energy penta-twinned apex sites."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "24 nm (at 2 mM) down to ~20 nm (at 50 mM)",
+            "mechanistic_justification": "Low [CTAB] fails to fully passivate equatorial facets against secondary overgrowth, whereas higher [CTAB] completely inhibits lateral waist thickening."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "2.9 (at 2 mM) to ~4.8 (at 50 mM)",
+            "mechanistic_justification": "Transition from isotropic waist-thickening at low [CTAB] to high-fidelity apical elongation at high [CTAB]."
+          },
+          {
+            "observable": "Low_CTAB_2mM_tip_morphology",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "Tip radius expands from 3.0 nm to > 6.0 nm (truncated/club-like apex)",
+            "mechanistic_justification": "Absence of sufficient bromide passivation allows uncontrolled lateral overgrowth near the tips, blunting the sharp bipyramidal apex."
+          }
+        ],
+        "confidence": 0.92
+      },
+      {
+        "series_id": "EXP_8",
+        "predicted_summary": "During 30 days of storage at 27 \u00b0C, AuBPs in 10 mM CTAB maintain high morphological stability with negligible plasmon shift, whereas in 10 mM CTAC, oxidative etching causes pronounced tip rounding and severe LSPR blue-shifting.",
+        "observables": [
+          {
+            "observable": "LSPR_shift_in_CTAB_30_days",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "< 10 nm blue-shift (900 nm -> 892 - 900 nm)",
+            "mechanistic_justification": "CTAB forms a dense, highly ordered bilayer on the Au surface with strongly adsorbed bromide ions, blocking dissolved O2-mediated oxidative etching of the high-curvature tips."
+          },
+          {
+            "observable": "LSPR_shift_in_CTAC_30_days",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "> 80 - 120 nm blue-shift (900 nm -> 780 - 810 nm)",
+            "mechanistic_justification": "CTAC forms a looser, more defective bilayer, and chloride readily coordinates with oxidatively dissolved Au(I) in the presence of dissolved oxygen, catalyzing rapid reshaping and truncation of the high-energy tips."
+          },
+          {
+            "observable": "Tip_radius_in_CTAB_vs_CTAC",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "CTAB: 3.0 \u00b1 0.4 nm (preserved); CTAC: 6.5 - 9.0 nm (severely blunted)",
+            "mechanistic_justification": "Surface atom migration and oxidative etching in chloride media selectively strip atoms from regions of highest Gibbs-Thomson chemical potential (the sharp apex tips)."
+          }
+        ],
+        "confidence": 0.96
+      }
+    ]
+  },
+  "mode_3_generic_multi_agent": {
+    "architecture_name": "Generic-Multi-Agent-Discussion",
+    "series_predictions": [
+      {
+        "series_id": "EXP_1",
+        "predicted_summary": "Pure CTAB supports high-yield anisotropic growth of sharp Au nanobipyramids with longitudinal LSPR in the near-infrared, whereas pure CTAC completely suppresses high-yield axial elongation, producing mostly low-aspect-ratio and isotropic spherical byproducts.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "Pure CTAC: ~530 - 555 nm (spherical/isotropic); Pure CTAB: ~780 - 850 nm",
+            "mechanistic_justification": "Bromide counterions strongly adsorb onto Au facets and stabilize Ag(I) underpotential deposition (UPD) adlayers, steering growth axially. Pure CTAC lacks bromide, causing isotropic growth with plasmon resonance restricted to the transverse visible range."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "Pure CTAC: 1.0 - 1.2; Pure CTAB: 3.3 - 4.2",
+            "mechanistic_justification": "Without bromide to selectively passivate side facets, chloride allows uniform Au deposition across all facets, whereas CTAB concentrates deposition at the apical {111} tips."
+          },
+          {
+            "observable": "Shape_purity_yield",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "Pure CTAC: < 15% bipyramids; Pure CTAB: 80 - 90% bipyramids",
+            "mechanistic_justification": "Pentatwinned decahedral seeds undergo isotropic overgrowth or disintegration under pure CTAC/8-HQL conditions, while CTAB preserves and promotes the pentatwinned symmetry."
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "series_id": "EXP_2",
+        "predicted_summary": "Increasing [CTAB] from 1 to 50 mM in 100 mM CTAC systematically increases aspect ratio, particle length, and longitudinal LSPR while significantly extending reaction completion time, keeping particle waist width nearly constant.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "670 nm (1 mM CTAB) to ~1060 nm (50 mM CTAB)",
+            "mechanistic_justification": "Increasing [CTAB] increases the Br-/Cl- ratio at the micelle and particle interface, enhancing lateral facet passivation and driving tip elongation."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "50 - 55 nm up to 115 - 125 nm",
+            "mechanistic_justification": "Higher Br- coverage suppresses lateral growth on equatorial facets, directing reduced Au atoms strictly toward the penta-twinned apical tips."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "18 - 22 nm across all samples",
+            "mechanistic_justification": "Equatorial growth is pinned by Ag-Br adlayer underpotential deposition across all bromide-containing conditions above 1 mM."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "2.5 \u00b1 0.2 up to 5.2 \u00b1 0.3",
+            "mechanistic_justification": "Length increases more than two-fold while waist diameter remains essentially constant around 19-21 nm."
+          },
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "~6,000 nm\u00b3 to ~16,500 nm\u00b3",
+            "mechanistic_justification": "The geometrical volume of a dual pentagonal pyramid scales linearly with length when the waist width is fixed."
+          },
+          {
+            "observable": "Reaction_completion_time",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "15 min (1 mM) to > 180 min (50 mM)",
+            "mechanistic_justification": "Stronger complexation of Au(I) by Br- reduces the reduction potential of the gold precursor, decelerating 8-HQL reduction kinetics."
+          },
+          {
+            "observable": "Tip_radius",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "4.5 nm down to ~2.0 nm",
+            "mechanistic_justification": "Slower growth kinetics at elevated Br- levels permit thermodynamic energy minimization and apex sharpening."
+          }
+        ],
+        "confidence": 0.94
+      },
+      {
+        "series_id": "EXP_3",
+        "predicted_summary": "Inorganic KBr addition into 100 mM CTAC exactly mimics the CTAB titration: Br- counterions alone govern ligand exchange of [AuCl4]- to [AuBr4]-, red-shift LSPR, increase aspect ratio, and slow reduction kinetics.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "670 nm (1 mM KBr) to ~1050 nm (50 mM KBr)",
+            "mechanistic_justification": "Halide exchange at the micellar surface and nanoparticle interface is determined by the [Br-]/[Cl-] ratio, decoupling the growth mechanism from the alkyl surfactant tail concentration."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "50 - 55 nm up to 115 - 122 nm",
+            "mechanistic_justification": "Bromide from KBr cooperates with Ag+ to stabilize the lateral side facets identically to bromide introduced via CTAB."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "18 - 21 nm",
+            "mechanistic_justification": "Waist diameter is fixed by the initial seed dimensions and Ag-UPD coverage pinning."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "2.6 to 5.2",
+            "mechanistic_justification": "Axial elongation dominates as Br- concentration increases at invariant particle waist width."
+          },
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "~6,200 nm\u00b3 to ~16,000 nm\u00b3",
+            "mechanistic_justification": "Volume increases monotonically with axial length at fixed waist dimensions."
+          },
+          {
+            "observable": "Reaction_completion_time",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "15 min to > 180 min",
+            "mechanistic_justification": "Ligand exchange of [AuCl4]- to [AuBr4]- (associated with the bathochromic shift in the LMCT absorption band from 395 to 400 nm) slows the Au(I) reduction rate."
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "series_id": "EXP_4",
+        "predicted_summary": "Silver nitrate concentration displays a sharp threshold transition: below ~17-19 \u00b5M Ag+, bipyramid formation fails; above 19 \u00b5M, bipyramid yield reaches 85-95% with stable dimensions and LSPR.",
+        "observables": [
+          {
+            "observable": "Shape_purity_yield",
+            "predicted_direction": "non_monotonic_threshold",
+            "predicted_quantitative_range": "0 - 17 \u00b5M: < 35% yield; 19 - 100 \u00b5M: 85 - 95% yield",
+            "mechanistic_justification": "A critical underpotential deposition (UPD) threshold coverage of Ag on lateral facets is required to arrest radial growth and direct pentatwinned growth strictly along the 5-fold axis."
+          },
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "0 - 15 \u00b5M: 530 - 560 nm (broad); 19 - 100 \u00b5M: 745 - 770 nm (sharp)",
+            "mechanistic_justification": "Below threshold, isotropic and irregular growth dominates. Above the Ag+ threshold, uniform bipyramids form with a well-defined longitudinal LSPR."
+          },
+          {
+            "observable": "Aspect_ratio_and_dimensions_above_threshold",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "AR = 3.0 \u00b1 0.2; Length = 55 - 62 nm; Width = 18 - 20 nm for 23 - 100 \u00b5M",
+            "mechanistic_justification": "Once monolayer/sub-monolayer Ag-UPD coverage is saturated on side facets, additional AgNO3 produces no further aspect ratio expansion."
+          }
+        ],
+        "confidence": 0.94
+      },
+      {
+        "series_id": "EXP_5",
+        "predicted_summary": "Increasing seed concentration [Au0] systematically downscales particle volume and linear dimensions by 10-fold while preserving an invariant aspect ratio and longitudinal LSPR.",
+        "observables": [
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "~24,000 nm\u00b3 down to ~2,400 nm\u00b3",
+            "mechanistic_justification": "Total precursor gold is partitioned over an increasing number of seeds, scaling individual particle volume inversely with [Au0]."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "115 \u00b1 8 nm down to 45 \u00b1 3 nm",
+            "mechanistic_justification": "Geometric dimensions scale with the cube root of individual particle volume."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "38 \u00b1 3 nm down to 14 \u00b1 2 nm",
+            "mechanistic_justification": "Waist width contracts proportionally with length to preserve the equilibrium aspect ratio."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "3.0 \u00b1 0.2 across all samples",
+            "mechanistic_justification": "The aspect ratio is determined by the chemical growth environment (fixed CTAB, CTAC, and Ag+), enforcing self-similar geometric scaling."
+          },
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "750 \u00b1 15 nm across all 8 samples",
+            "mechanistic_justification": "In this size regime, the longitudinal LSPR peak wavelength is governed by aspect ratio and apex angle, both of which remain constant."
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "series_id": "EXP_6",
+        "predicted_summary": "Simultaneous co-variation of [CTAB] and seed concentration allows decoupled control of AuBP volume (3,110 to 19,702 nm\u00b3) at strictly fixed LSPR (~750 nm and ~800 nm), with refractive index sensitivity (RIS) and FOM increasing markedly with volume.",
+        "observables": [
+          {
+            "observable": "LSPR_vs_CTAB_at_ratios_30_and_50",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "670 nm (1 mM CTAB) to ~950 nm (25 mM CTAB)",
+            "mechanistic_justification": "Bromide counterions tune relative tip-to-waist growth rates even at higher seed loadings, retaining dynamic aspect ratio control."
+          },
+          {
+            "observable": "Iso_LSPR_volume_tuning",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "Maintained at 750 \u00b1 10 nm and 800 \u00b1 10 nm across the 6-fold volume range",
+            "mechanistic_justification": "Matching seed concentration to [CTAB] allows independent tuning of particle volume while keeping the aspect ratio constant."
+          },
+          {
+            "observable": "Refractive_Index_Sensitivity_and_FOM_vs_Volume",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "RIS: ~240 nm/RIU (at 3,110 nm\u00b3) to ~480 nm/RIU (at 19,702 nm\u00b3); FOM increases from ~3.5 to > 5.5",
+            "mechanistic_justification": "Larger plasmonic nanoparticles exhibit stronger local electromagnetic field extension and greater polarizability, enhancing refractive index sensitivity."
+          }
+        ],
+        "confidence": 0.93
+      },
+      {
+        "series_id": "EXP_7",
+        "predicted_summary": "Secondary overgrowth of pre-synthesized AuBPs is strongly dictated by [CTAB]: low [CTAB] (2 mM) leads to lateral overgrowth and tip rounding, while higher [CTAB] promotes apical elongation and sharp tip preservation.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "760 - 780 nm (at 2 mM CTAB) to 920 - 970 nm (at 50 mM CTAB)",
+            "mechanistic_justification": "At low [CTAB], lateral deposition causes a slight blue-shift/broadening; as [CTAB] increases, axial elongation dominates, shifting LSPR into the infrared."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "68 \u00b1 4 nm (at 2 mM) to 85 - 95 nm (at 50 mM)",
+            "mechanistic_justification": "Higher bromide concentrations suppress side-facet growth and funnel Au(0) deposition to the tips."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "24 \u00b1 2 nm (at 2 mM) down to 20 \u00b1 1 nm (at 50 mM)",
+            "mechanistic_justification": "Insufficient Br- at 2 mM allows lateral deposition on equatorial facets, whereas higher [CTAB] pins waist width."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "2.8 \u00b1 0.2 (at 2 mM) up to 4.5 \u00b1 0.3 (at 50 mM)",
+            "mechanistic_justification": "Transition from isotropic/lateral thickening at low [CTAB] to strictly apical growth at elevated [CTAB]."
+          },
+          {
+            "observable": "Low_CTAB_2mM_tip_morphology",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "Tip radius increases to > 5.5 nm (blunted/truncated apices)",
+            "mechanistic_justification": "Weak side-facet passivation at 2 mM CTAB causes preferential Au deposition around high-energy tips and shoulders, blunting the sharp apices."
+          }
+        ],
+        "confidence": 0.92
+      },
+      {
+        "series_id": "EXP_8",
+        "predicted_summary": "During 30-day storage at 27 \u00b0C, AuBPs in 10 mM CTAB remain stable with minimal tip blunting and stable LSPR, whereas in 10 mM CTAC, oxidative dissolution and Ostwald ripening cause severe tip blunting and a massive blue-shift in LSPR.",
+        "observables": [
+          {
+            "observable": "LSPR_shift_in_CTAB_30_days",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "Minimal blue-shift (< 15 nm, remaining ~885 - 900 nm)",
+            "mechanistic_justification": "CTAB forms a dense, protective bilayer that stabilizes high-energy apical facets against oxidative etching and atom diffusion."
+          },
+          {
+            "observable": "LSPR_shift_in_CTAC_30_days",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "Large blue-shift (> 120 nm, shifting from 900 nm to < 770 nm)",
+            "mechanistic_justification": "Chloride promotes oxidative tip etching and reshaping via dissolved oxygen, dissolving gold from the high-curvature tips and redepositing it onto the lateral waist."
+          },
+          {
+            "observable": "Tip_radius_in_CTAB_vs_CTAC",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "CTAB: 3.1 \u00b1 0.4 nm (sharp); CTAC: > 6.0 nm (heavily blunted/rounded)",
+            "mechanistic_justification": "Selective atomic migration and oxidative truncation occur rapidly in chloride media due to lower facet passivation stability relative to bromide."
+          }
+        ],
+        "confidence": 0.96
+      }
+    ]
+  },
+  "mode_4_cross_questioning_critiques": {
+    "critiques": [
+      {
+        "series_id": "EXP_1",
+        "flaws_identified_in_proposer": [
+          "Inversion of surfactant roles: claimed pure CTAB produces sharp bipyramids while pure CTAC yields isotropic spheres.",
+          "Incorrect claim that bromide counterion in pure CTAB drives tip elongation in this specific 8-HQL / pentatwinned seed system.",
+          "Gross error in predicting high bipyramid shape yield (>80%) in pure CTAB and failure (<15%) in pure CTAC."
+        ],
+        "physical_chemistry_correction": "In seeded growth using thermally aged pentatwinned seeds and 8-hydroxyquinoline (8-HQL) at 35 \u00b0C, pure CTAC provides the fast longitudinal growth along the 5-fold twin axis needed to produce elongated bipyramids. In contrast, pure CTAB introduces an overwhelming concentration of bromide (100 mM), which forms stable [AuBr2]- complexes (E\u00b0 = 0.960 V vs 1.154 V for [AuCl2]-), drastically suppressing reduction kinetics, and heavily passivates the high-index facets via strong CTA+/[AgBr2]- complexes that hinder tip elongation. Consequently, pure CTAC yields high aspect ratio bipyramids/elongated particles (or nanojavelins), while pure CTAB suppresses the growth kinetics and longitudinal elongation, resulting in lower aspect ratio particles or incomplete anisotropic development."
+      },
+      {
+        "series_id": "EXP_2",
+        "flaws_identified_in_proposer": [
+          "Violated Mass Conservation: claimed single-particle volume increases from ~6,000 to ~16,000 nm\u00b3 despite constant [HAuCl4] and constant seed count ([Au0] = 3.75 \u00b5M).",
+          "Qualitative direction inversion: predicted that increasing [CTAB] increases particle length (50 to 125 nm), keeps width constant (~20 nm), increases aspect ratio (2.5 to 5.2), decreases tip radius, and redshifts LSPR (670 to 1060 nm).",
+          "Failed to recognize that [AgBr2]- / CTA+ passivation and bromide complexation suppress longitudinal growth along the twin axis while promoting lateral broadening."
+        ],
+        "physical_chemistry_correction": "By mass conservation, V ~ [HAuCl4]/[Au0] is constant across all 13 samples (~11,000 nm\u00b3), dictating a strict inverse geometric tradeoff between length and width (V ~ L * W\u00b2). Thermodynamically, adding Br- (via CTAB) lowers the Au(I) redox potential ([AuBr2]- at 0.960 V vs [AuCl2]- at 1.154 V), drastically decelerating reduction kinetics from ~30 min to >350 min. Furthermore, Br- forms strongly bound CTA+/[AgBr2]- complexes on {112} high-index facets, which suppresses growth along the longitudinal twin boundary. Therefore, as [CTAB] increases from 1 to 50 mM: particle length DECREASES, particle width INCREASES, aspect ratio DECREASES, tip radius INCREASES (tips become blunter), and the longitudinal LSPR monotonically BLUESHIFTS (from the near-IR down to the visible/NIR boundary)."
+      },
+      {
+        "series_id": "EXP_3",
+        "flaws_identified_in_proposer": [
+          "Violated Mass Conservation: claimed particle volume increases ~2.4-fold at fixed precursor and seed concentrations.",
+          "Qualitative direction inversion: claimed KBr addition lengthens AuBPs, keeps width fixed, increases aspect ratio, and redshifts LSPR.",
+          "Incorrect mechanistic assertion that Br- addition purely drives anisotropic tip elongation."
+        ],
+        "physical_chemistry_correction": "The effect of bromide is counterion-governed and does not require additional CTA+ surfactant chains. By strict mass conservation, single-particle volume V is constrained to ~11,000 nm\u00b3 because [HAuCl4] and seed concentration are constant. As KBr increases from 1 to 50 mM in 100 mM CTAC, [AuCl2]- exchanges to [AuBr2]- (E\u00b0 drops to 0.960 V, verified by the LMCT redshift), which slows reduction kinetics and stabilizes lateral/equatorial growth via Ag-Br complexes while passivating apical growth. Consequently, increasing KBr systematically DECREASES length, INCREASES width, DECREASES aspect ratio, and BLUESHIFTS the longitudinal LSPR, perfectly mirroring the CTAB sweep."
+      },
+      {
+        "series_id": "EXP_4",
+        "flaws_identified_in_proposer": [
+          "Inaccurately identified the Ag+ monolayer threshold as 17-19 \u00b5M instead of the true physical underpotential deposition (UPD) saturation threshold (~30 \u00b5M).",
+          "Underestimated the baseline yield deficit below the Ag threshold (0% bipyramids / pure spheres at 0 \u00b5M Ag+).",
+          "Failed to ground the plateau in terms of ~1 monolayer Ag UPD coverage on pentatwinned Au surfaces."
+        ],
+        "physical_chemistry_correction": "In pentatwinned AuBP growth, Ag+ is strictly required to break isotropic growth symmetry. At 0 \u00b5M AgNO3, shape purity yield is 0% (only spheres/isotropic nanoparticles form). As [AgNO3] increases, underpotential deposition of silver on the side facets begins, reaching the critical threshold at ~30 \u00b5M (corresponding to ~1 full monolayer of Ag adatoms over the total gold surface area). Above 30 \u00b5M (from 30 to 100 \u00b5M), the side-facet passivation is saturated: shape yield reaches 95-98%, and length, width, aspect ratio, and longitudinal LSPR completely plateau without further dimensional changes."
+      },
+      {
+        "series_id": "EXP_5",
+        "flaws_identified_in_proposer": [
+          "Falsely asserted that aspect ratio and longitudinal LSPR remain invariant across a 10-fold seed variation.",
+          "Failed to recognize that changing the growth-rate-to-monomer supply ratio alters the relative kinetic partitioning between longitudinal and transverse growth.",
+          "Overlooked the resulting blueshift in longitudinal LSPR as seed concentration increases from 2.5 to 25 \u00b5M."
+        ],
+        "physical_chemistry_correction": "Increasing the seed concentration [Au0] 10-fold (from 2.5 to 25 \u00b5M, decreasing [HAuCl4]/[Au0] from 100 to 10) distributes the fixed amount of Au(III) precursor over 10 times as many particles. By mass conservation, single-particle volume V must decrease ~6-10x. However, at higher seed counts, the depleted precursor flux per particle diminishes the kinetic overpotential required for rapid 1D tip-growth along the twin defect relative to side facet capping. As a result, particle length and width both contract, but the aspect ratio (AR) also systematically decreases, leading to a noticeable BLUESHIFT in the longitudinal LSPR rather than an invariant resonance."
+      },
+      {
+        "series_id": "EXP_6",
+        "flaws_identified_in_proposer": [
+          "In Part A, predicted that increasing [CTAB] at lower precursor-to-seed ratios (50 and 30) red-shifts LSPR, directly contradicting halide passivation kinetics.",
+          "Failed to recognize that holding LSPR constant across a 6-fold volume sweep requires counterbalancing seed dilution with specific [CTAB] adjustments according to the inverse [CTAB]-AR relationship."
+        ],
+        "physical_chemistry_correction": "In Part A, at fixed [HAuCl4]/[Au0] ratios of 50 and 30, increasing [CTAB] increases bromide surface coverage and [AuBr2]- coordination, which blunts tips, increases waist width, decreases aspect ratio, and BLUESHIFTS the longitudinal LSPR (e.g., from ~900 nm down toward ~700 nm). In Part B, because smaller particles at higher seed counts have lower aspect ratios, maintaining an iso-LSPR band (~750 nm or ~800 nm) across a 6-fold volume variation (3,110 to 19,702 nm\u00b3) requires systematically decreasing [CTAB] for smaller volumes to preserve the required high aspect ratio. Larger volume AuBPs at identical LSPR exhibit significantly higher refractive index sensitivity (RIS, nm/RIU) and figure of merit (FOM) due to dominant electrodynamic scattering and reduced surface damping."
+      },
+      {
+        "series_id": "EXP_7",
+        "flaws_identified_in_proposer": [
+          "Predicted that increasing [CTAB] during AuBP secondary overgrowth increases particle length and aspect ratio.",
+          "Mischaracterized the low-CTAB (2 mM) morphology as failure to elongate rather than inadequate tip protection causing spherical/dumbbell overgrowth."
+        ],
+        "physical_chemistry_correction": "When pre-synthesized AuBPs (L=66 nm, W=19 nm, AR=3.5) undergo secondary overgrowth, the final morphology is dictated by the [CTAB] capping efficiency. At very low [CTAB] (2 mM), bromide/CTA+ coverage at the highly curved, high-energy tips is insufficient to regulate monomer deposition, resulting in unconfined, isotropic gold overgrowth at the apices to form dumbbell-like or peanut-shaped particles. As [CTAB] is systematically increased from 5 to 50 mM, [AgBr2]-/CTA+ complexes preferentially passivate the longitudinal growth front and lower the reduction rate: particle length DECREASES, lateral waist width INCREASES, aspect ratio DECREASES, and the LSPR shifts monotonically to the blue."
+      },
+      {
+        "series_id": "EXP_8",
+        "flaws_identified_in_proposer": [
+          "The proposer omitted EXP_8 entirely from its structured predictions, missing critical shelf-life and thermodynamic stability phenomena.",
+          "Failed to evaluate the difference in oxidative etching and tip migration between CTAB and CTAC storage environments."
+        ],
+        "physical_chemistry_correction": "Due to the standard redox potential of Au(I) complexation, [AuBr2]- + e- <-> Au(0) + 2 Br- sits at 0.960 V, which is significantly lower than [AuCl2]- + e- <-> Au(0) + 2 Cl- at 1.154 V. In dissolved oxygen at 27 \u00b0C, the low redox potential of the bromide system thermodynamically favors spontaneous oxidative dissolution and atomic surface migration away from the high-curvature, high-surface-energy pentatwinned tips. Consequently, AuBPs stored in 10 mM CTAB for 30 days undergo tip blunting/reshaping (tip radius increases from ~3.0 nm to >5.5 nm), resulting in a dramatic ~45 nm blueshift of the longitudinal LSPR. In contrast, 10 mM CTAC possesses a sufficiently high Au(I)/Au(0) redox potential to completely resist O2-mediated tip oxidation, preserving atomic sharpness and exhibiting 0 nm LSPR shift."
+      }
+    ]
+  },
+  "mode_4_mechanistic_cross_questioning": {
+    "architecture_name": "Chief-Synthesis-Arbiter-Calibrated",
+    "series_predictions": [
+      {
+        "series_id": "EXP_1",
+        "predicted_summary": "Pure CTAC enables rapid longitudinal growth along the 5-fold twin axis of pentatwinned seeds with 8-HQL, yielding highly elongated bipyramids/nanojavelins with high shape purity and deep-NIR LSPR. In pure CTAB, high bromide concentration (100 mM) forms [AuBr2]- complexes with lower redox potential (E\u00b0 = 0.960 V vs 1.154 V for [AuCl2]-) and heavily passivates longitudinal growth via CTA+/[AgBr2]- complexes, resulting in severely retarded growth, lower aspect ratios, and blunted/stunted morphologies.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "Pure CTAC: ~950 - 1100 nm (NIR); Pure CTAB: ~700 - 750 nm",
+            "mechanistic_justification": "Pure CTAC maintains a high Au(I)/Au(0) reduction potential ([AuCl2]-), driving fast preferential gold deposition at the fivefold twinned apices to yield high aspect ratios. Pure CTAB introduces 100 mM Br-, which stabilizes [AuBr2]- and forms strong CTA+/[AgBr2]- adlayers that suppress apex-directed 1D elongation."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "Pure CTAC: 4.5 - 5.5; Pure CTAB: 2.2 - 2.8",
+            "mechanistic_justification": "Without bromide competition, CTAC and Ag+ promote rapid 1D growth along the twin boundary. 100 mM CTAB caps high-energy facets, restricting tip addition and promoting lateral waist broadening relative to length."
+          },
+          {
+            "observable": "Shape_purity_yield",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "Pure CTAC: > 85% elongated bipyramids/nanojavelins; Pure CTAB: < 40% sharp bipyramids (predominantly truncated/irregular bipyramids)",
+            "mechanistic_justification": "Excess bromide in pure CTAB disrupts the kinetic balance between seed apex activation and side-facet passivation, whereas CTAC with trace iodide/citrate maintains selective anisotropic growth along the fivefold axis."
+          }
+        ],
+        "confidence": 0.96
+      },
+      {
+        "series_id": "EXP_2",
+        "predicted_summary": "Increasing [CTAB] from 1 to 50 mM in 100 mM CTAC systematically increases bromide surface coverage, forming CTA+/[AgBr2]- adlayers that selectively passivate longitudinal twin boundaries. In accordance with strict mass conservation (constant volume ~11,000 nm\u00b3), length decreases, waist width increases, aspect ratio decreases, apices become blunted, and the longitudinal LSPR blueshifts monotonically while reaction time extends tenfold.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "1050 nm (at 1 mM CTAB) down to ~680 nm (at 50 mM CTAB)",
+            "mechanistic_justification": "As [CTAB] increases, the aspect ratio monotonically contracts due to apical growth passivation, shifting the dipole plasmon resonance progressively to higher energies (blueshift)."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "115 \u00b1 5 nm down to 55 \u00b1 4 nm",
+            "mechanistic_justification": "CTA+/[AgBr2]- surface complexation passivates high-index {112} facets at the tips, redirecting reduced gold adatoms away from the fivefold twin apex."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "15 \u00b1 1 nm up to 26 \u00b1 2 nm",
+            "mechanistic_justification": "Gold monomer flux diverted from the passivated apices deposits onto the lateral waist facets."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "7.5 \u00b1 0.4 down to 2.1 \u00b1 0.2",
+            "mechanistic_justification": "Simultaneous length contraction and waist widening cause a steep, monotonic decline in aspect ratio."
+          },
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "10,500 - 11,500 nm\u00b3 (invariant within experimental error)",
+            "mechanistic_justification": "Strict mass conservation dictates that with fixed [HAuCl4] (0.25 mM) and fixed seed concentration ([Au0] = 3.75 \u00b5M), total reduced gold per seed is invariant."
+          },
+          {
+            "observable": "Reaction_completion_time",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "30 min (at 1 mM) to > 350 min (at 50 mM)",
+            "mechanistic_justification": "Increasing bromide converts [AuCl2]- to [AuBr2]-, lowering E\u00b0 from 1.154 V to 0.960 V and substantially retarding 8-HQL reduction kinetics."
+          },
+          {
+            "observable": "Tip_radius",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "1.8 \u00b1 0.3 nm up to 5.5 \u00b1 0.5 nm",
+            "mechanistic_justification": "Enhanced bromide-mediated tip passivation and slower apex deposition promote thermodynamic facet rounding and tip blunting."
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "series_id": "EXP_3",
+        "predicted_summary": "Inorganic KBr addition (1 to 50 mM) in 100 mM CTAC exactly reproduces the CTAB sweep without requiring additional surfactant chains: Br- counterion exchange converts [AuCl2]- to [AuBr2]-, passivates tip elongation, causes lateral broadening at constant particle volume (~11,000 nm\u00b3), decreases aspect ratio, blueshifts the LSPR, and decelerates reduction kinetics.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "1040 nm (at 1 mM KBr) down to ~685 nm (at 50 mM KBr)",
+            "mechanistic_justification": "Decoupled Br- counterions replace Cl- on CTA+ micelles and at the Au surface, increasing side deposition over apex deposition and reducing the aspect ratio."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "112 \u00b1 5 nm down to 56 \u00b1 4 nm",
+            "mechanistic_justification": "Bromide complexation with surface Ag+ forms [AgBr2]- complexes that truncate longitudinal growth along the twin boundary."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "16 \u00b1 1 nm up to 25 \u00b1 2 nm",
+            "mechanistic_justification": "Mass-conserved monomer partitioning directs excess gold onto the equatorial facets."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "7.0 \u00b1 0.3 down to 2.2 \u00b1 0.2",
+            "mechanistic_justification": "Simultaneous axial reduction and radial expansion systematically depress the aspect ratio."
+          },
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "10,500 - 11,500 nm\u00b3",
+            "mechanistic_justification": "Precursor concentration and seed count remain fixed; the geometric tradeoff L * W\u00b2 preserves individual bipyramid volume."
+          },
+          {
+            "observable": "Reaction_completion_time",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "30 min to > 350 min",
+            "mechanistic_justification": "UV-Vis LMCT band shift from 395 nm to 400 nm confirms Au(III)/Au(I) ligand exchange from chloride to bromide, lowering precursor redox potential and slowing 8-HQL reduction."
+          }
+        ],
+        "confidence": 0.95
+      },
+      {
+        "series_id": "EXP_4",
+        "predicted_summary": "AgNO3 governs symmetry breaking via underpotential deposition (UPD). Below ~30 \u00b5M, sub-monolayer coverage yields isotropic particles or mixed low-aspect-ratio byproducts. At the critical threshold of ~30 \u00b5M (corresponding to full monolayer saturation on the side facets), bipyramid yield sharply jumps to >90%. Above 30 \u00b5M (up to 100 \u00b5M), dimensional growth and LSPR plateau completely.",
+        "observables": [
+          {
+            "observable": "Shape_purity_yield",
+            "predicted_direction": "non_monotonic_threshold",
+            "predicted_quantitative_range": "0 \u00b5M: 0% bipyramids (100% spheres/irregular); 15-23 \u00b5M: 30 - 75%; 30 - 100 \u00b5M: 92 - 96% bipyramids",
+            "mechanistic_justification": "A complete monolayer of Ag(0) adatoms deposited via UPD on {110}/{100} facets is thermodynamically required to suppress radial growth and stabilize pentatwinned symmetry."
+          },
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "non_monotonic_threshold",
+            "predicted_quantitative_range": "0 \u00b5M: 530 nm; 15-23 \u00b5M: 650 - 730 nm; 30 - 100 \u00b5M: invariant plateau at 750 \u00b1 10 nm",
+            "mechanistic_justification": "Below saturation, mixed isotropic/anisotropic growth shifts the resonance inconsistently. Once full UPD passivation is reached at ~30 \u00b5M, aspect ratio and LSPR become invariant to excess Ag+."
+          },
+          {
+            "observable": "Aspect_ratio_and_dimensions_above_threshold",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "Length = 68 \u00b1 3 nm; Width = 21 \u00b1 1 nm; AR = 3.2 \u00b1 0.1 across 30 to 100 \u00b5M AgNO3",
+            "mechanistic_justification": "Excess Ag+ above monolayer coverage does not deposit via UPD, maintaining fixed facet growth velocities."
+          }
+        ],
+        "confidence": 0.94
+      },
+      {
+        "series_id": "EXP_5",
+        "predicted_summary": "Increasing seed concentration [Au0] 10-fold (2.5 to 25 \u00b5M; [HAuCl4]/[Au0] from 100 to 10) distributes the fixed gold precursor over progressively more particles, scaling single-particle volume down ~8-fold. Because monomer flux per particle drops at high seed counts, longitudinal growth along the twin boundary is throttled more than side passivation, causing particle length and width to shrink, aspect ratio to decline, and LSPR to systematically blueshift.",
+        "observables": [
+          {
+            "observable": "Single_particle_volume",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "~22,000 nm\u00b3 (at 2.5 \u00b5M) down to ~2,600 nm\u00b3 (at 25 \u00b5M)",
+            "mechanistic_justification": "Direct mass conservation: single particle volume scales inversely with seed number concentration at constant precursor conversion."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "110 \u00b1 6 nm down to 42 \u00b1 3 nm",
+            "mechanistic_justification": "Monomer starvation per particle reduces the total material available for axial growth along the fivefold axis."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "24 \u00b1 2 nm down to 13 \u00b1 1 nm",
+            "mechanistic_justification": "Waist dimension contracts proportionally with cube-root volume scaling."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "4.6 \u00b1 0.2 down to 3.2 \u00b1 0.2",
+            "mechanistic_justification": "Decreased kinetic supersaturation at high seed concentrations reduces preferential apical deposition rate relative to lateral facet capping."
+          },
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "880 nm (at 2.5 \u00b5M seeds) down to 735 nm (at 25 \u00b5M seeds)",
+            "mechanistic_justification": "The systematic reduction in aspect ratio from 4.6 to 3.2 induces a steady ~145 nm blueshift in the longitudinal plasmon band."
+          }
+        ],
+        "confidence": 0.93
+      },
+      {
+        "series_id": "EXP_6",
+        "predicted_summary": "In Part A, increasing [CTAB] at fixed [HAuCl4]/[Au0] ratios (50 and 30) systematically blueshifts the LSPR by passivating apical elongation. In Part B, simultaneously co-varying seed concentration and [CTAB] successfully decouples size and aspect ratio, enabling iso-LSPR tuning at 750 nm and 800 nm across a 6-fold volume span (3,110 to 19,702 nm\u00b3). Larger volume AuBPs at constant LSPR exhibit markedly higher Refractive Index Sensitivity (RIS) and Figure of Merit (FOM).",
+        "observables": [
+          {
+            "observable": "LSPR_vs_CTAB_at_ratios_30_and_50",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "Ratio 50: ~910 nm (at 1 mM CTAB) down to ~720 nm (at 25 mM CTAB); Ratio 30: ~840 nm down to ~680 nm",
+            "mechanistic_justification": "Elevated [CTAB] increases bromide surface coverage, blunting tips, reducing aspect ratio, and blueshifting LSPR regardless of seed ratio."
+          },
+          {
+            "observable": "Iso_LSPR_volume_tuning",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "Volume scales from 3,110 nm\u00b3 up to 19,702 nm\u00b3 while LSPR is held strictly constant at 750 \u00b1 5 nm (or 800 \u00b1 5 nm)",
+            "mechanistic_justification": "Decreasing [CTAB] for smaller particles compensates for the seed-induced aspect ratio loss, locking the aspect ratio at ~3.4 for 750 nm and ~3.8 for 800 nm across all particle volumes."
+          },
+          {
+            "observable": "Refractive_Index_Sensitivity_and_FOM_vs_Volume",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "RIS: ~280 nm/RIU (at 3,110 nm\u00b3) up to ~590 nm/RIU (at 19,702 nm\u00b3); FOM: ~2.5 up to ~5.8",
+            "mechanistic_justification": "Electrodynamic scattering efficiency scales with particle volume (V\u00b2), suppressing intrinsic surface damping, narrowing homogeneous linewidths, and significantly boosting RIS and FOM."
+          }
+        ],
+        "confidence": 0.94
+      },
+      {
+        "series_id": "EXP_7",
+        "predicted_summary": "Secondary overgrowth of pre-synthesized AuBPs (66 x 19 nm, AR=3.5, LSPR=795 nm) is governed by tip capping efficiency. At low [CTAB] (2 mM), inadequate bromide/surfactant protection leads to isotropic, unconfined apex deposition, yielding dumbbell- or peanut-shaped particles. Increasing [CTAB] (5 to 50 mM) enhances apical passivation and retards kinetics, resulting in waist thickening, length reduction, aspect ratio decrease, and monotonic LSPR blueshift.",
+        "observables": [
+          {
+            "observable": "LSPR_wavelength",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "820 nm (at 5 mM CTAB) down to 710 nm (at 50 mM CTAB)",
+            "mechanistic_justification": "Higher [CTAB] redirects monomer addition to the equatorial waist, suppressing apical elongation and reducing the aspect ratio."
+          },
+          {
+            "observable": "Particle_length",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "78 \u00b1 3 nm (at 5 mM) down to 62 \u00b1 2 nm (at 50 mM)",
+            "mechanistic_justification": "Strong CTA+/[AgBr2]- adlayers at the fivefold tips progressively inhibit longitudinal gold addition."
+          },
+          {
+            "observable": "Particle_width",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "20 \u00b1 1 nm up to 26 \u00b1 2 nm",
+            "mechanistic_justification": "Diverted gold adatoms deposit on the less passivated lateral facets, widening the waist."
+          },
+          {
+            "observable": "Aspect_ratio",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "3.9 \u00b1 0.1 down to 2.4 \u00b1 0.1",
+            "mechanistic_justification": "Simultaneous axial suppression and radial overgrowth continuously lower particle aspect ratio."
+          },
+          {
+            "observable": "Low_CTAB_2mM_tip_morphology",
+            "predicted_direction": "non_monotonic_threshold",
+            "predicted_quantitative_range": "Dumbbell/peanut morphology with bulbous tips (>6 nm tip curvature radius) and split LSPR modes",
+            "mechanistic_justification": "At 2 mM CTAB, insufficient bromide coverage fails to restrict rapid 8-HQL reduction at the high-energy tips, causing isotropic bulbous overgrowth at both apices."
+          }
+        ],
+        "confidence": 0.93
+      },
+      {
+        "series_id": "EXP_8",
+        "predicted_summary": "During 30-day storage at 27 \u00b0C under ambient dissolved oxygen, AuBPs in 10 mM CTAB undergo significant oxidative dissolution and surface atom migration driven by the lower standard redox potential of [AuBr2]- (E\u00b0 = 0.960 V vs NHE), resulting in apical blunting and a ~45 nm LSPR blueshift. In contrast, AuBPs in 10 mM CTAC remain thermodynamically resistant to O2 oxidation ([AuCl2]-, E\u00b0 = 1.154 V), exhibiting perfect morphological and optical stability.",
+        "observables": [
+          {
+            "observable": "LSPR_shift_in_CTAB_30_days",
+            "predicted_direction": "decrease",
+            "predicted_quantitative_range": "Blueshift of 42 - 48 nm (initial 900 nm -> ~855 nm)",
+            "mechanistic_justification": "Ambient O2 oxidizes high-curvature gold atoms at the tips in the presence of 10 mM Br- (E\u00b0 = 0.960 V), driving dissolution and Ostwald-type atomic migration toward the waist, which decreases the aspect ratio."
+          },
+          {
+            "observable": "LSPR_shift_in_CTAC_30_days",
+            "predicted_direction": "no_significant_change",
+            "predicted_quantitative_range": "0 \u00b1 2 nm shift (remains stable at 900 nm)",
+            "mechanistic_justification": "The higher oxidation potential of Au in chloride media ([AuCl2]-, E\u00b0 = 1.154 V) prevents dissolved O2 from oxidatively etching the tips."
+          },
+          {
+            "observable": "Tip_radius_in_CTAB_vs_CTAC",
+            "predicted_direction": "increase",
+            "predicted_quantitative_range": "CTAB: increases from 3.0 \u00b1 0.4 nm to 5.6 \u00b1 0.5 nm; CTAC: remains 3.0 \u00b1 0.3 nm",
+            "mechanistic_justification": "Oxidative surface diffusion in bromide selectively blunts sharp, high-surface-energy apical vertices; chloride media preserves atomic sharpness."
+          }
+        ],
+        "confidence": 0.97
+      }
+    ]
+  }
+}
