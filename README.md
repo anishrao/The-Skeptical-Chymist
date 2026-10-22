@@ -3,7 +3,8 @@
 > **By Team: The Skeptical Chymists**  
 > *Built for the Open Scientific Intelligence (OSI) Hackathon*  
 > **Repository:** [https://github.com/anishrao/The-Skeptical-Chymist](https://github.com/anishrao/The-Skeptical-Chymist)  
-> 🌐 **Main Interactive Web Application:** [http://localhost:8089](http://localhost:8089) *(or open `index.html` in any browser)*  
+> 🌐 **Live Web Application (Deployed):** [https://anishrao.github.io/The-Skeptical-Chymist/](https://anishrao.github.io/The-Skeptical-Chymist/)  
+> 💻 **Local Interactive App:** [http://localhost:8089](http://localhost:8089) *(or open `index.html`)*  
 > 🧪 **Companion Streamlit Console:** [http://localhost:8501](http://localhost:8501) *(launch with `streamlit run app.py`)*
 
 ---

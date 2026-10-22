@@ -78,14 +78,14 @@
       "label": "stirring rate"
     },
     {
-      "id": "halide ion type",
-      "node_type": "parameter",
-      "label": "halide ion type"
-    },
-    {
       "id": "sulfite (SO32\u2212) ligand concentration",
       "node_type": "parameter",
       "label": "sulfite (SO32\u2212) ligand concentration"
+    },
+    {
+      "id": "halide ion type",
+      "node_type": "parameter",
+      "label": "halide ion type"
     }
   ],
   "edges": [
@@ -508,25 +508,6 @@
       "from_si": true
     },
     {
-      "source": "halide ion type",
-      "target": "Bipyramid shape yield / purity",
-      "paper_id": "EPMC_PMC6107855",
-      "paper_title": "The Many \"Facets\" of Halide Ions in the Chemistry of Colloidal Inorganic Nanocrystals.",
-      "publication_year": 2018,
-      "raw_parameter": "halide ion type",
-      "raw_observable": "Shape yield",
-      "perturbation_direction": "addition_or_substitution",
-      "parameter_range": "Chloride, bromide, and iodide ions across nanocrystal syntheses",
-      "boundary_conditions": [
-        "Colloidal inorganic nanocrystal synthesis"
-      ],
-      "mechanism": "Halide ions selectively adsorb onto specific crystal facets and form complexes with metal precursors, regulating surface energy and anisotropic growth kinetics.",
-      "outcome_direction": "increase",
-      "quantitative_effect": "Provides high level of shape and compositional control in colloidal nanomaterials.",
-      "evidence_quote": "Halide ions affect the NC growth kinetics through several means, including selective binding on crystal facets, complexation with the precursors, and oxidative etching.",
-      "from_si": false
-    },
-    {
       "source": "sulfite (SO32\u2212) ligand concentration",
       "target": "Bipyramid longitudinal length",
       "paper_id": "OA_W4320497587",
@@ -544,6 +525,25 @@
       "outcome_direction": "increase",
       "quantitative_effect": "Edge lengths tunable from 48 nm to 167 nm.",
       "evidence_quote": "run_thin_nanoplates_range: morphology=thin gold nanoplates, L=48\u2013167 nm, W=7.5 nm",
+      "from_si": false
+    },
+    {
+      "source": "halide ion type",
+      "target": "Bipyramid shape yield / purity",
+      "paper_id": "EPMC_PMC6107855",
+      "paper_title": "The Many \"Facets\" of Halide Ions in the Chemistry of Colloidal Inorganic Nanocrystals.",
+      "publication_year": 2018,
+      "raw_parameter": "halide ion type",
+      "raw_observable": "Shape yield",
+      "perturbation_direction": "addition_or_substitution",
+      "parameter_range": "Chloride, bromide, and iodide ions across nanocrystal syntheses",
+      "boundary_conditions": [
+        "Colloidal inorganic nanocrystal synthesis"
+      ],
+      "mechanism": "Halide ions selectively adsorb onto specific crystal facets and form complexes with metal precursors, regulating surface energy and anisotropic growth kinetics.",
+      "outcome_direction": "increase",
+      "quantitative_effect": "Provides high level of shape and compositional control in colloidal nanomaterials.",
+      "evidence_quote": "Halide ions affect the NC growth kinetics through several means, including selective binding on crystal facets, complexation with the precursors, and oxidative etching.",
       "from_si": false
     }
   ],
@@ -604,18 +604,23 @@
         "jp412409u",
         "s11051-016-3486-y"
       ],
-      "DDAB concentration": [
-        "1-s2.0-S2468519416300702-main"
-      ],
-      "Ascorbic acid (AA) concentration": [
-        "1-s2.0-S2468519416300702-main",
-        "s11051-016-3486-y"
-      ],
       "CTAB surfactant concentration": [
         "1-s2.0-S2468519416300702-main",
         "Advanced Optical Materials - 2015 - Li - Production of Monodisperse Gold Nanobipyramids with Number Percentages Approaching",
         "cg5b00121",
         "d1nr01768c"
+      ],
+      "Ascorbic acid (AA) concentration": [
+        "1-s2.0-S2468519416300702-main",
+        "s11051-016-3486-y"
+      ],
+      "DDAB concentration": [
+        "1-s2.0-S2468519416300702-main"
+      ],
+      "Seed concentration / volume": [
+        "Advanced Optical Materials - 2015 - Li - Production of Monodisperse Gold Nanobipyramids with Number Percentages Approaching",
+        "ja6b12143",
+        "jp4c08818"
       ],
       "AgNO3 / [Ag+] concentration": [
         "Advanced Optical Materials - 2015 - Li - Production of Monodisperse Gold Nanobipyramids with Number Percentages Approaching",
@@ -623,29 +628,24 @@
         "cg5b00121",
         "s11051-016-3486-y"
       ],
-      "Seed concentration / volume": [
-        "Advanced Optical Materials - 2015 - Li - Production of Monodisperse Gold Nanobipyramids with Number Percentages Approaching",
-        "ja6b12143",
-        "jp4c08818"
-      ],
       "Growth-to-Seed (GtS) slow addition rate": [
         "am9b12973"
       ],
       "HAuCl4 / [Au3+] concentration": [
         "am9b12973"
       ],
+      "sodium salicylate concentration": [
+        "c3nr01553j"
+      ],
       "CTAC surfactant concentration": [
         "c3nr01553j",
         "c4nr06323f",
         "jp4c08818"
       ],
-      "sodium salicylate concentration": [
-        "c3nr01553j"
-      ],
-      "thermal aging time of seeds": [
+      "8-hydroxyquinoline concentration": [
         "c4nr06323f"
       ],
-      "8-hydroxyquinoline concentration": [
+      "thermal aging time of seeds": [
         "c4nr06323f"
       ],
       "L-Cysteine concentration": [
@@ -657,23 +657,14 @@
       "surfactant system (CTAB vs CTAC/CTAB)": [
         "ncomms8571"
       ],
-      "NaOH concentration / pH": [
+      "stirring rate": [
         "ja7b01779_si_001"
       ],
-      "stirring rate": [
+      "NaOH concentration / pH": [
         "ja7b01779_si_001"
       ],
       "TEOS concentration": [
         "ja7b01779_si_001"
-      ],
-      "halide ion type": [
-        "EPMC_PMC6107855"
-      ],
-      "halide ion type (Cl-, Br-, I-)": [
-        "EPMC_PMC6107855"
-      ],
-      "halide concentration": [
-        "EPMC_PMC6107855"
       ],
       "Aspect ratio (AR)": [
         "OA_W4200383126"
@@ -686,6 +677,15 @@
       ],
       "sulfite (SO32\u2212) ligand concentration": [
         "OA_W4320497587"
+      ],
+      "halide ion type": [
+        "EPMC_PMC6107855"
+      ],
+      "halide concentration": [
+        "EPMC_PMC6107855"
+      ],
+      "halide ion type (Cl-, Br-, I-)": [
+        "EPMC_PMC6107855"
       ]
     },
     "co_varied_pairs": [
@@ -842,7 +842,7 @@
       {
         "pair": [
           "CTAC surfactant concentration",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "papers_co_varying": [
           "c4nr06323f"
@@ -941,7 +941,7 @@
       {
         "pair": [
           "HCl / pH",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "1-s2.0-S0022369720315158-main",
@@ -1035,7 +1035,7 @@
       {
         "pair": [
           "CTAB surfactant concentration",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "1-s2.0-S2468519416300702-main",
@@ -1112,7 +1112,7 @@
       {
         "pair": [
           "AgNO3 / [Ag+] concentration",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "Advanced Optical Materials - 2015 - Li - Production of Monodisperse Gold Nanobipyramids with Number Percentages Approaching",
@@ -1212,7 +1212,7 @@
       {
         "pair": [
           "Seed concentration / volume",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "Advanced Optical Materials - 2015 - Li - Production of Monodisperse Gold Nanobipyramids with Number Percentages Approaching",
@@ -1349,7 +1349,7 @@
       {
         "pair": [
           "Ascorbic acid (AA) concentration",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "1-s2.0-S2468519416300702-main",
@@ -1410,7 +1410,7 @@
       {
         "pair": [
           "additive acid concentration",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "1-s2.0-S0022369720315158-main"
@@ -1458,7 +1458,7 @@
       {
         "pair": [
           "DDAB concentration",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "1-s2.0-S2468519416300702-main"
@@ -1482,7 +1482,7 @@
       {
         "pair": [
           "Growth-to-Seed (GtS) slow addition rate",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "am9b12973"
@@ -1506,7 +1506,7 @@
       {
         "pair": [
           "HAuCl4 / [Au3+] concentration",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "am9b12973"
@@ -1518,7 +1518,7 @@
       {
         "pair": [
           "sodium salicylate concentration",
-          "thermal aging time of seeds"
+          "8-hydroxyquinoline concentration"
         ],
         "p1_papers": [
           "c3nr01553j"

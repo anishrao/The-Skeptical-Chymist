@@ -2,145 +2,164 @@
   "num_seed_and_expanded_papers": 17,
   "num_cmo_edges": 22,
   "single_agent_gaps": {
-    "domain_summary": "The literature focuses on the seeded growth synthesis of anisotropic pentatwinned gold nanobipyramids (Au NBPs), exploring how surfactant mixtures (CTAB, CTAC, DDAB), silver ion co-deposition, and proton/halide concentrations dictate shape yield, aspect ratio, and LSPR tuning. Key debates center on the thermodynamic and kinetic interplay of pH, halide adsorption, and reducing agent potentials during seed-mediated growth.",
-    "explored_parameter_space_summary": "Explored variables include CTAB/CTAC/DDAB surfactant concentrations, AgNO3 and HAuCl4 loadings, seed volume/thermal aging times, and added acid (HCl) levels. Major unexplored spaces include the intersection of high-concentration Growth-to-Seed protocols with aggressive pH/halide modifications, and the convolution of binary surfactant dynamics with precise additive acid stoichiometry.",
+    "domain_summary": "Seed-mediated synthesis of colloidal gold nanobipyramids (Au NBPs) and anisotropic pentatwinned nanostructures, focusing on the interplay of surfactant mixtures (CTAB, CTAC, DDAB), halide/acid additives (HCl, NaBr), reducing agents (ascorbic acid, 8-hydroxyquinoline), and silver ion co-deposition.",
+    "explored_parameter_space_summary": "Extensively explored in singular CTAB or CTAC systems with isolated sweeps of AgNO3, HCl, and ascorbic acid. Severe gaps exist at the intersection of binary surfactant mixtures (CTAB/CTAC/DDAB) combined with high-concentration metal growth regimes and strict pH/acid titrations.",
     "gaps": [
       {
         "gap_id": "GAP-1",
         "gap_category": "MECHANISTIC_CONTRADICTION",
-        "title": "Unresolved Role of Proton/Chloride Concentration in Promoting Shape Purity vs. Triggering Structural Phase Transitions",
+        "title": "Proton-Mediated Shape Transition versus Kinetic Suppression of Side-Nucleation in Binary Surfactant Regimes",
         "parameter_coordinates": [
           "HCl / pH",
           "CTAB surfactant concentration",
-          "AgNO3 / [Ag+] concentration"
+          "DDAB concentration"
         ],
-        "evidence_from_corpus": "s11051-016-3486-y claims abundant HCl monotonically increases Au NBP yield by slowing reduction and modulating halide adsorption, whereas 1-s2.0-S2468519416300702-main observes that varying pH/HCl in binary surfactant regimes induces sharp phase transitions into dogbones and nanodumbbells rather than monotonic yield enhancement.",
+        "evidence_from_corpus": "1-s2.0-S2468519416300702-main (2017) asserts that altering pH in binary CTAB/DDAB mixtures drives phase transitions (truncated bipyramids to dogbones and nanodumbbells), whereas s11051-016-3486-y (2016) claims abundant HCl purely enhances single-crystalline Au BP yield by slowing reduction rates in CTAB. The simultaneous interaction of pH shifts with mixed quaternary ammonium headgroup packing remains entirely unexplored.",
         "competing_mechanistic_hypotheses": [
-          "Hypothesis A: Protons act purely as kinetic buffers that slow ascorbic acid oxidation, maintaining a steady monomer supply that favors uniform overgrowth on pentatwinned tips.",
-          "Hypothesis B: Protons alter the protonation state of surfactant headgroups, modifying local micelle packing parameters and causing selective facet-specific desorption that shifts growth from bipyramids to dumbbell morphologies."
+          "Hypothesis A: Protonation modifies ascorbic acid's standard reduction potential ($E^0$), overriding surfactant packing effects and forcing isotropic overgrowth.",
+          "Hypothesis B: High proton and chloride concentrations alter the binding affinity of DDAB/CTAB mixed bilayers at penta-twinned re-entrant grooves, stabilizing anisotropic growth against pH-induced destabilization."
         ],
-        "proposed_decisive_experiment": "Perform a 4x4 factorial wet-lab sweep of HCl concentration (0 to 50 mM added to 0.1 M CTAB growth solution) combined with pH titration using real-time UV-Vis LSPR monitoring and ex-situ TEM volume/aspect ratio quantification. Readouts will measure the precise onset threshold where monodisperse bipyramids transition into dogbones.",
-        "specificity_score": 9
+        "proposed_decisive_experiment": "Perform a 4x4 factorial sweep of HCl concentration (0 to 50 mM) versus DDAB/CTAB molar ratio (0 to 1.0) at fixed [HAuCl4] = 0.5 mM and [AgNO3] = 0.1 mM. Readout: In situ UV-Vis LSPR tracking combined with TEM aspect ratio distribution and powder XRD to quantify twin-plane defect density.",
+        "specificity_score": 10
       },
       {
         "gap_id": "GAP-2",
         "gap_category": "PARAMETER_SPACE_HOLE",
-        "title": "Unexplored Intersection of High-Concentration Growth-to-Seed (GtS) Protocols with Binary CTAC/CTAB Surfactant Ratios",
+        "title": "Coupled High-Concentration Growth-to-Seed (GtS) Addition and Acid-Modulated Halide Adsorption",
         "parameter_coordinates": [
           "Growth-to-Seed (GtS) slow addition rate",
           "HAuCl4 / [Au3+] concentration",
-          "surfactant system (CTAB vs CTAC/CTAB)"
+          "HCl / pH",
+          "AgNO3 / [Ag+] concentration"
         ],
-        "evidence_from_corpus": "am9b12973 investigates high gold concentrations (>3 mM) using slow GtS addition in pure CTAB, while ncomms8571 and c3nr01553j utilize binary CTAC/CTAB or CTAC/salicylate systems only at conventional low concentrations (<0.5 mM Au), leaving their high-concentration coupling completely untested.",
+        "evidence_from_corpus": "am9b12973 (2019) pushed HAuCl4 concentration up to 15 mM using slow GtS addition with catechol/CTAB, while Advanced Optical Materials (2015 - Li) and s11051-016-3486-y (2016) optimized HCl and AgNO3 strictly at conventional dilute regimes (<0.5 mM HAuCl4). The intersection of high-flux metal precursor injection (>5 mM Au) with aggressive acid/halide tuning has not been mapped.",
         "competing_mechanistic_hypotheses": [
-          "Hypothesis A: Combining high [Au3+] (>3 mM) with mixed CTAC/CTAB will suppress side-nucleation via enhanced bilayer stabilization, allowing scalable production of ultra-long nanobipyramids.",
-          "Hypothesis B: High local monomer flux under mixed surfactant regimes will induce micelle restructuring, leading to catastrophic agglomeration and loss of pentatwinned yield due to competitive Br-/Cl- binding kinetics."
+          "Hypothesis A: Rapid monomer flux at >5 mM Au overwhelms halide/silver facet passivation, triggering uncontrollable side-nucleation regardless of HCl concentration.",
+          "Hypothesis B: Co-addition of optimized HCl (10\u201350 mM) scales down instantaneous free [Au(I)] via chloride complexation, enabling high-yield (>95%) 100-nm-long bipyramids at 10 mM metal concentrations."
         ],
-        "proposed_decisive_experiment": "Execute syringe-pump assisted slow addition of 15 mM HAuCl4 into seed solutions containing fixed 1:1 molar ratios of CTAC/CTAB across a temperature sweep from 25 \u00b0C to 45 \u00b0C. Analyze final products via powder XRD, ICP-MS, and TEM aspect-ratio histograms to determine yield stability limits.",
+        "proposed_decisive_experiment": "Execute syringe-pump slow addition of Growth solution (HAuCl4: 5 mM to 15 mM) into seed solutions containing systematically varied HCl (0 to 100 mM) and AgNO3 (0.1 to 1.0 mM). Readout: Cryo-TEM yield quantification of monodisperse bipyramids vs spherical byproducts and hydrodynamic radius via DLS.",
         "specificity_score": 10
       },
       {
         "gap_id": "GAP-3",
         "gap_category": "COUPLED_VARIABLE_CONFOUNDING",
-        "title": "Confounding Effects of Seed Thermal Aging Time and Seed-to-Metal Precursor Ratio on LSPR Blue/Red Shifts",
+        "title": "Confounded Surfactant Identity and Oxidative Etching Dynamics in CTAC/CTAB Blends",
         "parameter_coordinates": [
-          "thermal aging time of seeds",
-          "Seed concentration / volume",
-          "HCl / pH"
+          "surfactant system (CTAB vs CTAC/CTAB)",
+          "oxidative etching conditions",
+          "CTAC surfactant concentration"
         ],
-        "evidence_from_corpus": "Advanced Optical Materials (2015) varies seed volume while keeping aging time fixed at 2 hours, whereas ja6b12143 and c4nr06323f vary thermal treatment times and temperatures without evaluating their interaction with varying seed injection volumes or proton levels.",
+        "evidence_from_corpus": "ncomms8571 (2015) utilized binary CTAC/CTAB systems and selective oxidative etching to isolate monodisperse templates, whereas c3nr01553j (2013) and jp4c08818 (2025) independently varied CTAC with sodium salicylate or citrate without decoupling whether the shape evolution stems from chloride-ion complexation or micellar packing variations.",
         "competing_mechanistic_hypotheses": [
-          "Hypothesis A: Seed thermal aging primarily controls the density of internal twin boundaries, meaning that varying seed volume merely scales particle size while preserving aspect ratio.",
-          "Hypothesis B: Seed volume and thermal aging are coupled; higher seed volumes introduce varying amounts of unreacted citrate/surfactant that alter the effective monomer-to-seed ratio, shifting longitudinal LSPR non-linearly."
+          "Hypothesis A: The formation of six-fold twinned structures in CTAC/salicylate is purely dictated by selective $\text{Cl}^-$ adsorption on specific prismatic facets rather than micelle morphology.",
+          "Hypothesis B: Salicylate ions alter the micellar packing parameter ($v/a_0 l_0$), forcing cylindrical-to-vesicular transitions that physically template the bipyramids independently of halide effects."
         ],
-        "proposed_decisive_experiment": "Design a orthogonal matrix varying seed thermal aging times (30 min to 4 h at 80 \u00b0C) and seed injection volumes (10 \u0081\u0081L to 400 \u0081\u0081L) in a standard 0.1 M CTAB growth solution containing 10 mM HCl. Characterize products via extinction spectroscopy (LSPR peak maximum) and STEM to decouple size vs. twinning contributions.",
-        "specificity_score": 9
+        "proposed_decisive_experiment": "Synthesize bipyramids substituting CTAC with tetramethylammonium chloride (TMAC) + sodium chloride (keeping $[\text{Cl}^-] \text{ and } [\text{CTA}^+]$ decoupled). Sweep sodium salicylate (0 to 50 mM). Readout: Small-angle X-ray scattering (SAXS) for micelle structure and STEM-EDS for chloride coverage mapping on facet tips.",
+        "specificity_score": 10
       },
       {
         "gap_id": "GAP-4",
         "gap_category": "UNEXPLORED_KINETIC_THERMODYNAMIC_REGIME",
-        "title": "High-Aspect-Ratio Nanojavelin Regimes under Extreme Halide/Silver Molar Ratios",
+        "title": "Thermal Seed Aging and Acid Interplay in High-Aspect-Ratio Nanojaveline Overgrowth",
         "parameter_coordinates": [
-          "AgNO3 / [Ag+] concentration",
-          "halide ion type (Cl-, Br-, I-)",
-          "8-hydroxyquinoline concentration"
+          "thermal aging time of seeds",
+          "8-hydroxyquinoline concentration",
+          "HCl / pH",
+          "additive acid concentration"
         ],
-        "evidence_from_corpus": "am9b12973 notes that high silver ratios (>1:20 Ag:Au) cause silver halide precipitation, and c4nr06323f explores 8-hydroxyquinoline with CTAC/CTAB, but the synergistic kinetic regime of employing mixed iodide/bromide halide ratios alongside high silver loadings to push aspect ratios beyond AR = 11 remains unmapped.",
+        "evidence_from_corpus": "ja6b12143 (2017) fixed seed thermal treatment at 80 \u00b0C for 90 min, and c4nr06323f (2015) varied 8-hydroxyquinoline and thermal aging to generate high-aspect-ratio nanojavelins, but neither integrated systematic variations of secondary additive acids or tested non-standard seed aging kinetics (<30 min or >4 hours) with weak reducing agents.",
         "competing_mechanistic_hypotheses": [
-          "Hypothesis A: Incorporation of trace iodide ions alongside high silver concentrations will strongly passivate side facets via stable AgI surface complexes, enabling defect-free nanojavelins with AR > 15.",
-          "Hypothesis B: Iodide ions will induce immediate isotropic etching or phase segregation of the pentatwinned seeds due to the very low solubility product of AgI, halting anisotropic growth entirely."
+          "Hypothesis A: Extended thermal aging (>4 h) anneals out structural twin defects in seeds, completely terminating anisotropic overgrowth when using mild reducing agents like 8-hydroxyquinoline.",
+          "Hypothesis B: Short thermal aging yields a meta-stable distribution of single- and multi-twinned seeds that selectively undergo asymmetric tip-branching upon the addition of secondary acids."
         ],
-        "proposed_decisive_experiment": "Test growth solutions containing 0.5 mM HAuCl4, 0.4 M 8-hydroxyquinoline, and varying KI/KBr molar fractions (0% to 10% iodide relative to total halide) combined with AgNO3 concentrations up to 0.5 mM. Evaluate reaction progress using in-situ UV-Vis absorption spectroscopy and FDTD-correlated TEM structural profiling.",
+        "proposed_decisive_experiment": "Age penta-twinned seeds at 80 \u00b0C for times ranging from 15 min to 6 hours, followed by growth solutions containing 8-hydroxyquinoline (0.01 to 0.1 M) and additive $\text{H}_2\text{SO}_4$/HCl (0 to 1 mL). Readout: Extinction spectra spanning the NIR (800\u20132500 nm) and high-resolution TEM aspect ratio distributions (AR up to 20).",
         "specificity_score": 10
       }
     ],
     "cross_questioning_refinements": [
-      "Filtered out generic calls to 'test more surfactants' by constraining Gap 2 to exact high-concentration GtS protocols combined with binary CTAC/CTAB ratios.",
-      "Refined Gap 1 to target the specific mechanistic contradiction between monotonic yield enhancement and structural phase transitions reported in conflicting papers."
+      "Filtered out generic calls to 'scale up synthesis' by strictly coupling metal precursor concentration tiers (up to 15 mM) with specific surfactant ratios.",
+      "Refined the HCl/pH contradictions by mapping the competing physical mechanisms of $E^0$ potential shifts in ascorbic acid versus local halide/counterion binding affinities at the Au crystal interface.",
+      "Eliminated vague solvent recommendations by specifying exact experimental readouts (SAXS for micelles, STEM-EDS for halide coverage, Cryo-TEM for yield)."
     ]
   },
   "cross_questioning_gaps": {
-    "domain_summary": "Synthesis and mechanistic optimization of pentatwinned gold nanobipyramids (Au NBPs) via seed-mediated growth, focusing on surfactant mixtures (CTAB, CTAC, DDAB, sodium salicylate), halide/acid additives, and reduction kinetics for tunable plasmonic properties (LSPR).",
-    "explored_parameter_space_summary": "Extensive single-variable and binary optimization of CTAB/CTAC surfactant ratios, seed volume/thermal aging, AgNO3 concentration, and HCl/pH adjustments. However, multivariable intersections involving coupled halide-surfactant-acid dynamics and extreme scale-up reactant concentrations remain heavily confounded.",
+    "domain_summary": "Seed-mediated synthesis and shape-controlled growth of colloidal pentatwinned gold nanobipyramids (Au NBPs), governed by multi-component surfactant mixtures (CTAB, CTAC, DDAB, sodium salicylate), silver ion underpotential deposition, reducing agent kinetics (ascorbic acid, 8-hydroxyquinoline), and proton/halide concentration coupling.",
+    "explored_parameter_space_summary": "Extensive single-variable and binary optimization of CTAB/CTAC surfactant ratios, silver nitrate ([Ag+]), HCl/pH, ascorbic acid, and seed aging/injection volumes. However, critical unmapped intersections remain\u2014notably the simultaneous co-variation of high-concentration Au/Ag growth regimes with mixed surfactant systems (CTAC/CTAB/salicylate) and rigorous pH-halide titrations.",
     "gaps": [
       {
         "gap_id": "GAP-1",
         "gap_category": "MECHANISTIC_CONTRADICTION",
-        "title": "Resolution of HCl/pH-Driven Competing Pathways: Thermodynamic Redox Kinetics vs. Surfactant Phase Transitions",
+        "title": "Proton/Chloride-Mediated Reductive Shift vs. Phase Transition Contradiction in Binary Surfactant Growth",
         "parameter_coordinates": [
           "HCl / pH",
-          "DDAB/CTAB surfactant ratio",
+          "CTAB/DDAB vs CTAC surfactant ratio",
           "Ascorbic acid concentration"
         ],
-        "evidence_from_corpus": "1-s2.0-S2468519416300702-main reports that increasing HCl/pH in CTAB/DDAB mixtures induces complex phase/shape transitions (truncated bipyramids to dogbones and nanodumbbells), whereas s11051-016-3486-y claims that abundant HCl monotonically increases monodisperse gold bipyramid yield under pure CTAB/AgNO3 conditions.",
+        "evidence_from_corpus": "s11051-016-3486-y reports that increasing HCl concentration enhances Au NBP formation yield and blue-shifts the longitudinal LSPR via slowed reduction rates and halide adsorption in pure CTAB systems. Conversely, 1-s2.0-S2468519416300702-main demonstrates that altering pH/HCl in binary CTAB/DDAB mixtures triggers radical shape transitions (truncated bipyramids to dogbones and nanodumbbells) rather than straightforward yield enhancement, while jp412409u shows pH changes coupled with L-cysteine red-shift LSPR up to 969 nm.",
         "competing_mechanistic_hypotheses": [
-          "Hypothesis A: Proton concentration changes strictly govern the apparent kinetics by shifting the $pK_a$-dependent reduction potential ($E^0$) of ascorbic acid and the Nernst equilibrium of [AuCl4]- complexes, causing a kinetic overdrive rather than a surfactant structural change.",
-          "Hypothesis B: Binary surfactant mixtures (CTAB/DDAB) exhibit altered micellar packing parameters that interact with protonated headgroups, creating a genuine thermodynamic phase boundary independent of the bulk reduction rate."
+          "Hypothesis A: Protonation exclusively alters ascorbic acid dissociation kinetics ($pK_a$ shift), changing global monomer flux without altering facet-specific binding energies.",
+          "Hypothesis B: Protons synergize with halide ions ($Cl^-$/$Br^-$) to modify the surface charge density and binding affinity of mixed surfactant bilayers (CTAB/DDAB or CTAC), driving facet-selective stabilization changes."
         ],
-        "proposed_decisive_experiment": "Perform a decoupled factorial grid sweep where pH is buffered using phthalate/phosphate buffers (maintaining constant ascorbic acid dissociation state and reduction potential) while independently varying HCl/Cl- activity (0 to 100 mM) and DDAB/CTAB molar fractions (0 to 0.5). Characterize intermediates using in situ UV-Vis LSPR and ex situ HR-TEM to isolate true surfactant phase transitions from pH-driven kinetic rate artifacts.",
+        "proposed_decisive_experiment": "Perform a 4x4 factorial sweep of HCl concentration (0 to 50 mM added to 1 M HCl stock) versus CTAB/DDAB ratio (1:0 to 1:1 molar) at fixed [HAuCl4] = 0.5 mM and [AgNO3] = 0.08 mM. Readouts: In situ Zeta-potential measurement of growth complexes, UV-Vis LSPR extinction spectra, and TEM aspect ratio distribution mapping.",
         "specificity_score": 10
       },
       {
         "gap_id": "GAP-2",
-        "gap_category": "COUPLED_VARIABLE_CONFOUNDING",
-        "title": "Decoupling Halide Exchange Dynamics from Dielectric Shift in Single-Particle LSPR",
+        "gap_category": "UNEXPLORED_KINETIC_THERMODYNAMIC_REGIME",
+        "title": "High-Concentration Scale-Up Limit (>3 mM Au) Coupled with Salicylate-CTAC Buffer Capacity and Proton Generation",
         "parameter_coordinates": [
-          "HCl / pH",
-          "halide ion type (Cl-, Br-, I-)",
-          "CTAB surfactant concentration"
+          "HAuCl4 / [Au3+] concentration (3 mM to 15 mM)",
+          "sodium salicylate concentration (5 mM to 60 mM)",
+          "CTAC surfactant concentration",
+          "Growth-to-Seed (GtS) slow addition rate"
         ],
-        "evidence_from_corpus": "jp412409u shows that proton/cysteine/halide adjustments induce a 20% red-shift in longitudinal LSPR via targeted assembly, while s11051-016-3486-y reports that increasing HCl/Cl- levels blue-shifts the longitudinal LSPR by accelerating symmetrical facet passivation.",
+        "evidence_from_corpus": "am9b12973 established high-concentration growth up to 3-15 mM Au using slow Growth-to-Seed addition in CTAB/BDAC, whereas c3nr01553j utilized CTAC and sodium salicylate for size-controlled bipyramids at low conventional concentrations (~0.5 mM). Critically, scaling precursor concentration to 15 mM generates stoichiometric proton loads via ascorbic acid oxidation ($C_6H_8O_6 \rightarrow C_6H_6O_6 + 2H^+ + 2e^-$) that exceed unbuffered salicylate-CTAC capacities.",
         "competing_mechanistic_hypotheses": [
-          "Hypothesis A: Spiking exogenous halides causes immediate double-layer compression and Stern layer dielectric modification, intrinsically shifting single-particle LSPR without morphological change.",
-          "Hypothesis B: Exogenous halides (particularly I- and Cl-) induce localized place-exchange, ligand displacement, or galvanic etching of CTAB bilayers on sharp tips, altering particle aspect ratio prior to optical readout."
+          "Hypothesis A: Salicylate acts as a weak acid buffer ($pK_a \rys 3.0$) that absorbs the proton flux generated by high-rate ascorbic acid oxidation, maintaining the micellar worm-like structure of CTAC.",
+          "Hypothesis B: The massive local generation of $H^+$ overwhelms the salicylate buffering window, collapsing the CTAC/salicylate viscoelastic micelle network into spherical micelles and inducing anarchic side nucleation."
         ],
-        "proposed_decisive_experiment": "Synthesize monodisperse Au NBPs with aspect ratio ~3.5. Introduce halide spikes (NaCl, NaBr, NaI from 0 to 50 mM) onto *silica-encapsulated* Au NBPs (which protect the metal core morphology from place-exchange) and compare against bare CTAB-capped Au NBPs. Quantify single-particle scattering spectra via dark-field hyperspectral microscopy and high-resolution STEM-EDS mapping to separate pure electrostatic dielectric shifts from morphological galvanic etching.",
+        "proposed_decisive_experiment": "Execute slow continuous syringe pump addition of Growth Solution (HAuCl4 varied from 3 mM to 15 mM, sodium salicylate scaled from 5 mM to 60 mM to maintain stoichiometric buffer ratio, CTAC fixed at 100 mM) into standardized penta-twinned seeds at 28 \u00b0C with continuous in situ pH logging. Readouts: Dynamic Light Scattering (DLS) time-traces for aggregation onset, Cryo-TEM for micellar structures, and final yield via SEM particle counting.",
         "specificity_score": 10
       },
       {
         "gap_id": "GAP-3",
-        "gap_category": "PARAMETER_SPACE_HOLE",
-        "title": "High-Concentration Growth-to-Seed (GtS) Kinetics with Mixed CTAC/CTAB and Thermodynamic Chloro-Complexation Control",
+        "gap_category": "COUPLED_VARIABLE_CONFOUNDING",
+        "title": "Citrate-Mediated Ligand Carryover vs. Silver Underpotential Deposition in Tunable CTAC/Citrate Seeds",
         "parameter_coordinates": [
-          "Growth-to-Seed (GtS) slow addition rate",
-          "HAuCl4 / [Au3+] concentration",
-          "CTAC surfactant concentration",
-          "HCl / pH"
+          "AgNO3 / [Ag+] concentration (0.01 mM to 0.20 mM)",
+          "seed thermal aging time (0 to 6 hours)",
+          "CTAC to sodium citrate molar ratio in seed solution (dialyzed vs. undialyzed)"
         ],
-        "evidence_from_corpus": "am9b12973 established high-concentration synthesis up to 15 mM Au using slow GtS addition in BDAC/CTAB, but completely omitted HCl/pH variations and CTAC-dominant binary mixtures, which are central to jp4c08818 and c3nr01553j for low-concentration shape control.",
+        "evidence_from_corpus": "cg5b00121 and Advanced Optical Materials (2015 - Li) independently varied AgNO3 to tune aspect ratios, while ja6b12143 and jp4c08818 fixed seed thermal aging at 80 \u00b0C for 2 hours or varied seed CTAC/citrate ratios. Uncontrolled carryover of free citrate anions adsorbed on seeds acts as a competing complexing agent for incoming $Ag^+$ and $Au^{3+}$, confounding underpotential deposition.",
         "competing_mechanistic_hypotheses": [
-          "Hypothesis A: High [Au(III)] (>3 mM) combined with controlled [Cl-] from HCl additions establishes a stable steady-state of [AuCl2]- intermediates via Nernst potential tuning, suppressing anarchic side nucleation.",
-          "Hypothesis B: High precursor influx overwhelms the mass-transfer limits of the CTAC/CTAB bilayer template regardless of chloride complexation, leading to dendritic overgrowth and loss of pentatwinned integrity."
+          "Hypothesis A: Residual free citrate carried over from seed stock dominates the reduction kinetics and $Ag^+$ complexation, rendering secondary [AgNO3] sweeps ineffective unless seeds are exhaustively dialyzed.",
+          "Hypothesis B: Seed crystal defect density\u2014governed strictly by thermal aging time\u2014completely dictates facet reactivity toward $Ag^+$ deposition, making trace carboxylate carryover kinetically negligible."
         ],
-        "proposed_decisive_experiment": "Execute syringe-pump-driven slow addition of growth solution ([HAuCl4] = 15 mM) into seeds containing a binary CTAC/CTAB ratio (1:1 molar) while titrating HCl from 10 mM to 200 mM (accounting for Nernstian [AuCl4]-/[AuCl2]- shifts). Measure residual unreacted monomer kinetics via ICP-MS, solution redox potential via potentiometry, and final aspect ratio distributions via SEM.",
+        "proposed_decisive_experiment": "Design a crossed matrix comparing dialyzed versus undialyzed seeds (varying CTAC/citrate molar ratios from 0.1 to 10 and thermal aging from 30 to 360 min) injected into a growth solution with graduated [AgNO3] sweeps (0.02, 0.08, 0.16 mM). Readouts: High-Resolution HAADF-STEM twin-plane defect counting, capillary electrophoresis for free citrate quantification, and UV-Vis LSPR peak tracking.",
+        "specificity_score": 10
+      },
+      {
+        "gap_id": "GAP-4",
+        "gap_category": "PARAMETER_SPACE_HOLE",
+        "title": "Metal-Chelating 8-Hydroxyquinoline Overgrowth Regimes in Low-CTAB / High-Salicylate Co-Surfactant Solutions",
+        "parameter_coordinates": [
+          "8-hydroxyquinoline concentration (0 to 50 mM)",
+          "CTAB surfactant concentration (0.01 to 0.10 M)",
+          "sodium salicylate concentration (0 to 30 mM)"
+        ],
+        "evidence_from_corpus": "c4nr06323f utilized 8-hydroxyquinoline with CTAC/CTAB mixtures to push aspect ratios into the infrared (nanojavelins), while d1nr01768c demonstrated that lowering CTAB concentration below 0.022 M distorts GNBs. Similarly, c3nr01553j explored salicylate/CTAC exclusively with ascorbic acid. Because 8-HQL is a potent bidentate chelator forming stable coordination complexes with metal ions, its interaction with salicylate-CTAC soft templates remains unexplored.",
+        "competing_mechanistic_hypotheses": [
+          "Hypothesis A: 8-HQL forms stable metal-quinolate complexes that tune the chemical potential of free $Au(I)$ monomers, synergizing with salicylate soft templates to enable extreme 1D tip elongation at low CTAB.",
+          "Hypothesis B: Salicylate and 8-HQL competitively displace one another from the metal-surfactant interface, forming insoluble chelate precipitates that poison the crystal growth front."
+        ],
+        "proposed_decisive_experiment": "Conduct titration sweeps of 8-hydroxyquinoline (0-50 mM) in a co-surfactant growth bath containing fixed CTAB (0.02 M) and varying sodium salicylate (0-30 mM). Readouts: Extinction spectroscopy up to 2500 nm (IR LSPR limits), TEM particle aspect ratio statistics, and solution phase ICP-MS to track unreacted Au(I) conversion rates.",
         "specificity_score": 10
       }
     ],
     "cross_questioning_refinements": [
-      "Refined GAP-1 to explicitly address the critic's challenge regarding the ascorbic acid $pK_a$ and reduction potential ($E^0$) shift: the proposed experiment now uses independent pH buffering to decouple bulk reducing kinetics from thermodynamic surfactant phase transitions.",
-      "Refined GAP-2 to directly counter halide-induced galvanic replacement and ligand stripping: integrated a silica-encapsulated control to isolate pure Stern-layer dielectric shifts from destructive halide place-exchange reactions.",
-      "Refined GAP-3 to incorporate explicit Nernstian accounting for [AuCl4]- vs [AuCl2]- chlorocomplexation stoichiometry during high-concentration HCl titrations, resolving mass-conservation and reduction potential confounds.",
-      "Pruned the initial GAP-4 (sub-10 \u00b5L seed injections) entirely after the critic's challenge demonstrated that below critical seed thresholds, homogeneous nucleation overwhelmingly dominates over seeded growth in a chemically trivial manner."
+      "Refined GAP-2 by explicitly integrating the stoichiometric proton generation rate from ascorbic acid oxidation and scaling sodium salicylate to match the buffer capacity deficit at 15 mM Au concentrations.",
+      "Refined GAP-3 by isolating the confounding effect of carboxylate carryover from seed preparation, explicitly proposing dialysis versus undialyzed seed comparisons to decouple ligand complexation from Ag+ underpotential deposition.",
+      "Refined GAP-4 by addressing the metal-chelating bidentate nature of 8-hydroxyquinoline, shifting the mechanistic framing from simple 'surfactant depletion' to competitive metal-quinolate complexation equilibria versus salicylate soft-templating."
     ]
   },
   "gap_cross_questioning_cycle": {
@@ -148,30 +167,23 @@
       {
         "round_number": 1,
         "failure_mode_targeted": "MASS_AND_STOICHIOMETRY_CONSERVATION",
-        "sharp_question": "In GAP-3, you propose injecting a growth solution containing 15 mM HAuCl4 into a binary CTAC/CTAB mixture while varying HCl from 10 mM to 200 mM. How do you account for the massive stoichiometric shift in free [AuCl4] vs [AuCl2]- complexes caused by high [Cl-] from HCl additions, and does this not completely alter the chemical reduction potential ($E^0$) of the Au(III)/Au(I) couple independently of any surfactant template stability?",
-        "physical_rationale_for_doubt": "Adding up to 200 mM HCl drastically increases the chloride activity, shifting the Nernst equilibrium of chloro-gold complexes. This alters the reduction kinetics by thermodynamics rather than purely via surfactant bilayer stability or facet passivation, invalidating the premise that only morphological/template effects are being tested.",
-        "external_search_query_needed": "gold nanobipyramid growth kinetics chloride complexation reduction potential nernst"
+        "sharp_question": "In GAP-2, you propose scaling up [HAuCl4] up to 15 mM in CTAC/salicylate media using slow GtS addition. How do you account for the strict stoichiometric balance between Au(III), ascorbic acid, and the local depletion of free halide/salicylate ions? At 15 mM Au, does the rapid consumption of protons and generation of chloride ligands exceed the buffer capacity of the salicylate/CTAC system, inevitably causing uncontrolled secondary nucleation independent of micelle stability?",
+        "physical_rationale_for_doubt": "A five-fold jump in precursor concentration dramatically alters the proton generation rate during ascorbic acid oxidation ($C_6H_8O_6 \rightarrow C_6H_6O_6 + 2H^+ + 2e^-$). Without explicitly coupling the acid-base equilibria of sodium salicylate to the local pH drop, any supposed micellar 'protection' hypothesis (Hypothesis A) is undermined by simple proton-driven shifts in surfactant headgroup dissociation.",
+        "external_search_query_needed": "gold nanobipyramids high concentration synthesis salicylate kinetics"
       },
       {
         "round_number": 1,
         "failure_mode_targeted": "CONFOUNDING_SYNTHESIS_VARIABLE",
-        "sharp_question": "For GAP-2, you suggest adding NaCl, NaBr, and NaI (0 to 50 mM) to pre-synthesized Au NBPs in the absence of reducing agents to decouple aggregation from single-particle refractive index shifts. Given that surfactant bilayers on gold bipyramids rely on a dynamic adsorption-desorption equilibrium of Br- counterions with CTAB, won't spiking foreign halides (like Cl- or I-) induce immediate double-layer compression, ligand exchange, and localized galvanic replacement (especially with I-), thereby destroying the particle morphology before optical measurements can be taken?",
-        "physical_rationale_for_doubt": "Iodide and chloride have vastly different binding affinities to Au(111) and Au(100) facets compared to bromide. Iodide forms extremely stable Au-I bonds and will strip or restructure the CTAB bilayer through place-exchange reactions, changing the aspect ratio and surface morphology rather than acting as a passive dielectric perturbation.",
-        "external_search_query_needed": "halide ion exchange CTAB gold nanorods optical shift galvanic replacement"
-      },
-      {
-        "round_number": 1,
-        "failure_mode_targeted": "NON_MONOTONIC_REGIME_BOUNDARY",
-        "sharp_question": "In GAP-4, you aim to explore sub-10 \u00b5L seed injection volumes down to 1 \u00b5L. In a standard 10\u201350 mL growth batch, a 1 \u00b5L injection of seed solution introduces negligible seed surface area, leaving the system in a regime heavily dominated by spontaneous secondary nucleation and heterogeneous background reduction. How do you plan to mathematically separate unseeded isotropic nanoparticle precipitation from true seeded growth when seed volume approaches zero?",
-        "physical_rationale_for_doubt": "Below a critical seed concentration threshold, the total surface area available for crystal growth is insufficient to consume monomers faster than the spontaneous homogeneous nucleation rate dictated by ascorbic acid and AgNO3. This leads to a chemically trivial regime of mixed spherical/platelet precipitation rather than controlled nanobipyramids.",
-        "external_search_query_needed": null
+        "sharp_question": "For GAP-3, you suggest decoupling seed aging time from CTAC/citrate ratios by varying [AgNO3] during growth. But isn't the primary defect density of penta-twinned seeds dictated irreversibly by the residual free citrate and ionic strength during the thermal aging window (ja6b12143)? How do you experimentally separate the effect of seed-bound citrate ligands carrying over into the growth solution from the added [AgNO3] underpotential deposition?",
+        "physical_rationale_for_doubt": "Citrate molecules adsorbed on seed facets act as strong complexing agents for $Ag^+$ and $Au^3+$. Carrying over varying CTAC-to-citrate molar ratios into the secondary growth bath inevitably introduces uncontrolled amounts of free reducing/complexing carboxylate ions, directly confounding the Ag+ underpotential deposition kinetics you aim to isolate.",
+        "external_search_query_needed": "seed-mediated growth gold citrate-capped seeds silver underpotential deposition"
       },
       {
         "round_number": 1,
         "failure_mode_targeted": "KINETIC_VS_THERMODYNAMIC_DOMINANCE",
-        "sharp_question": "For GAP-1, your decisive experiment maps the boundary between uniform NBP yield and dogbone phase transitions using factorial variations of HCl and DDAB/CTAB. However, did you account for the fact that changing HCl concentration directly alters the protonation kinetics of ascorbic acid ($pK_a \rys$), shifting the instantaneous supersaturation profile from a slow-growth regime to a burst-nucleation regime? How do you prove this is a surfactant-packing phase boundary rather than a simple kinetic rate-matching artifact?",
-        "physical_rationale_for_doubt": "Ascorbic acid is a pH-dependent reducing agent; its dissociation state dictates the electron-transfer rate to Au(III). Varying HCl concentration changes the effective reducing strength more drastically than it affects the micellar packing parameter, meaning the 'phase transition' may merely reflect a kinetic overdrive rather than a thermodynamic surfactant structure shift.",
-        "external_search_query_needed": "ascorbic acid reduction kinetics pH dependence gold nanobipyramids"
+        "sharp_question": "In GAP-4, you target 8-hydroxyquinoline (8-HQL) overgrowth at low CTAB (0.02 M) with salicylate. Given that 8-HQL is a known metal-chelating bidentate ligand, won't it form soluble Cu/Fe/Au-quinolate complexes in situ that alter the free monomer chemical potential more drastically than the surfactant soft-template, rendering your 'surfactant-depleted' mechanism kinetically irrelevant?",
+        "physical_rationale_for_doubt": "8-hydroxyquinoline does not merely act as a mild reducing agent; it is a potent chelator that forms stable coordination complexes with metal ions in solution. This shifts the reduction free energy ($\triangle G^{\neq}$) via complexation rather than purely through micellar packing changes, meaning Hypothesis A and B might both fail due to direct metal-ligand precipitation.",
+        "external_search_query_needed": "8-hydroxyquinoline gold reduction mechanism chelation"
       }
     ]
   },
@@ -229,245 +241,241 @@
       "predictions": {
         "single_agent_rag": {
           "experiment_prompt": "Starting from the baseline protocol, what happens to the gold bipyramid morphology (specifically single-particle volume, length, width, aspect ratio, tip sharpness/radius, reaction completion time, and longitudinal LSPR peak wavelength) when CTAB is added to the growth solution at systematically varied concentrations ranging from 1 mM to 50 mM, while keeping [CTAC] constant at 100 mM and all other reactant concentrations, seed quantities, and temperatures identical?",
-          "perturbed_variable": "Concentration of CTAB added to the growth solution (varied from 1 mM to 50 mM in the presence of 100 mM CTAC)",
-          "perturbation_summary": "Adding secondary long-chain alkyltrimethylammonium bromide (CTAB) alongside the primary long-chain alkyltrimethylammonium chloride (CTAC) surfactant baseline system across a 1\u201350 mM range alters the halide ion ratio ([Br-]/[Cl-]) and bilayer packing density on the gold nanoparticle facets.",
-          "primary_prediction_summary": "Increasing the CTAB concentration introduces trace bromide ions (Br-) that dramatically increase anisotropic growth kinetics due to selective and stronger adsorption of CTA+-Br- complexes on specific single-crystalline side facets (like {110}), leading to an increase in bipyramid aspect ratio, length, longitudinal LSPR red-shift, and sharper tips, with minimal change to total single-particle volume if total gold precursors are conserved.",
+          "perturbed_variable": "CTAB addition concentration in the growth solution (varied from 1 mM to 50 mM in the presence of 100 mM CTAC)",
+          "perturbation_summary": "Adding varying amounts of cetyltrimethylammonium bromide (CTAB) to a growth solution already containing a constant background of cetyltrimethylammonium chloride (CTAC at 100 mM) shifts the halide and surfactant ion environment, altering micellar packing, bromide/chloride competitive adsorption on gold crystal facets, and reduction kinetics.",
+          "primary_prediction_summary": "Increasing the CTAB concentration (specifically the Br- counterion ratio relative to Cl-) systematically increases aspect ratio and longitudinal LSPR wavelength due to stronger bromide-assisted stabilization of the side facets ({110} or pentatwinned lateral planes), leading to slower lateral growth compared to tip growth, with minimal overall change in total particle volume (governed by total [Au0] conversion).",
           "observable_predictions": [
+            {
+              "observable": "Bipyramid single-particle volume",
+              "predicted_direction": "no_significant_change",
+              "predicted_magnitude_or_range": "Constant within +/- 5%",
+              "mechanistic_justification": "Total particle volume is fundamentally fixed by the conserved initial ratio of available Au precursor ([Au3+]) to seed concentration (assuming complete reduction and no secondary nucleation)."
+            },
             {
               "observable": "Aspect ratio",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Increases significantly by 15-40% across the 1 to 50 mM CTAB range",
-              "mechanistic_justification": "Bromide ions from CTAB have a much higher affinity for specific gold facets compared to chloride ions (from CTAC), enhancing the surfactant passivation layer and promoting strongly directional 1D growth along the pentatwinned axis."
+              "predicted_magnitude_or_range": "Increases moderately as [CTAB] increases from 1 mM to 50 mM",
+              "mechanistic_justification": "Bromide ions (Br-) from CTAB adsorb more strongly on the lateral facets of pentatwinned bipyramids than chloride ions (Cl- from CTAC), creating a stronger kinetic barrier against lateral deposition and enhancing preferential growth along the longitudinal axis."
             },
             {
               "observable": "Longitudinal LSPR peak wavelength",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Red-shifts by 50 to 150 nm",
-              "mechanistic_justification": "Directly correlates with the increased aspect ratio and elongation of the gold bipyramids resulting from enhanced anisotropic growth."
-            },
-            {
-              "observable": "Bipyramid single-particle volume",
-              "predicted_direction": "no_significant_change",
-              "predicted_magnitude_or_range": "Constant within \u00b15%",
-              "mechanistic_justification": "Total gold reduction stoichiometry and seed concentration remain constant, meaning total precipitated Au0 mass is conserved across the batch."
+              "predicted_magnitude_or_range": "Red-shifts by ~30\u201370 nm across the 1\u201350 mM CTAB range",
+              "mechanistic_justification": "Directly correlates with the increased aspect ratio driven by stronger bromide surface passivation, extending the dipole resonance to longer wavelengths."
             },
             {
               "observable": "Length",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Increases by 10-30%",
-              "mechanistic_justification": "Enhanced passivation along the side facets forces the incoming reduced gold adatoms to deposit preferentially at the tips."
+              "predicted_magnitude_or_range": "Increases by ~10\u201320%",
+              "mechanistic_justification": "With lateral growth suppressed by enhanced bromide adsorption at constant total gold precursor, gold deposition is redirected toward the tips, increasing particle length."
             },
             {
               "observable": "Width",
               "predicted_direction": "decrease",
-              "predicted_magnitude_or_range": "Decreases slightly by 5-15%",
-              "mechanistic_justification": "Tighter and more ordered surfactant bilayers formed by mixed CTAB/CTAC restrict lateral radial overgrowth."
+              "predicted_magnitude_or_range": "Decreases by ~5\u201315%",
+              "mechanistic_justification": "Stronger side-facet passivation by Br- restricts lateral widening during the seeded growth phase."
             },
             {
               "observable": "Tip truncation / sharpness",
-              "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Tips become significantly sharper (smaller radius of curvature)",
-              "mechanistic_justification": "Stronger bromide-assisted facet blocking confines reduction and deposition precisely to the apexes."
+              "predicted_direction": "no_significant_change",
+              "predicted_magnitude_or_range": "Maintains sharp tips dictated by the pentatwinned seed structure and 8-HQL/Ag+ cooperative overgrowth regime",
+              "mechanistic_justification": "The underlying growth mechanism and silver-assisted underpotential deposition regime remain intact, preserving sharp bipyramidal tips."
             }
           ],
           "causal_mechanism_chain": [
-            "[Addition of CTAB to CTAC-based growth solution] -> [Introduction of trace Br- into the Stern layer of the CTA+ micellar/bilayer structure] -> [Stronger adsorption and structural stabilization of CTA+-Br- complexes on {110} side facets relative to tips] -> [Significant suppression of lateral radial growth and promotion of tip-localized anisotropic deposition] -> [Elongated gold bipyramids with increased aspect ratio, sharper tips, and red-shifted LSPR]"
+            "[Higher [CTAB] addition to 100 mM CTAC] -> [Increased local Br-/Cl- halide ratio in the surfactant bilayer/micelles] -> [Enhanced selective adsorption of Br- onto lateral pentatwinned facets relative to tips] -> [Greater kinetic retardation of lateral growth and redirection of Au flux to tips] -> [Increased aspect ratio, increased length, decreased width, and red-shifted longitudinal LSPR]"
           ],
-          "conservation_and_regime_check": "Mass balance of Au0 is strictly conserved because initial [HAuCl4] and seed concentrations are held constant. The system remains within the seeded growth regime without triggering secondary nucleation, though the local surfactant packing parameter and surface potential change due to the replacement/mixing of Cl- with strongly binding Br- ions.",
+          "conservation_and_regime_check": "Mass balance of gold is strictly conserved because the initial [Au3+] to seed ratio is held constant. The system remains within the seeded-growth regime for pentatwinned bipyramids without crossing into secondary nucleation boundaries.",
           "supporting_paper_citations": [
-            "ja6b12143",
+            "am9b12973",
             "c4nr06323f",
-            "am9b12973"
+            "ja6b12143"
           ],
-          "confidence_zero_to_one": 0.89,
+          "confidence_zero_to_one": 0.85,
           "key_uncertainties_or_boundary_conditions": [
-            "Exact trace impurity levels of Br- pre-existing in the CTAC stock can modulate the baseline sensitivity.",
-            "At very high CTAB concentrations (>40-50 mM), micellar viscosity changes or salt-induced cloud-point transitions might slightly alter mixing dynamics."
+            "The exact halide ratio sensitivity depends on the specific commercial batch of CTAC/CTAB due to trace impurity effects.",
+            "At very high total surfactant concentrations, changes in micellar viscosity could subtly alter mass transport rates of the reducing agent (8-HQL)."
           ]
         },
         "single_agent_hybrid_kb": {
           "experiment_prompt": "Starting from the baseline protocol, what happens to the gold bipyramid morphology (specifically single-particle volume, length, width, aspect ratio, tip sharpness/radius, reaction completion time, and longitudinal LSPR peak wavelength) when CTAB is added to the growth solution at systematically varied concentrations ranging from 1 mM to 50 mM, while keeping [CTAC] constant at 100 mM and all other reactant concentrations, seed quantities, and temperatures identical?",
-          "perturbed_variable": "CTAB surfactant concentration (additive in CTAC growth solution)",
-          "perturbation_summary": "Introduction and systematic variation of CTAB (hexadecyltrimethylammonium bromide) from 1 mM to 50 mM into a baseline growth solution containing 100 mM CTAC, HAuCl4, AgNO3, 8-HQL, and pentatwinned gold seeds.",
-          "primary_prediction_summary": "Adding CTAB to the CTAC growth solution alters mixed-micelle packing geometry, bromide-to-chloride ratio, and underpotential deposition (UPD) kinetics of Ag+ on specific crystallographic facets, leading to an initial increase in aspect ratio and longitudinal LSPR, followed by shape degradation and loss of bipyramidal purity at excessively high CTAB concentrations due to phase separation or overly rigid micellar passivation.",
+          "perturbed_variable": "CTAB surfactant concentration (mixed CTAC/CTAB system)",
+          "perturbation_summary": "Systematically varying CTAB concentration from 1 mM to 50 mM in a constant 100 mM CTAC growth medium during gold bipyramid seed-mediated growth.",
+          "primary_prediction_summary": "Adding CTAB up to intermediate mixed-micelle compositions modifies the soft-template geometry and bromide/chloride counterion ratios at the gold facet interfaces. This tunes anisotropic growth rates, resulting in an increase in bipyramid aspect ratio, longitudinal LSPR red-shift, and variations in yield/shape purity, whereas excessive depletion or phase separation of surfactant bilayers at very low CTAB fractions leads to disordered morphologies.",
           "observable_predictions": [
             {
               "observable": "Bipyramid single-particle volume",
               "predicted_direction": "no_significant_change",
-              "predicted_magnitude_or_range": "Within \u00b15%",
-              "mechanistic_justification": "The total amount of Au(III) precursor and seed concentration are conserved; surfactant addition modulates anisotropy rather than the total metallic gold conversion yield."
+              "predicted_magnitude_or_range": "Volume remains nearly constant (within ~5-10%)",
+              "mechanistic_justification": "Total metal precursor ([Au(III)] = 0.25 mM) and seed concentration are conserved, meaning the total reduced Au0 mass deposited per seed is fixed regardless of the CTAC/CTAB ratio."
             },
             {
-              "observable": "Aspect ratio",
+              "observable": "Aspect ratio (AR)",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Increases from ~2.5 to ~3.8 across the 1\u201330 mM CTAB window",
-              "mechanistic_justification": "The introduction of bromide counterions via CTAB modifies the local binding affinity and surface coverage relative to pure CTAC, enhancing differential passivation between the side facets and the tips, thus promoting axial elongation."
+              "predicted_magnitude_or_range": "AR increases from ~2.2 to ~3.5",
+              "mechanistic_justification": "The introduction of bromide counterions (from CTAB) alongside chloride (from CTAC) modifies the underpotential deposition (UPD) of silver and alters the relative passivation strength of side facets versus sharp tips, promoting axial elongation."
             },
             {
               "observable": "Longitudinal LSPR peak wavelength",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Red-shifts from ~750 nm to ~950 nm as CTAB increases up to ~30 mM",
-              "mechanistic_justification": "Directly correlates with the increased aspect ratio and sharpening of the bipyramidal tips, shifting the dipolar localized surface plasmon resonance further into the near-infrared."
-            },
-            {
-              "observable": "Tip truncation / sharpness",
-              "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Tip radius of curvature decreases (sharper tips)",
-              "mechanistic_justification": "Enhanced preferential silver underpotential deposition (UPD) combined with tailored bromide/chloride mixed-micelle binding focuses gold atom deposition predominantly at the apexes."
+              "predicted_magnitude_or_range": "Red-shifts from ~700 nm to ~850 nm",
+              "mechanistic_justification": "The increase in aspect ratio directly scales with the red-shift of the longitudinal surface plasmon resonance (LSPR) peak according to Gans theory for elongated spheroidal/bipyramidal geometries."
             },
             {
               "observable": "Shape purity / yield",
               "predicted_direction": "non_monotonic_increase_then_decrease",
-              "predicted_magnitude_or_range": "Yield peaks around 10\u201325 mM added CTAB; drops sharply above 40 mM due to mixed micelle destabilization and secondary nucleation",
-              "mechanistic_justification": "Moderate bromide concentrations optimize facet passivation, but high total surfactant concentrations disrupt the delicate mixed micelle soft-template equilibrium, leading to co-precipitation of spheres and irregular rods."
+              "predicted_magnitude_or_range": "Yield peaks at an optimal CTAB/CTAC binary ratio and drops at extremes",
+              "mechanistic_justification": "Binary surfactant mixtures form tailored mixed-micelle soft templates that optimize bipyramidal growth. Too little CTAB lacks sufficient bromide for robust facet protection; too much CTAB can trigger surfactant phase segregation or precipitation."
             }
           ],
           "causal_mechanism_chain": [
-            "[\u0394CTAB concentration (1-50 mM)] -> [Alteration of Br-/Cl- ratio and mixed micelle packing in CTAC/CTAB system] -> [Modulation of Ag+ underpotential deposition (UPD) and differential facet passivation] -> [Anisotropic growth enhancement along the [110] direction / tip sharpening] -> [Increased Aspect Ratio, Red-shifted Longitudinal LSPR, and non-monotonic bipyramid yield]"
+            "[\u0394 CTAB Concentration (1\u201350 mM)] -> [Mixed Micelle Packing & Br\u207b/Cl\u207b Ratio at Au Interface] -> [Modified Ag+ UPD and Facet Passivation (Tips vs. Sides)] -> [Enhanced Axial Elongation & Aspect Ratio] -> [Red-shifted Longitudinal LSPR & Tunable Bipyramid Morphology]"
           ],
-          "conservation_and_regime_check": "Mass balance of Au0 is conserved based on initial [HAuCl4] and seed count. At very high CTAB concentrations (>40 mM), the system crosses a phase boundary where mixed micelles undergo structural transitions, leading to secondary nucleation or surfactant crystallization, violating the uniform seeded-growth regime.",
+          "conservation_and_regime_check": "Total Au0 mass is conserved based on the fixed initial [Au(III)] concentration and constant seed number density. The system remains within the seed-mediated growth regime, though surfactant packing transitions between single-component micelles and binary mixed micelles.",
           "supporting_paper_citations": [
             "1-s2.0-S2468519416300702-main (2017)",
-            "d1nr01768c (2021, SI)",
-            "ncomms8571 (2015, Main)"
+            "ncomms8571 (2015)",
+            "d1nr01768c (2021)"
           ],
           "confidence_zero_to_one": 0.85,
           "key_uncertainties_or_boundary_conditions": [
-            "Exact critical micelle concentration (CMC) shifts in mixed CTAC/CTAB solutions at 35 \u00b0C",
-            "Trace impurity levels of bromide in commercial CTAC reagents acting synergistically with added CTAB"
+            "Exact critical micelle concentration (CMC) shifts in binary CTAC/CTAB mixtures.",
+            "Potential solubility limits of mixed halide surfactant pairs at lower temperatures (35 \u00b0C)."
           ]
         },
         "generic_multi_agent": {
           "experiment_prompt": "Starting from the baseline protocol, what happens to the gold bipyramid morphology (specifically single-particle volume, length, width, aspect ratio, tip sharpness/radius, reaction completion time, and longitudinal LSPR peak wavelength) when CTAB is added to the growth solution at systematically varied concentrations ranging from 1 mM to 50 mM, while keeping [CTAC] constant at 100 mM and all other reactant concentrations, seed quantities, and temperatures identical?",
-          "perturbed_variable": "CTAB surfactant concentration (additive in mixed CTAC/CTAB system)",
-          "perturbation_summary": "Systematic addition of CTAB (1 mM to 50 mM) to a fixed 100 mM CTAC growth solution during gold bipyramid seeded growth.",
-          "primary_prediction_summary": "Adding CTAB to the CTAC growth solution modifies mixed micelle composition, bromide/chloride counterion ratios, and surfactant packing at the nanoparticle-solution interface. This tunes anisotropic growth rates, resulting in a progressive increase in aspect ratio, larger single-particle volumes via altered monomer deposition kinetics, and a red-shift in the longitudinal LSPR peak.",
+          "perturbed_variable": "CTAB surfactant concentration (additive in CTAC binary surfactant growth solution)",
+          "perturbation_summary": "Introduction and systematic variation of CTAB (1 to 50 mM) into a fixed 100 mM CTAC growth system for seed-mediated growth of gold bipyramids.",
+          "primary_prediction_summary": "Adding CTAB to the CTAC growth mixture alters mixed-micelle packing geometry and counterion adsorption dynamics at distinct crystallographic facets, which tunes aspect ratios, increases single-particle volume due to modified monomer delivery, and systematically red-shifts the longitudinal LSPR peak wavelength.",
           "observable_predictions": [
             {
               "observable": "Bipyramid single-particle volume",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Volume increases by approximately 15-40% across the 1 mM to 50 mM CTAB addition range.",
-              "mechanistic_justification": "Higher surfactant concentration increases the total micellar volume and enhances the incorporation/solubilization of gold-surfactant-halide complexes, increasing the local monomer flux available per seed during growth."
+              "predicted_magnitude_or_range": "Volume increases by ~20-50% across the 1 to 50 mM CTAB titration range",
+              "mechanistic_justification": "Incorporation of CTAB into the CTAC micellar network changes the hydrophobic/hydrophilic balance and micelle aggregation number, altering the local reduction potential and stabilizing monomer flux which enhances overall mass deposition per seed."
             },
             {
               "observable": "Bipyramid longitudinal length",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Length increases by 10 to 30 nm as [CTAB] increases from 1 mM to 50 mM.",
-              "mechanistic_justification": "The introduction of bromide counterions from CTAB modifies side-facet passivation relative to chloride (from CTAC), slowing lateral overgrowth while permitting sustained axial tip elongation."
+              "predicted_magnitude_or_range": "Length increases by 15-40 nm",
+              "mechanistic_justification": "Modified bromide/chloride ratio and headgroup packing at the tips versus the side facets promote more pronounced one-dimensional axial elongation."
             },
             {
               "observable": "Bipyramid width",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Width increases slightly by 2 to 6 nm.",
-              "mechanistic_justification": "Mixed micellar packing with bromide ions stabilizes side facets against complete cessation of growth, leading to a modest equatorial expansion alongside the enhanced axial growth."
+              "predicted_magnitude_or_range": "Width increases slightly by ~3-8 nm",
+              "mechanistic_justification": "Enhanced silver underpotential deposition (UPD) combined with denser surfactant bilayer passivation on side facets permits controlled lateral growth alongside axial elongation."
             },
             {
-              "observable": "Aspect ratio",
+              "observable": "Aspect ratio (AR)",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Aspect ratio increases from ~3.0 up to ~4.5.",
-              "mechanistic_justification": "Because axial tip growth rate is enhanced more significantly than side-facet lateral growth by the optimal bromide/chloride mixed surfactant ratio, the overall particle aspect ratio grows."
+              "predicted_magnitude_or_range": "Aspect ratio increases from ~2.5 to ~4.0",
+              "mechanistic_justification": "Axial growth rate outpaces lateral growth due to preferential stabilization of the side facets by mixed CTAB/CTAC micellar aggregates."
             },
             {
               "observable": "Tip sharpness / radius",
-              "predicted_direction": "decrease",
-              "predicted_magnitude_or_range": "Tip radius slightly increases (tips become slightly blunter or less needle-like).",
-              "mechanistic_justification": "Higher total surfactant and bromide concentration promotes more isotropic overgrowth at the high-energy vertices, resulting in marginally blunter tip radii."
+              "predicted_direction": "increase",
+              "predicted_magnitude_or_range": "Tip radius increases slightly (less acute/more blunt tips)",
+              "mechanistic_justification": "Higher surfactant concentration and increased bromide availability passivate high-energy vertices slightly more effectively, though competing rapid monomer deposition can moderate this effect."
             },
             {
               "observable": "Reaction completion time",
               "predicted_direction": "decrease",
-              "predicted_magnitude_or_range": "Reaction time decreases by ~20-30%",
-              "mechanistic_justification": "Mixed CTAC/CTAB micelles can accelerate electron transfer or precursor complex turnover rates with reducing agents like ascorbic acid or 8-hydroxyquinoline, shortening overall reduction completion times."
+              "predicted_magnitude_or_range": "Completion time decreases by ~20-30%",
+              "mechanistic_justification": "Altered micellar catalysis and partitioning of the reducing agent accelerate electron transfer kinetics between Au(III) complexes and seed surfaces."
             },
             {
               "observable": "Longitudinal LSPR peak wavelength",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Red-shifts by 40 to 120 nm (e.g., from ~800 nm to ~920 nm).",
-              "mechanistic_justification": "The increase in aspect ratio and single-particle length directly scales with the red shift of the longitudinal localized surface plasmon resonance (LSPR) peak."
+              "predicted_magnitude_or_range": "Red-shifts by 50-150 nm",
+              "mechanistic_justification": "Directly correlates with the increased particle length and aspect ratio, shifting the dipolar plasmon resonance deeper into the near-infrared region."
             }
           ],
           "causal_mechanism_chain": [
             "[\u0394CTAB concentration (1-50 mM)]",
-            "--> [Modification of mixed micellar interface (CTAC/CTAB ratio) and local Br-/Cl- counterion concentration]",
-            "--> [Altered underpotential deposition (UPD) of Ag+ and differential facet passivation on pentatwinned crystal faces]",
-            "--> [Enhanced axial elongation rate relative to lateral side-facet expansion and increased monomer consumption per seed]",
-            "--> [Increased aspect ratio, larger single-particle volume, and red-shifted longitudinal LSPR]"
+            "[Modification of CTAC/CTAB mixed micelle soft-template geometry and local Br-/Cl- counterion ratio]",
+            "[Altered side-facet passivation and Ag+ underpotential deposition (UPD) kinetics]",
+            "[Accelerated reduction kinetics and enhanced 1D axial growth over lateral broadening]",
+            "[Increased single-particle volume, larger aspect ratio, and red-shifted longitudinal LSPR]"
           ],
-          "conservation_and_regime_check": "Mass balance of Au0 is strictly conserved based on the initial HAuCl4 precursor concentration and fixed seed number density. The CTAB addition stays well below the critical micelle transition regime that would induce secondary nucleation or destroy the pentatwinned seed template, remaining within the primary seeded growth regime.",
+          "conservation_and_regime_check": "Mass balance is preserved: total Au(III) precursor and seed concentration remain constant, ensuring total metallic conversion matches available monomer supply. The system remains within the primary seeded growth regime without triggering homogeneous secondary nucleation.",
           "supporting_paper_citations": [
             "1-s2.0-S2468519416300702-main (2017)",
             "ncomms8571 (2015)",
             "c3nr01553j (2013)"
           ],
-          "confidence_zero_to_one": 0.88,
+          "confidence_zero_to_one": 0.85,
           "key_uncertainties_or_boundary_conditions": [
-            "Exact critical micelle concentration (CMC) shifts in binary CTAC/CTAB mixtures at reaction temperature",
-            "AgNO3 concentration coupling with varying bromide-to-chloride ratios",
-            "Purity and trace impurity variations across different commercial CTAB/CTAC batches"
+            "Exact halide ratios (Br- from CTAB vs Cl- from CTAC)",
+            "Mixed micelle phase behavior and non-linear viscosity/packing changes at higher titrations",
+            "Competitive balance between monomer flux (blunting) and facet-specific passivation (sharpening) at the tips",
+            "Temperature fluctuations affecting mixed micelle phase behavior",
+            "Purity and aging state of the pentatwinned seeds"
           ]
         },
         "mechanistic_cross_questioning": {
           "experiment_prompt": "Starting from the baseline protocol, what happens to the gold bipyramid morphology (specifically single-particle volume, length, width, aspect ratio, tip sharpness/radius, reaction completion time, and longitudinal LSPR peak wavelength) when CTAB is added to the growth solution at systematically varied concentrations ranging from 1 mM to 50 mM, while keeping [CTAC] constant at 100 mM and all other reactant concentrations, seed quantities, and temperatures identical?",
-          "perturbed_variable": "CTAB surfactant concentration (additive to CTAC growth solution)",
-          "perturbation_summary": "Adding CTAB (1 to 50 mM) to a CTAC-based baseline growth solution modifies mixed-micelle soft template geometry, halide counterion equilibria ([AuBr4]- vs [AuCl4]- and AgBr vs AgCl precipitation/complexation dynamics), and facet passivation kinetics on pentatwinned gold nanobipyramids.",
-          "primary_prediction_summary": "As proven by rigorous cross-examination and halide thermodynamic/kinetic regimes, introducing CTAB into a CTAC/8-HQL growth system increases the local bromide fraction, which accelerates Au(III) reduction kinetics due to lower redox barriers of bromo-aurate complexes and passivates high-index tip facets via CTA+/[AgBr2]- complexes. This leads to stunted longitudinal growth, increased width, decreased length, reduced aspect ratio, blunter tip radii, faster reaction completion, and a blue-shifted longitudinal LSPR while maintaining constant single-particle volume.",
+          "perturbed_variable": "CTAB surfactant concentration (binary CTAC/CTAB surfactant mixture via addition of 1 mM to 50 mM CTAB)",
+          "perturbation_summary": "Adding CTAB from 1 mM to 50 mM into a 100 mM CTAC-based growth solution creates a binary surfactant system that alters halide composition ([Br-]/[Cl-]), Stern-layer counterion binding affinity, and mixed micelle packing parameters during seeded growth.",
+          "primary_prediction_summary": "Incorporating CTAB into the CTAC growth solution introduces bromide ions that favorably modify facet passivation and underpotential deposition (UPD) of silver on penta-twinned {100} side facets versus {110} tips. Across the 1 to 50 mM range, this non-linearly enhances anisotropic 1D growth, leading to an increase in longitudinal length, aspect ratio, and longitudinal LSPR wavelength, while single-particle volume remains strictly conserved by precursor mass stoichiometry.",
           "observable_predictions": [
             {
               "observable": "Bipyramid single-particle volume",
               "predicted_direction": "no_significant_change",
-              "predicted_magnitude_or_range": "Volume remains invariant within \u00b15%",
-              "mechanistic_justification": "Total initial gold precursor ([Au3+]) and seed concentration are conserved, meaning total reduced Au(0) mass per seed remains strictly constant ($V \text{ }\\propto\\text{ } W^2 L = \\text{const}$). Surfactant substitution solely alters morphology/kinetics, not total monomer yield."
+              "predicted_magnitude_or_range": "Volume remains invariant (within ~0-5% deviation)",
+              "mechanistic_justification": "Mass balance and stoichiometry enforcement dictate that total reduced Au0 per seed is fixed by initial [HAuCl4] and seed concentration. Changes in surfactant packing redistribute metal atoms anisotropically without altering the total mass of gold available."
             },
             {
               "observable": "Bipyramid longitudinal length",
-              "predicted_direction": "decrease",
-              "predicted_magnitude_or_range": "Length decreases by ~15-30%",
-              "mechanistic_justification": "Bromide enrichment accelerates reduction kinetics and passivates the high-index tip facets prematurely via CTA+/[AgBr2]- ion-pair adsorption, shortens the duration of anisotropic axial overgrowth."
+              "predicted_direction": "increase",
+              "predicted_magnitude_or_range": "Length increases by ~20-40%",
+              "mechanistic_justification": "Higher local Br- concentration from added CTAB increases binding affinity and Stern-layer passivation on side facets, restricting lateral growth and forcing incoming monomers to deposit along the <110> tip axes."
             },
             {
               "observable": "Bipyramid width",
-              "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Width increases by ~10-25%",
-              "mechanistic_justification": "To conserve total single-particle volume ($V = \\text{const}$) while axial length decreases, lateral overgrowth on the side facets is promoted, leading to thicker, blunter decahedral/bipyramidal structures."
+              "predicted_direction": "decrease",
+              "predicted_magnitude_or_range": "Width decreases by ~10-20%",
+              "mechanistic_justification": "Enhanced bromide-mediated side-facet passivation effectively suppresses lateral thickening, satisfying geometric volume constraints ($V \\propto W^2 L$) alongside the elongation of length."
             },
             {
               "observable": "Aspect ratio",
-              "predicted_direction": "decrease",
-              "predicted_magnitude_or_range": "Aspect ratio decreases from baseline (~3.0) down to ~2.0-2.3",
-              "mechanistic_justification": "Shorter lengths combined with increased widths directly reduce the length-to-width aspect ratio."
+              "predicted_direction": "increase",
+              "predicted_magnitude_or_range": "Aspect ratio increases from ~2.5 to ~4.0-5.2",
+              "mechanistic_justification": "Because axial length increases while equatorial width decreases concurrently, the length-to-width aspect ratio undergoes a substantial upward shift."
             },
             {
               "observable": "Tip sharpness / radius",
               "predicted_direction": "increase",
-              "predicted_magnitude_or_range": "Tip radius increases (tips become blunter / more truncated)",
-              "mechanistic_justification": "Early passivation of high-index apexes by strong bromide/silver halide interactions restricts sharp tip-directed growth, yielding rounder, heavily truncated bipyramid tips."
+              "predicted_magnitude_or_range": "Tip radius of curvature decreases by ~15-30% (sharper tips)",
+              "mechanistic_justification": "Stronger kinetic selectivity and focused monomer flux onto the high-energy penta-twinned vertices sharpen the tips during directional overgrowth."
             },
             {
               "observable": "Reaction completion time",
-              "predicted_direction": "decrease",
-              "predicted_magnitude_or_range": "Reaction time decreases by ~20-40%",
-              "mechanistic_justification": "Substitution of chloride by bromide forms [AuBr4]- complexes which exhibit faster reduction kinetics by 8-HQL compared to more inert [AuCl4]-, accelerating reaction completion."
+              "predicted_direction": "non_monotonic_increase_then_decrease",
+              "predicted_magnitude_or_range": "Reaction time extends initially due to stronger bromide coordination barriers, but can drop at higher surfactant concentrations due to altered micellar catalysis",
+              "mechanistic_justification": "Mixed Cl-/Br- ligand exchange on Au(III) alters the reduction potential ($E^\\circ$) and initial reduction kinetics ($R_{red}$), exhibiting non-monotonic variations in activation energy across the 1-50 mM CTAB sweep."
             },
             {
               "observable": "Longitudinal LSPR peak wavelength",
-              "predicted_direction": "decrease",
-              "predicted_magnitude_or_range": "LSPR blue-shifts by ~40-90 nm",
-              "mechanistic_justification": "The substantial decrease in particle aspect ratio directly drives a blue-shift in the longitudinal surface plasmon resonance peak."
+              "predicted_direction": "increase",
+              "predicted_magnitude_or_range": "LSPR red-shifts by ~90-180 nm",
+              "mechanistic_justification": "Directly tracks the increased aspect ratio and enhanced tip sharpness, which concentrate free-electron oscillations and shift longitudinal plasmon resonance toward longer near-infrared wavelengths."
             }
           ],
           "causal_mechanism_chain": [
-            "[\u0394CTAB addition to CTAC/8-HQL growth solution] -> [Elevated [Br-]/[Cl-] ratio forms bromo-aurate complexes and alters Ag+/Br- solubility equilibria] -> [Accelerated reduction kinetics & premature CTA+/[AgBr2]- passivation of high-index tip facets] -> [Suppressed axial elongation, promoted lateral thickening, and tip truncation at constant Au(0) mass] -> [Decreased length, increased width, lower aspect ratio, blunter tips, faster reaction, and blue-shifted LSPR]"
+            "[\u0394CTAB added (1-50 mM) to 100 mM CTAC] -> [Mixed CTAC/CTAB micelle formation and altered [Br-]/[Cl-] Stern-layer ratio] -> [Enhanced Ag+ underpotential deposition and selective bilayer passivation on side facets] -> [Restricted lateral growth and focused 1D monomer deposition along <110> axes] -> [Invariant single-particle volume with increased length, decreased width, higher aspect ratio, and red-shifted LSPR]"
           ],
-          "conservation_and_regime_check": "Mass conservation is rigorously obeyed via $V \\propto W^2 L = \\text{const}$, enforced by fixed initial [Au3+]-to-seed ratios. The system transitions into a bromide-dominated kinetic regime where faster reduction and altered tip passivation favor lateral thickening over axial elongation.",
+          "conservation_and_regime_check": "Strictly adheres to mass conservation: total Au0 reduced is constrained by the fixed initial [HAuCl4]-to-seed ratio. The geometric invariant $\\Delta V / V = 2(\\Delta W / W) + (AH \\text{or } \\Delta L / L)$ is preserved by compensating a ~15% decrease in width with a ~35% increase in length. Operating concentrations remain within the stable mixed micelle growth regime below macroscopic phase separation or precipitation boundaries.",
           "supporting_paper_citations": [
-            "d1nr01768c (2021)",
+            "1-s2.0-S2468519416300702-main (2017)",
             "c4nr06323f (2015)",
-            "am9b12973 (2019)"
+            "d1nr01768c (2021)"
           ],
-          "confidence_zero_to_one": 0.95,
+          "confidence_zero_to_one": 0.92,
           "key_uncertainties_or_boundary_conditions": [
-            "Exact solubility product limits of AgBr versus AgCl governing silver-assisted underpotential deposition at high [CTAB]",
-            "Mixed micellar packing transition thresholds in the CTAC/CTAB binary phase diagram at 35 \u00b0C"
+            "Assumes temperature is rigorously held constant at 35 \u00b0C to avoid thermal shifts in mixed micelle packing parameters.",
+            "Restricted to the 1 to 50 mM CTAB addition window; pushing CTAB beyond critical packing parameter limits could induce phase separation or secondary nucleation."
           ]
         }
       },
@@ -475,74 +483,75 @@
         "challenges": [
           {
             "round_number": 1,
-            "failure_mode_targeted": "CONTRADICTORY_LITERATURE_EVIDENCE",
-            "sharp_question": "Your prediction assumes that adding Br- via CTAB always increases aspect ratio and promotes axial elongation by strengthening side-facet passivation. However, in a CTAC-dominant system (100 mM CTAC) using 8-hydroxyquinoline (8-HQL) as a mild reductant, does the introduction of Br- shift the reduction potential and alter the chloro/bromo-aurate complex equilibria ([AuCl4]- vs [AuBr4]-) such that reduction kinetics actually SPEED UP, destabilizing the fine kinetic balance required for anisotropic bipyramidal growth and causing isotropic broadening rather than elongation?",
-            "physical_rationale_for_doubt": "Bromide ions form stronger complexes with Au(III) than chloride, shifting redox potentials. Furthermore, mixed CTAC/CTAB micelles undergo complex structural packing transitions where low-to-intermediate CTAB concentrations can disrupt the monodisperse micellar soft templates established by pure CTAC, frequently causing stunted growth or spherical byproducts rather than clean red-shifted bipyramids.",
-            "external_search_query_needed": "CTAC CTAB mixed surfactant gold nanobipyramids 8-hydroxyquinoline"
+            "failure_mode_targeted": "KINETIC_VS_THERMODYNAMIC_DOMINANCE",
+            "sharp_question": "Your prediction assumes that adding CTAB uniformly enhances side-facet passivation and drives linear axial elongation. However, when transitioning from pure CTAC to a binary CTAC/CTAB mixture across a broad 1 to 50 mM range, how do you account for the differential binding constants and Stern-layer packing parameter changes of Br- versus Cl- counterions on penta-twinned {110} vs {100} facets, which often exhibit non-linear phase behavior rather than a smooth monotonic increase in aspect ratio?",
+            "physical_rationale_for_doubt": "Chloride (Cl-, from CTAC) and bromide (Br-, from CTAB) possess vastly different hydration enthalpies, counterion binding affinities, and critical micelle packing geometries. Introducing Br- into a CTAC matrix alters the electrostatic potential and permeability of the surfactant bilayer. A naive linear extrapolation ignores the cooperative or competitive adsorption isotherms of mixed halides on gold facets, which can lead to critical regime shifts\u2014such as sudden bluntness or side-wall roughening\u2014rather than uniform tip sharpening.",
+            "external_search_query_needed": "binary CTAC CTAB mixed surfactant gold nanobipyramids aspect ratio non-monotonic"
           },
           {
             "round_number": 2,
-            "failure_mode_targeted": "KINETIC_VS_THERMODYNAMIC_DOMINANCE",
-            "sharp_question": "You claim that reaction completion time increases monotonically by 20-50% due to denser micellar structures. But what happens to the silver-assisted underpotential deposition (UPD) kinetics when bromide concentration increases? Since AgBr has an extremely low solubility product ($K_{sp} \thickapprox 5.35 \times 10^{-13}$) compared to AgCl ($K_{sp} \thickapprox 1.77 \times 10^{-10}$), does the massive influx of Br- instantly precipitate or strongly complex free $Ag^+$ out of solution, thereby completely poisoning the Ag+-UPD facet-blocking mechanism and halting anisotropic growth prematurely?",
-            "physical_rationale_for_doubt": "In silver-assisted gold bipyramid growth, free $\text{Ag}^+$ concentration is a tightly controlled thermodynamic parameter. Adding up to 50 mM CTAB introduces a massive excess of $\text{Br}^-$ into a solution containing 30 \u00b5M $\text{AgNO}_3$. This will drastically alter the free $[\text{Ag}^+]$ via silver halide complexation and precipitation, potentially shutting down the side-facet passivation entirely.",
-            "external_search_query_needed": "silver bromide complexation effect on gold nanobipyramid growth CTAB CTAC"
+            "failure_mode_targeted": "NON_MONOTONIC_REGIME_BOUNDARY",
+            "sharp_question": "You predicted that the reaction completion time increases monotonically by 20-50% due to denser mixed surfactant packing creating a larger activation barrier for precursor reduction. What prevents this surfactant restructuring from crossing a non-linear regime boundary where excessive CTAB concentrations induce local phase separation, micellar structural transitions (spherical-to-rodlike), or precipitation of Au-surfactant complexes, thereby causing catastrophic quenching of the reduction kinetics or secondary homogeneous nucleation?",
+            "physical_rationale_for_doubt": "Surfactant mixtures of alkyltrimethylammonium halides frequently exhibit sharp non-linear phase boundaries and viscosity spikes as the ratio of chloride to bromide or total amphiphile concentration is swept. If the added CTAB pushes the system across a micellar transition threshold, the local monomer flux ($R_{dep}$) will plummet, causing the system to slip out of the kinetic focusing window and undergo thermodynamic relaxation (tip blunting), directly contradicting your prediction of enhanced aspect ratio across the entire 1 to 50 mM range.",
+            "external_search_query_needed": "CTAC CTAB mixed micelle phase transition kinetic growth gold nanorods"
           },
           {
             "round_number": 3,
             "failure_mode_targeted": "MASS_AND_STOICHIOMETRY_CONSERVATION",
-            "sharp_question": "While you correctly noted that single-particle volume remains invariant when total $[\text{Au}^{3+}]$ and seed count are fixed, what happens to the seed particle stability and monodispersity when stepping CTAB from 1 to 50 mM into a 100 mM CTAC solution? If the binary surfactant mixture crosses a miscibility gap or binodal boundary, does localized micellar phase separation trigger secondary nucleation or seed etching, effectively altering the *effective* active seed number and thus violating your constant-volume assumption?",
-            "physical_rationale_for_doubt": "Binary cationic surfactant systems (CTAC/CTAB) exhibit non-ideal mixing behavior in aqueous solutions depending on temperature and total ionic strength. Introducing 50 mM CTAB into 100 mM CTAC can induce cloud points or micellar restructuring that destabilizes pentatwinned seed surfaces, leading to Ostwald ripening or secondary nucleation events that invalidate the constant-per-seed growth stoichiometry.",
-            "external_search_query_needed": "CTAC CTAB binary surfactant micelle phase separation cloud point"
+            "sharp_question": "Your prediction claims that longitudinal length increases by 15-35% and width decreases by 5-15% while single-particle volume remains strictly constant ('within ~5-10%'). For a bipyramidal geometry where volume scales as $V \\propto W^2 L$, does your proposed 35% increase in length combined with a 15% decrease in width mathematically satisfy the mass and stoichiometric conservation invariant, or does it violate the geometric volume constraint?",
+            "physical_rationale_for_doubt": "Let us test the geometric conservation invariant. If width ($W$) decreases by 15% ($W_{new} = 0.85 W_{old}$), its squared contribution $W^2$ drops to $0.7225$ of its original value (a ~28% reduction in cross-sectional area). For the total single-particle volume $V$ to remain constant ($\\Delta V = 0$), the length ($L$) must increase by roughly 38% to compensate ($1 / 0.7225 \times \text{length factor} \to 1.38$). However, if length increases by 35% *while* width drops by 15%, the calculated volume $V_{new} \u2210 (0.85)^2 \times (1.35) = 0.975$ appears close, but pushing both bounds simultaneously without a rigorous check of tip sharpness contribution to volume integration risks violating the strict mass conservation invariant, especially if Ag underpotential deposition also incorporates foreign volume.",
+            "external_search_query_needed": null
+          },
+          {
+            "round_number": 4,
+            "failure_mode_targeted": "CONFOUNDING_SYNTHESIS_VARIABLE",
+            "sharp_question": "The baseline protocol relies on 8-hydroxyquinoline (8-HQL) as a mild reducing agent in a CTAC medium. When CTAB is added to form a binary surfactant system, does the change in halide composition alter the coordination chemistry and redox potential of the HQL-Au(III) complex, acting as an uncalculated confounding variable that independently accelerates or suppresses reduction kinetics ($R_{red}$) irrespective of micellar passivation?",
+            "physical_rationale_for_doubt": "Reducing agents like ascorbic acid and 8-HQL form coordination complexes with metal-halide precursors prior to electron transfer. Exchanging or mixing $\\text{Cl}^-$ and $\\text{Br}^-$ in the Stern layer directly alters the reduction potential ($E^\\circ$) of the $\\text{AuCl}_4^- / \\text{AuBr}_4^-$ complexes. Attributing morphological changes solely to 'mixed micelle soft-template geometry' ignores the direct thermodynamic shift in precursor reduction potentials caused by halide ligand exchange.",
+            "external_search_query_needed": "8-hydroxyquinoline gold reduction kinetics halide coordination CTAB CTAC"
           }
         ]
       },
       "triggered_external_searches": [
-        "[Triggered by CONTRADICTORY_LITERATURE_EVIDENCE | Query: 'CTAC CTAB mixed surfactant gold nanobipyramids 8-hydroxyquinoline'] Assessment of the photothermal conversion efficiencies of tunable gold bipyramids under irradiation by two laser lines in a NIR biological window (2019) -> In this work, we present a thorough study on the evaluation of the photothermal conversion efficiencies of gold nanobipyramids (AuBPs) under irradiation by two phototherapeutic laser lines at 785 and 808 nm. Due to fine tunability of the longitudinal localized surface plasmon resonance (LSPR) of AuBPs along the entire biological window, AuBPs have great potential to be applied as efficient photothermal agents in specific hyperthermia applications",
-        "[Triggered by CONTRADICTORY_LITERATURE_EVIDENCE | Query: 'CTAC CTAB mixed surfactant gold nanobipyramids 8-hydroxyquinoline'] Calligraphed Selective Plasmonic Arrays on Paper Platforms for Complementary Dual Optical \u201cON/OFF Switch\u201d Sensing (2020) -> Designing innovative (nano)detection platforms, respecting their low-cost and fabrication simplicity, capable to chemically detect multiple target analytes by employing the same engineered device, is still a great challenge in the multiplexed biosensor development. In this scientific context, in the current manuscript, we exploit the low-cost plasmonic calligraphy as a versatile approach to directly draw continuous plasmonic lines on Whatman pape",
-        "[Triggered by CONTRADICTORY_LITERATURE_EVIDENCE | Query: 'CTAC CTAB mixed surfactant gold nanobipyramids 8-hydroxyquinoline'] Multicolor Visual Detection of Deoxynivalenol in Grain Based on Magnetic Immunoassay and Enzymatic Etching of Plasmonic Gold Nanobipyramids (2023) -> In this study, a multicolor visual method based on a magnetic immunoassay and enzyme-induced gold nanobipyramids (Au NBPs) etching was developed for deoxynivalenol (DON) detection. The magnetic beads modified with high affinity DON monoclonal antibodies were used as a carrier for target enrichment and signal transformation and the Au NBPs with excellent plasmonic optical properties were served as enzymatic etching substrates. The oxidation state ",
-        "[Triggered by KINETIC_VS_THERMODYNAMIC_DOMINANCE | Query: 'silver bromide complexation effect on gold nanobipyramid growth CTAB CTAC'] Gold Nanoparticle-Based Colorimetric Strategies for Chemical and Biological Sensing Applications (2019) -> Gold nanoparticles are popularly used in biological and chemical sensors and their applications owing to their fascinating chemical, optical, and catalytic properties. Particularly, the use of gold nanoparticles is widespread in colorimetric assays because of their simple, cost-effective fabrication, and ease of use. More importantly, the gold nanoparticle sensor response is a visual change in color, which allows easy interpretation of results. T",
-        "[Triggered by KINETIC_VS_THERMODYNAMIC_DOMINANCE | Query: 'silver bromide complexation effect on gold nanobipyramid growth CTAB CTAC'] Bioinspired chiral inorganic nanomaterials (2023) -> Chiral inorganic nanomaterials can induce specific physical, chemical and biological phenomena. This Review discusses how chiral biomolecules and polarized light allow nanoscale chirality control in inorganic nanomaterials, which can be applied in optical devices, sensing, catalysis and biomedicine.",
-        "[Triggered by KINETIC_VS_THERMODYNAMIC_DOMINANCE | Query: 'silver bromide complexation effect on gold nanobipyramid growth CTAB CTAC'] Gold nanomaterials for optical biosensing and bioimaging (2021) -> Gold nanoparticles (AuNPs) are highly compelling nanomaterials for biomedical studies due to their unique optical properties. By leveraging the versatile optical properties of different gold nanostructures, the performance of biosensing and biomedical imaging can be dramatically improved in terms of their sensitivity, specificity, speed, contrast, resolution and penetration depth. Here we review recent advances of optical biosensing and bioimagin",
-        "[Triggered by MASS_AND_STOICHIOMETRY_CONSERVATION | Query: 'CTAC CTAB binary surfactant micelle phase separation cloud point'] Nanoarchitectured Structure and Surface Biofunctionality of Mesoporous Silica Nanoparticles (2020) -> Mesoporous silica nanoparticles (MSNs), one of the important porous materials, have garnered interest owing to their highly attractive physicochemical features and advantageous morphological attributes. They are of particular importance for use in diverse fields including, but not limited to, adsorption, catalysis, and medicine. Despite their intrinsic stable siliceous frameworks, excellent mechanical strength, and optimal morphological attribute",
-        "[Triggered by MASS_AND_STOICHIOMETRY_CONSERVATION | Query: 'CTAC CTAB binary surfactant micelle phase separation cloud point'] Scrutinizing Self-Assembly, Surface Activity and Aggregation Behavior of Mixtures of Imidazolium Based Ionic Liquids and Surfactants: A Comprehensive Review (2021) -> The desire of improving various processes like enhanced oil recovery (EOR), water treatment technologies, biomass extraction, organic synthesis, carbon capture etc. in which conventional surfactants have been traditionally utilized; prompted various researchers to explore the self-assembly and aggregation behavior of different kinds of surface-active molecules. Ionic liquids (ILs) with long alkyl chain present in their structure constitute the ad",
-        "[Triggered by MASS_AND_STOICHIOMETRY_CONSERVATION | Query: 'CTAC CTAB binary surfactant micelle phase separation cloud point'] Recent advancements in coinage metal nanostructures and bio-applications (2021) -> In this review, the recent advances of coinage metals such as Cu, Ag, Au, and their bimetallic nanostructures are summarized, including synthetic methodologies and bio-applications of antibacterial, SERS-based detection, and electrochemical sensing."
+        "[LITERATURE | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'CTAC CTAB mixed micelle phase transition kinetic growth gold nanorods'] Hierarchically porous materials: synthesis strategies and structure design (2016) -> Owing to their immense potential in energy conversion and storage, catalysis, photocatalysis, adsorption, separation and life science applications, significant interest has been devoted to the design and synthesis of hierarchically porous materials. The hierarchy of materials on porosity, structural, morphological, and component levels is key for high performance in all kinds of applications. Synthesis and applications of hierarchically structure",
+        "[LITERATURE | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'CTAC CTAB mixed micelle phase transition kinetic growth gold nanorods'] The Role of Ligands in the Chemical Synthesis and Applications of Inorganic Nanoparticles (2019) -> The design of nanoparticles is critical for their efficient use in many applications ranging from biomedicine to sensing and energy. While shape and size are responsible for the properties of the inorganic nanoparticle core, the choice of ligands is of utmost importance for the colloidal stability and function of the nanoparticles. Moreover, the selection of ligands employed in nanoparticle synthesis can determine their final size and shape. Liga",
+        "[LITERATURE | Triggered by NON_MONOTONIC_REGIME_BOUNDARY | Query: 'CTAC CTAB mixed micelle phase transition kinetic growth gold nanorods'] Nanoarchitectured Structure and Surface Biofunctionality of Mesoporous Silica Nanoparticles (2020) -> Mesoporous silica nanoparticles (MSNs), one of the important porous materials, have garnered interest owing to their highly attractive physicochemical features and advantageous morphological attributes. They are of particular importance for use in diverse fields including, but not limited to, adsorption, catalysis, and medicine. Despite their intrinsic stable siliceous frameworks, excellent mechanical strength, and optimal morphological attribute"
       ],
       "scores": [
         {
           "method_name": "1. Single-Agent Standard RAG",
-          "directional_accuracy_percent": 33.3,
+          "directional_accuracy_percent": 16.6,
           "primary_volume_or_morphology_correct": false,
           "mechanistic_alignment_score": 3,
           "quantitative_closeness_score": 2,
-          "brier_calibration_error": 0.3121,
-          "critique_of_prediction": "The single-agent standard RAG model performed poorly on this specific materials chemistry prompt, demonstrating a complete inversion of the actual experimental trend. While standard gold nanorod/bipyramid syntheses often rely on bromide to promote elongation (e.g., in pure CTAB systems), adding CTAB into a high-background 100 mM CTAC solution actually increases the bromide-to-chloride ratio in a regime where increasing [Br-] slows down reduction kinetics and leads to shorter, wider, blunter bipyramids (blue-shifted LSPR). The agent predicted an increase in aspect ratio, length, and red-shifted LSPR, whereas the ground truth shows a dramatic decrease in aspect ratio (from 5.9 to 1.7) and a blue-shift in LSPR (from 1070 to 584 nm). The agent correctly predicted the preservation of single-particle volume (constant mass balance), but otherwise failed on all morphological trends due to confusing the direction of halide-dependent reduction kinetics in mixed surfactant systems. The high confidence score (0.89) combined with entirely incorrect directional predictions results in a substantial calibration penalty."
+          "brier_calibration_error": 0.7225,
+          "critique_of_prediction": "The single-agent standard RAG model performed poorly on this specific materials chemistry perturbation because it inverted the core trends of the bromide effect. Specifically, it predicted that increasing [CTAB] (increasing the Br-/Cl- ratio) would increase the aspect ratio, length, and red-shift the LSPR due to enhanced side-facet passivation. In reality, literature and the held-out paper show that higher bromide concentrations heavily passivate the tips ({112} facets via CTA+/[AgBr2]- complexation) and slow down reduction kinetics, causing length to decrease, width to increase, and the LSPR to dramatically blue-shift. The agent correctly predicted that single-particle volume remains invariant (due to fixed gold precursor-to-seed ratios), which saved its score from being a total zero. However, its overall directional accuracy for morphology and optical properties was inverted, showing the limits of standard RAG when reasoning about subtle halide-specific facet passivation kinetics without multi-step critique or advanced mechanistic checking."
         },
         {
           "method_name": "2. Single-Agent + Hybrid CMO Graph KB",
           "directional_accuracy_percent": 33.3,
           "primary_volume_or_morphology_correct": false,
-          "mechanistic_alignment_score": 4,
+          "mechanistic_alignment_score": 3,
           "quantitative_closeness_score": 3,
-          "brier_calibration_error": 0.53,
-          "critique_of_prediction": "The agent correctly predicted that single-particle volume remains invariant (conserved mass balance based on precursor and seeds), which is a positive result. However, it completely failed on the core morphological trend: it predicted that increasing CTAB concentration would increase aspect ratio, red-shift the longitudinal LSPR, and sharpen the tips. In reality, adding CTAB (introducing bromide into a chloride-rich CTAC system) dramatically slowed down reduction kinetics, increased side-facet passivation, caused lateral growth (wider particles, shorter lengths), and strongly blue-shifted the LSPR from ~1070 nm down to 584 nm. The agent inverted the directionality of aspect ratio and LSPR shift because it assumed bromide would universally enhance axial elongation rather than passivate high-index facets and slow overall reduction kinetics."
+          "brier_calibration_error": 0.5625,
+          "critique_of_prediction": "The agent completely inverted the direction of the morphological trend. While the ground truth demonstrates that increasing CTAB in a CTAC background leads to a decrease in length, decrease in aspect ratio, and a dramatic blue-shift of the LSPR peak (due to stronger bromide passivation and slowed reduction kinetics), the agent predicted that increasing CTAB would increase the aspect ratio and red-shift the LSPR peak. Interestingly, the agent correctly predicted that single-particle volume remains invariant (conserved mass). The mechanistic justification failed to capture how the specific increase in bromide concentration shifts reduction potentials and retards axial growth relative to lateral growth. Because the agent expressed high confidence (0.85) in an incorrect directional trend, the Brier calibration error is quite high."
         },
         {
           "method_name": "3. Generic Multi-Agent Discussion",
           "directional_accuracy_percent": 14.3,
           "primary_volume_or_morphology_correct": false,
           "mechanistic_alignment_score": 2,
-          "quantitative_closeness_score": 2,
-          "brier_calibration_error": 0.7744,
-          "critique_of_prediction": "The agent completely inverted the key physical trends of the system. While the ground-truth paper demonstrates that adding CTAB (introducing bromide to a CTAC solution) strongly *decreases* the aspect ratio, *decreases* length, *increases* width, and *blue-shifts* the longitudinal LSPR peak due to stronger CTA+/[AgBr2]- passivation and slower reduction kinetics, the agent predicted that aspect ratio, length, volume, and LSPR would all *increase*. The agent reasoned that bromide addition would enhance axial tip growth, whereas in reality, bromide strongly passivates {112} tips and suppresses axial growth while redirecting growth laterally. The agent also missed the conservation of single-particle volume (predicting a 15-40% increase despite fixed gold precursor and seed concentrations). Consequently, the directional accuracy was very poor (~14%) and the confidence was heavily miscalibrated."
+          "quantitative_closeness_score": 1,
+          "brier_calibration_error": 0.7225,
+          "critique_of_prediction": "The generic multi-agent discussion model performed poorly on this task, getting almost every directional trend completely backward compared to the experimental ground truth. Specifically, the agent predicted that increasing CTAB in a CTAC-based growth solution would *increase* length, aspect ratio, single-particle volume, and *red-shift* the LSPR peak (along with *decreasing* reaction completion time). In reality, adding more bromide (CTAB) slows down reduction kinetics, passivates high-index facets, decreases length, increases width, dramatically drops aspect ratio (from ~5.9 to 1.7), and causes a massive *blue-shift* of the LSPR peak (~486 nm), while keeping single-particle volume constant. The agent incorrectly reasoned about mixed-micelle soft-templating and assumed halide effects would promote 1D elongation rather than retardation and lateral spreading. High confidence (0.85) paired with low accuracy leads to a severe calibration error."
         },
         {
           "method_name": "4. Mechanistic Cross-Questioning Agent (Ours)",
-          "directional_accuracy_percent": 85.7,
-          "primary_volume_or_morphology_correct": true,
-          "mechanistic_alignment_score": 7,
-          "quantitative_closeness_score": 6,
-          "brier_calibration_error": 0.0025,
-          "critique_of_prediction": "The agent correctly captured the invariant single-particle volume constraint, the decrease in length, the increase in width, the drop in aspect ratio, the blunter tip radius, and the blue-shifted longitudinal LSPR peak. It successfully identified that bromide incorporation plays a central role in altering facet passivation and growth directionality. However, the agent's most notable mechanistic error was predicting a *decrease* in reaction completion time based on the assumption that bromo-aurate complexes reduce faster, whereas the experimental reality is that strong CTA+/[AgBr2]- binding and passivation significantly *slows down* the overall reduction kinetics (increasing reaction completion time from ~30 min to 350 min). Additionally, the quantitative magnitude of the aspect ratio change and LSPR blue-shift was somewhat underestimated compared to the dramatic experimental range."
+          "directional_accuracy_percent": 14.3,
+          "primary_volume_or_morphology_correct": false,
+          "mechanistic_alignment_score": 2,
+          "quantitative_closeness_score": 2,
+          "brier_calibration_error": 0.8464,
+          "critique_of_prediction": "The agent completely inverted the physical chemistry trends of this system. In gold bipyramid synthesis using mixed surfactant systems (CTAC/CTAB), increasing the bromide/CTAB concentration actually slows down reduction kinetics, passivates high-index tips, broadens the particle width, shortens the length, and drops the aspect ratio (blue-shifting the LSPR from near-IR to visible). The agent instead hypothesized that adding CTAB would enhance 1D growth, increase aspect ratio, red-shift the LSPR, and decrease width. While the agent correctly predicted the single-particle volume invariant (based on mass conservation and fixed gold/seed stoichiometry), almost all directional trends regarding length, width, aspect ratio, tip sharpness, and LSPR were wrong. Furthermore, the agent expressed an overconfident 0.92 calibration score despite failing the primary mechanistic trend, resulting in a large Brier calibration error."
         }
       ]
     }
@@ -564,64 +573,64 @@
       "year": "2018"
     },
     {
-      "title": "D\u00e9veloppement de la spectroscopie Raman exalt\u00e9e de pointe \u00e9lectrochimique : vers la caract\u00e9risation d\u2019architectures mol\u00e9culaires \u00e9lectroactives",
-      "url": "https://openalex.org/W4393509545",
+      "title": "Single Nanoparticle Plasmonic Sensors",
+      "url": "https://doi.org/10.3390/s151025774",
+      "year": "2015"
+    },
+    {
+      "title": "Plasmonic nanosensors for point-of-care biomarker detection",
+      "url": "https://doi.org/10.1016/j.mtbio.2022.100263",
       "year": "2022"
     },
     {
-      "title": "Branched metal and alloy nanoparticles for plasmonic and electrochemistry applications",
-      "url": "https://doi.org/10.32657/10356/71796",
-      "year": "2017"
+      "title": "Development of plasmonic sensor using gold nanobipyramids for detection of glyphosate based pesticide",
+      "url": "https://openalex.org/W146643195",
+      "year": "2020"
     },
     {
-      "title": "Characterization techniques for nanoparticles: comparison and complementarity upon studying nanoparticle properties",
-      "url": "https://doi.org/10.1039/c8nr02278j",
+      "title": "Facile synthesis of pentacle gold\u2013copper alloy nanocrystals and their plasmonic and catalytic properties",
+      "url": "https://doi.org/10.1038/ncomms5327",
+      "year": "2014"
+    },
+    {
+      "title": "Bimetallic Nanoparticles: Enhanced Magnetic and Optical Properties for Emerging Biological Applications",
+      "url": "https://doi.org/10.3390/app8071106",
       "year": "2018"
     },
     {
-      "title": "Facet Control of Gold Nanorods",
-      "url": "https://doi.org/10.1021/acsnano.6b00258",
-      "year": "2016"
+      "title": "Fine-tuning of gold nanorod dimensions and plasmonic properties using the Hofmeister effects",
+      "url": "https://doi.org/10.1039/c5tc02426a",
+      "year": "2015"
     },
     {
-      "title": "Anisotropic Gold Nanoparticles in Biomedical Applications",
-      "url": "https://doi.org/10.3390/ijms19113385",
-      "year": "2018"
+      "title": "Methods for determination of inorganic substances in water and fluvial sediments",
+      "url": "https://doi.org/10.3133/twri05a1",
+      "year": "1989"
     },
     {
-      "title": "Accessible hotspots for single-protein SERS in DNA-origami assembled gold nanorod dimers with tip-to-tip alignment",
-      "url": "https://doi.org/10.1038/s41467-023-42943-7",
+      "title": "Pseudomonas aeruginosa Biofilms",
+      "url": "https://doi.org/10.3390/ijms21228671",
+      "year": "2020"
+    },
+    {
+      "title": "Cuproptosis: mechanisms and links with cancers",
+      "url": "https://doi.org/10.1186/s12943-023-01732-y",
       "year": "2023"
     },
     {
-      "title": "Monodisperse Gold Nanoparticles: A Review on Synthesis and Their Application in Modern Medicine",
-      "url": "https://doi.org/10.3390/ijms23137400",
-      "year": "2022"
+      "title": "Hierarchically porous materials: synthesis strategies and structure design",
+      "url": "https://doi.org/10.1039/c6cs00829a",
+      "year": "2016"
     },
     {
-      "title": "Synthesis, Catalytic Properties and Application in Biosensorics of Nanozymes and Electronanocatalysts: A Review",
-      "url": "https://doi.org/10.3390/s20164509",
+      "title": "The Role of Ligands in the Chemical Synthesis and Applications of Inorganic Nanoparticles",
+      "url": "https://doi.org/10.1021/acs.chemrev.8b00733",
+      "year": "2019"
+    },
+    {
+      "title": "Nanoarchitectured Structure and Surface Biofunctionality of Mesoporous Silica Nanoparticles",
+      "url": "https://doi.org/10.1002/adma.201907035",
       "year": "2020"
-    },
-    {
-      "title": "The Many \"Facets\" of Halide Ions in the Chemistry of Colloidal Inorganic Nanocrystals.",
-      "url": "https://doi.org/10.1021/acs.chemrev.8b00158",
-      "year": "2018"
-    },
-    {
-      "title": "Anisotropic gold nanoparticles: A survey of recent synthetic methodologies",
-      "url": "https://doi.org/10.1016/j.ccr.2020.213489",
-      "year": "2020"
-    },
-    {
-      "title": "Adenine oligomer directed synthesis of chiral gold nanoparticles",
-      "url": "https://doi.org/10.1038/s41467-022-31513-y",
-      "year": "2022"
-    },
-    {
-      "title": "Assembly of planar chiral superlattices from achiral building blocks",
-      "url": "https://doi.org/10.1038/s41467-022-31868-2",
-      "year": "2022"
     }
   ]
 }
