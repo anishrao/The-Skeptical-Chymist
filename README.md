@@ -26,11 +26,11 @@ Instead of relying on polite consensus or shallow keyword retrieval (which hallu
                   /  KNOWLEDGE  \
                  /───────────────\
                 /        2        \
-               /   INFORMATION   \
-              /───────────────────\
-             /          1          \
-            /         DATA          \
-           /─────────────────────────\
+               /   INFORMATION     \
+              /─────────────────────\
+             /          1            \
+            /         DATA            \
+           /───────────────────────────\
 ```
 
 ### What the Levels Mean:
