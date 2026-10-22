@@ -3,7 +3,8 @@
 > **By Team: The Skeptical Chymists**  
 > *Built for the Open Scientific Intelligence (OSI) Hackathon*  
 > **Repository:** [https://github.com/anishrao/The-Skeptical-Chymist](https://github.com/anishrao/The-Skeptical-Chymist)  
-> **Interactive App:** [http://localhost:8501](http://localhost:8501) (Launch with `streamlit run app.py`)
+> 🌐 **Main Interactive Web Application:** [http://localhost:8089](http://localhost:8089) *(or open `index.html` in any browser)*  
+> 🧪 **Companion Streamlit Console:** [http://localhost:8501](http://localhost:8501) *(launch with `streamlit run app.py`)*
 
 ---
 
@@ -61,43 +62,41 @@ flowchart TD
 
 ---
 
-## 🚀 How to Use This? (Quickstart & Streamlit App)
+## 🚀 How to Use This? (Web Platform & Quickstart)
 
-> [!NOTE]
-> **Explore All Live Results in the App:**  
-> All 36 physical observables, Brier calibration curves, head-to-head model ablations, and wet-lab ground truth comparisons are visualized interactively in the **Skeptical Chymist Streamlit App**.
+### 🌟 1. Open the Main Interactive Web Application (Instant Visual Experience)
 
-### 1. Installation
+The primary user experience is the **Skeptical Chymist Web Application (`index.html`)**. It features the complete high-contrast visual design, smooth card scroll transitions, ACS-style coolwarm canvas charts (with top and right spines disabled), step-by-step Proposer vs. Skeptic debates, and interactive Valency Bond MCP contradiction audits:
 
-Clone the repository and install dependencies using standard `pip` or [`uv`](https://docs.astral.sh/uv/):
-
-```bash
-# Clone the repository
-git clone https://github.com/anishrao/The-Skeptical-Chymist.git
-cd The-Skeptical-Chymist
-
-# Option A: Standard Python (Recommended)
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-# Option B: Using uv
-uv sync
-```
-
-### 2. Launch the Streamlit App
-
-Start the interactive Skeptical Chymist dashboard:
-
-```bash
-streamlit run app.py
-```
-
-Then open your browser to **[http://localhost:8501](http://localhost:8501)**.
+* **Direct Browser Access:** Open **[http://localhost:8089](http://localhost:8089)** in your web browser.  
+  *(Or simply double-click `index.html` to open it locally with zero setup!)*
+* **Start Local Server (if not already running):**
+  ```bash
+  python3 -m http.server 8089
+  ```
 
 ---
 
-## 🧭 What You Can Do in the Streamlit App
+### 🧪 2. Companion Streamlit Console & Python Pipeline
+
+If you want to run Python-based evaluations, customize pipeline parameters, or test batch scripts, you can launch the companion Streamlit app:
+
+```bash
+# Clone the repository (if not already cloned)
+git clone https://github.com/anishrao/The-Skeptical-Chymist.git
+cd The-Skeptical-Chymist
+
+# Install dependencies
+pip install -r requirements.txt   # or 'uv sync'
+
+# Launch Streamlit Console
+streamlit run app.py
+```
+Open **[http://localhost:8501](http://localhost:8501)**.
+
+---
+
+## 🧭 Interactive Platform Features (Web App & Streamlit)
 
 The Streamlit app is organized into dedicated interactive consoles:
 
